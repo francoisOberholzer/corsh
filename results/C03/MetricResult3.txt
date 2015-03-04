@@ -1,0 +1,70 @@
+
+Fitness Violation Correlation 
+10D
+Mean Correlation: 0.4741896954158967
+Max  Correlation: 0.488992300493924
+Min  Correlation: 0.4525267519692673
+Standard Deviation: 0.00979443713112575
+
+30D
+Mean Correlation: 0.46626259980901774
+Max  Correlation: 0.4771967812079995
+Min  Correlation: 0.45677771542664153
+Standard Deviation: 0.005536284129254919
+
+
+Feasibility Ratio 
+10D
+Mean Feasibility: 0.0
+Max  Feasibility: 0.0
+Min  Feasibility: 0.0
+Standard Deviation: 0.0
+
+30D
+Mean Feasibility: 0.0
+Max  Feasibility: 0.0
+Min  Feasibility: 0.0
+Standard Deviation: 0.0
+
+
+Ratio of Feasibility Boundary Crossings 
+10D 
+Mean Crossings: 0.0
+Max  Crossings: 0.0
+Min  Crossings: 0.0
+Standard Deviation: 0.0
+
+30D 
+Mean Crossings: 0.0
+Max  Crossings: 0.0
+Min  Crossings: 0.0
+Standard Deviation: 0.0
+
+
+Proportion in Ideal Zone 0.01 
+10D
+Mean IdealZone: 0.036596666666666666
+Max  IdealZone: 0.0571
+Min  IdealZone: 0.0228
+Standard Deviation: 0.007517083226217803
+
+30D
+Mean IdealZone: 5.555555555555555E-6
+Max  IdealZone: 6.666666666666667E-5
+Min  IdealZone: 0.0
+Standard Deviation: 1.7688954350174415E-5
+
+
+Proportion in Ideal Zone 0.25 
+10D
+Mean IdealZone: 0.9162366666666667
+Max  IdealZone: 0.9471
+Min  IdealZone: 0.883
+Standard Deviation: 0.019351351789783425
+
+30D
+Mean IdealZone: 0.7450422222222223
+Max  IdealZone: 0.8599
+Min  IdealZone: 0.6445666666666666
+Standard Deviation: 0.0612035119903173
+
