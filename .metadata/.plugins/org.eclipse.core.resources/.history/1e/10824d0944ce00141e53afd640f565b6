@@ -1,0 +1,45 @@
+package functions;
+
+import java.util.Vector;
+
+//CEC 2006
+public class G15 extends AbstractFunction {
+	private static int dimension = 3;
+	private static double[] domainsMin = new double[]{0, 0, 0};	
+	private static double[] domainsMax = new double[]{10, 10, 10};
+	private final double e = 0.0001;
+	
+    public Double f(Vector<Double> x) {
+    	double f;
+    	
+    	f = 1000.0 - Math.pow(x.get(0), 2.0) - 2.0 * x.get(1) * x.get(1) - x.get(2) * x.get(2) - x.get(0) * x.get(1) - x.get(0) * x.get(2);
+    	  
+    	return f;
+    }
+
+    public double violation(Vector<Double> x) {
+    	h1 = pow (x[0], 2.0) + pow (x[1], 2.0) + pow (x[2], 2.0) - 25.0;
+  	  	h2 = 8.0 * x[0] + 14.0 * x[1] + 7.0 * x[2] - 56.0;
+
+		if ((h1 - e) <= 0) {
+			h1 = 0;
+		}
+		if ((h2 - e) <= 0) {
+			h2 = 0;
+		}
+
+		return (g1 + g2 + h1 + h2)/4;
+    }
+    
+    public int getDimension() {
+    	return dimension;
+    }
+    
+    public double[] getDomainsMin() {
+    	return domainsMin;
+    }
+    
+    public double[] getDomainsMax() {
+    	return domainsMax;
+    }
+}

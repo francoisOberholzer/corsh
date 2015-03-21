@@ -3,6 +3,10 @@ package functions;
 import java.util.Vector;
 
 public class Rastrigin1 extends AbstractFunction {
+	private static int dimension = -1;
+	private static double[] domainsMin = new double[]{-5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5};
+	private static double[] domainsMax = new double[]{5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5};
+	
 	public Double f(Vector<Double> x) {
 		return 0.0;
     }
@@ -29,5 +33,17 @@ public class Rastrigin1 extends AbstractFunction {
 		}
 
 		return (g1 + g2)/2;
+    }
+    
+    public int getDimension() {
+    	return dimension;
+    }
+    
+    public double[] getDomainsMin() {
+    	return domainsMin;
+    }
+    
+    public double[] getDomainsMax() {
+    	return domainsMax;
     }
 }

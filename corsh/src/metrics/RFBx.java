@@ -12,46 +12,67 @@ import org.apache.commons.math3.stat.descriptive.moment.Mean;
 import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation;
 
 public class RFBx {
-	public static String write(AbstractFunction funct, double min, double max) {
+	public static String write(AbstractFunction funct) {
 		StringBuilder result = new StringBuilder();
 		Mean m = new Mean();
 		StandardDeviation std = new StandardDeviation();
+		int dimension = funct.getDimension();
 		
-		double[] result10d = new double[30];
-		double[] result30d = new double[30];
-		
-		for(int i = 0; i < 30; i++) {
-			result10d[i] = crossing(funct, min, max, 10);
+		if(dimension == -1) {
+			double[] result10d = new double[30];
+			double[] result30d = new double[30];
+			
+			for(int i = 0; i < 30; i++) {
+				result10d[i] = crossing(funct, 10);
+			}
+			
+			for(int i = 0; i < 30; i++) {
+				result30d[i] = crossing(funct, 30);
+			}
+			
+			Arrays.sort(result10d);
+			Arrays.sort(result30d);
+			
+			result.append("\n Ration of Feasibility Boundary Crossings \n");
+			
+			result.append("10D\n");
+			result.append("Mean Crossings: " + m.evaluate(result10d, 0, 30) + "\n");
+			result.append("Max  Crossings: " + result10d[29] + "\n");
+			result.append("Min  Crossings: " + result10d[0] + "\n");
+			result.append("Standard Deviation: " + std.evaluate(result10d) + "\n");
+
+			result.append("\n30D\n");
+			result.append("Mean Crossings: " + m.evaluate(result30d, 0, 30) + "\n");
+			result.append("Max  Crossings: " + result30d[29] + "\n");
+			result.append("Min  Crossings: " + result30d[0] + "\n");
+			result.append("Standard Deviation: " + std.evaluate(result30d) + "\n");
+		}
+		else {
+			double[] resultArray = new double[30];
+			
+			for(int i = 0; i < 30; i++) {
+				resultArray[i] = crossing(funct, dimension);
+			}
+			
+			Arrays.sort(resultArray);
+			
+			result.append("\n Ration of Feasibility Boundary Crossings \n");
+			
+			result.append("Mean Crossings: " + m.evaluate(resultArray, 0, dimension) + "\n");
+			result.append("Max  Crossings: " + resultArray[dimension] + "\n");
+			result.append("Min  Crossings: " + resultArray[0] + "\n");
+			result.append("Standard Deviation: " + std.evaluate(resultArray) + "\n");
 		}
 		
-		for(int i = 0; i < 30; i++) {
-			result30d[i] = crossing(funct, min, max, 30);
-		}
-		
-		Arrays.sort(result10d);
-		Arrays.sort(result30d);
-		
-		result.append("\nRatio of Feasibility Boundary Crossings \n");
-		
-		result.append("10D \n");
-		result.append("Mean Crossings: " + m.evaluate(result10d, 0, 30) + "\n");
-		result.append("Max  Crossings: " + result10d[29] + "\n");
-		result.append("Min  Crossings: " + result10d[0] + "\n");
-		result.append("Standard Deviation: " + std.evaluate(result10d) + "\n");
-
-		result.append("\n30D \n");
-		result.append("Mean Crossings: " + m.evaluate(result30d, 0, 30) + "\n");
-		result.append("Max  Crossings: " + result30d[29] + "\n");
-		result.append("Min  Crossings: " + result30d[0] + "\n");
-		result.append("Standard Deviation: " + std.evaluate(result30d) + "\n");
-
 		return result.toString();
 	}
 	
-	private static double crossing(AbstractFunction funct, double min, double max, int dimension) {
+	private static double crossing(AbstractFunction funct, int dimension) {
 		int numSteps = 1000;
 		int numWalks = dimension;
-		double stepSize = (max-min) * 0.01;
+		double[] min = funct.getDomainsMin();
+		double[] max = funct.getDomainsMax();
+		//double stepSize = (max-min) * 0.01;
 		double newValue = 0;
 		double sumCrossings = 0;
 		int numStartingZones = (int)Math.pow(2,dimension);
@@ -73,38 +94,38 @@ public class RFBx {
 			
 			//Initialize
 			for(int i = 0; i < dimension; i++) {
-	    	    double offset = MiscFunctions.getRandom(0,1)*((max - min)*0.5);
+	    	    double offset = MiscFunctions.getRandom(0,1)*((max[i] - min[i])*0.5);
 	    	    if (bf.isSet(i))
-	    	       temp.add( max - offset);
+	    	       temp.add(max[i] - offset);
 	            else
-	    	       temp.add( min + offset); 
+	    	       temp.add(min[i] + offset); 
 	    	}
 	        int randDim = (int)Math.floor(MiscFunctions.getRandom(0,1)*dimension);
 		    if (bf.isSet(randDim))
-	            temp.set(randDim, max);
+	            temp.set(randDim, max[randDim]);
 	        else
-	            temp.set(randDim, min);
+	            temp.set(randDim, min[randDim]);
 				
 			//Walk
 	        for(int i = 0; i < numSteps; i++) {
 	        	steps.add(new Vector<Double>(dimension));
 	        	for(int j = 0; j < dimension; j++) {
 	        		steps.get(i).add(temp.get(j));
-	        		smallRandomChange = (MiscFunctions.getRandom(0,1)*stepSize);
+	        		smallRandomChange = (MiscFunctions.getRandom(0,1)*(max[j]-min[j]) * 0.01);
 	                
 	                if (bf.isSet(j)) 
 	                    smallRandomChange = -smallRandomChange;
 	
 	                newValue = temp.get(j) + smallRandomChange;
 	
-	                if (newValue < min) {
-	                    double diff = min - newValue;
-	                    newValue = min + diff;
+	                if (newValue < min[j]) {
+	                    double diff = min[j] - newValue;
+	                    newValue = min[j] + diff;
 	                    bf.flipBit(j);
 	                }
-	                else if (newValue > max) {
-	                    double diff = newValue - max;
-	                    newValue = max - diff;
+	                else if (newValue > max[j]) {
+	                    double diff = newValue - max[j];
+	                    newValue = max[j] - diff;
 	                    bf.flipBit(j);
 	                }
 	                

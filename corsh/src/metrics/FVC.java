@@ -15,47 +15,68 @@ import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation;
 import org.apache.commons.math3.stat.correlation.SpearmansCorrelation;
 
 public class FVC {
-	public static String write(AbstractFunction funct, double min, double max) {
+	public static String write(AbstractFunction funct) {
 		StringBuilder result = new StringBuilder();
 		Mean m = new Mean();
 		StandardDeviation std = new StandardDeviation();
+		int dimension = funct.getDimension();
 		
-		double[] result10d = new double[30];
-		double[] result30d = new double[30];
-		
-		for(int i = 0; i < 30; i++) {
-			result10d[i] = correlation(funct, min, max, 10, false);
-		}
-		
-		for(int i = 0; i < 30; i++) {
-			result30d[i] = correlation(funct, min, max, 30, false);
-		}
-		
-		correlation(funct, min, max, 2, true);
-		correlation(funct, min, max, 10, true);
-		correlation(funct, min, max, 30, true);
-		
-		Arrays.sort(result10d);
-		Arrays.sort(result30d);
-		
-		result.append("\nFitness Violation Correlation \n");
-		
-		result.append("10D\n");
-		result.append("Mean Correlation: " + m.evaluate(result10d, 0, 30) + "\n");
-		result.append("Max  Correlation: " + result10d[29] + "\n");
-		result.append("Min  Correlation: " + result10d[0] + "\n");
-		result.append("Standard Deviation: " + std.evaluate(result10d) + "\n");
+		if(dimension == -1) {
+			double[] result10d = new double[30];
+			double[] result30d = new double[30];
+			
+			for(int i = 0; i < 30; i++) {
+				result10d[i] = correlation(funct, 10, false);
+			}
+			
+			for(int i = 0; i < 30; i++) {
+				result30d[i] = correlation(funct, 30, false);
+			}
+			
+			correlation(funct, 2, true);
+			correlation(funct, 10, true);
+			correlation(funct, 30, true);
+			
+			Arrays.sort(result10d);
+			Arrays.sort(result30d);
+			
+			result.append("\n Correlation Ratio \n");
+			
+			result.append("10D\n");
+			result.append("Mean Correlation: " + m.evaluate(result10d, 0, 30) + "\n");
+			result.append("Max  Correlation: " + result10d[29] + "\n");
+			result.append("Min  Correlation: " + result10d[0] + "\n");
+			result.append("Standard Deviation: " + std.evaluate(result10d) + "\n");
 
-		result.append("\n30D\n");
-		result.append("Mean Correlation: " + m.evaluate(result30d, 0, 30) + "\n");
-		result.append("Max  Correlation: " + result30d[29] + "\n");
-		result.append("Min  Correlation: " + result30d[0] + "\n");
-		result.append("Standard Deviation: " + std.evaluate(result30d) + "\n");
+			result.append("\n30D\n");
+			result.append("Mean Correlation: " + m.evaluate(result30d, 0, 30) + "\n");
+			result.append("Max  Correlation: " + result30d[29] + "\n");
+			result.append("Min  Correlation: " + result30d[0] + "\n");
+			result.append("Standard Deviation: " + std.evaluate(result30d) + "\n");
+		}
+		else {
+			double[] resultArray = new double[30];
+			
+			for(int i = 0; i < 30; i++) {
+				resultArray[i] = correlation(funct, dimension, false);
+			}
+			
+			correlation(funct, dimension, true);
+			
+			Arrays.sort(resultArray);
+			
+			result.append("\n Correlation Ratio \n");
+			
+			result.append("Mean Correlation: " + m.evaluate(resultArray, 0, 30) + "\n");
+			result.append("Max  Correlation: " + resultArray[29] + "\n");
+			result.append("Min  Correlation: " + resultArray[0] + "\n");
+			result.append("Standard Deviation: " + std.evaluate(resultArray) + "\n");
+		}
 		
 		return result.toString();
 	}
 	
-	private static double correlation(AbstractFunction funct, double min, double max, int dimension, boolean writeFile) {
+	private static double correlation(AbstractFunction funct, int dimension, boolean writeFile) {
 		double result = 0;
 
 		try {
@@ -67,7 +88,7 @@ public class FVC {
 				writer.println("# FVC " + dimension + "D Coordinates");
 				
 				for(int i = 0; i < size; i++) {
-					Vector<Double> coordinates = MiscFunctions.getCoordinates(min, max, dimension);
+					Vector<Double> coordinates = MiscFunctions.getCoordinates(funct.getDomainsMin(), funct.getDomainsMax(), dimension);
 
 					double resFit = (double) funct.f(coordinates);
 					double resVal = (double) funct.violation(coordinates);
@@ -83,7 +104,7 @@ public class FVC {
 				double[][] data = new double[2][size];
 				
 				for(int i = 0; i < size; i++) {
-					Vector<Double> coordinates = MiscFunctions.getCoordinates(min, max, dimension);
+					Vector<Double> coordinates = MiscFunctions.getCoordinates(funct.getDomainsMin(), funct.getDomainsMax(), dimension);
 
 					double resFit = (double) funct.f(coordinates);
 					double resVal = (double) funct.violation(coordinates);

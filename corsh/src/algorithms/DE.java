@@ -16,43 +16,62 @@ public class DE {
 	private static int POPSIZE = 100; //Pop Size
 	private static int MAXGEN = 200; //Maximum Generations, Stopping Condition
 	
-	public static String write(AbstractFunction funct, double min, double max) {
+	public static String write(AbstractFunction funct) {
 		StringBuilder result = new StringBuilder();
 		Mean m = new Mean();
 		StandardDeviation std = new StandardDeviation();
+		int dimension = funct.getDimension();
 		
-		double[] result10d = new double[10];
-		double[] result30d = new double[30];
-		
-		for(int i = 0; i < 10; i++) {
-			result10d[i] = evolution(funct, min, max, 10);
+		if(dimension == -1) {
+			double[] result10d = new double[30];
+			double[] result30d = new double[30];
+			
+			for(int i = 0; i < 30; i++) {
+				result10d[i] = evolution(funct, 10);
+			}
+			
+			for(int i = 0; i < 30; i++) {
+				result30d[i] = evolution(funct, 30);
+			}
+			
+			Arrays.sort(result10d);
+			Arrays.sort(result30d);
+			
+			result.append("\n Differential Evolution \n");
+			
+			result.append("10D\n");
+			result.append("Mean Fitness: " + m.evaluate(result10d, 0, 30) + "\n");
+			result.append("Max  Fitness: " + result10d[29] + "\n");
+			result.append("Min  Fitness: " + result10d[0] + "\n");
+			result.append("Standard Deviation: " + std.evaluate(result10d) + "\n");
+
+			result.append("\n30D\n");
+			result.append("Mean Fitness: " + m.evaluate(result30d, 0, 30) + "\n");
+			result.append("Max  Fitness: " + result30d[29] + "\n");
+			result.append("Min  Fitness: " + result30d[0] + "\n");
+			result.append("Standard Deviation: " + std.evaluate(result30d) + "\n");
+		}
+		else {
+			double[] resultArray = new double[30];
+			
+			for(int i = 0; i < 30; i++) {
+				resultArray[i] = evolution(funct, dimension);
+			}
+			
+			Arrays.sort(resultArray);
+			
+			result.append("\n Differential Evolution \n");
+			
+			result.append("Mean Fitness: " + m.evaluate(resultArray, 0, dimension) + "\n");
+			result.append("Max  Fitness: " + resultArray[dimension] + "\n");
+			result.append("Min  Fitness: " + resultArray[0] + "\n");
+			result.append("Standard Deviation: " + std.evaluate(resultArray) + "\n");
 		}
 		
-		for(int i = 0; i < 30; i++) {
-			result30d[i] = evolution(funct, min, max, 30);
-		}
-		
-		Arrays.sort(result10d);
-		Arrays.sort(result30d);
-		
-		result.append("\nDE \n");
-		
-		result.append("10D\n");
-		result.append("Mean DE: " + m.evaluate(result10d, 0, 10) + "\n");
-		result.append("Max  DE: " + result10d[9] + "\n");
-		result.append("Min  DE: " + result10d[0] + "\n");
-		result.append("Standard Deviation: " + std.evaluate(result10d) + "\n");
-
-		result.append("\n30D\n");
-		result.append("Mean DE: " + m.evaluate(result30d, 0, 30) + "\n");
-		result.append("Max  DE: " + result30d[29] + "\n");
-		result.append("Min  DE: " + result30d[0] + "\n");
-		result.append("Standard Deviation: " + std.evaluate(result30d) + "\n");
-
 		return result.toString();
 	}
 	
-	private static double evolution(AbstractFunction funct, double min, double max, int dimension) {
+	private static double evolution(AbstractFunction funct, int dimension) {
 		double bestFitness = Double.MAX_VALUE;
 		
 		//Initialize Population		
@@ -61,7 +80,7 @@ public class DE {
 		for(int i = 0; i < POPSIZE; i++) {
 			population.add(new Vector<Double>());
 			for(int j = 0; j < dimension; j++) {
-				population.get(i).add(MiscFunctions.getRandom(min, max));
+				population.get(i).add(MiscFunctions.getRandom(funct.getDomainsMin()[j], funct.getDomainsMax()[j]));
 			}
 		}
 		
@@ -74,7 +93,7 @@ public class DE {
 				Vector<Double> r1 = population.get(randomIndividuals[0]);
 				Vector<Double> r2 = population.get(randomIndividuals[1]);
 				Vector<Double> r3 = population.get(randomIndividuals[2]);	
-				Vector<Double> child = recombine(parent, r1, r2, r3, dimension, min, max);
+				Vector<Double> child = recombine(parent, r1, r2, r3, dimension, funct.getDomainsMin(), funct.getDomainsMax());
 				
 				//Replacement
 				double childFitness = funct.f(child);	
@@ -98,12 +117,11 @@ public class DE {
 		return bestFitness;
 	}
 	
-	private static Vector<Double> recombine(Vector<Double> parent, Vector<Double> ran1, Vector<Double> ran2, Vector<Double> ran3, int dimension, double min, double max) {
+	private static Vector<Double> recombine(Vector<Double> parent, Vector<Double> ran1, Vector<Double> ran2, Vector<Double> ran3, int dimension, double[] min, double[] max) {
 		//System.out.println("Start recombine");
 		int jrandom = (int) MiscFunctions.getRandom(0,dimension-1);
 		Vector<Double> child = new Vector<Double>(dimension);
 		
-		//System.out.println("Jrandom set to " + jrandom);
 		//System.out.println("Parent " + parent.toString());
 		//System.out.println("Ran1 " + ran1.toString());
 		//System.out.println("Ran2 " + ran2.toString());
@@ -116,11 +134,11 @@ public class DE {
 				double v = ran3.get(j) + (F * (ran1.get(j) - ran2.get(j)));
 				
 				//Repair
-				if(v > max) {
-					v = (parent.get(j) + max) / 2;
+				if(v > max[j]) {
+					v = (parent.get(j) + max[j]) / 2;
 				}
-				else if(v < min) {
-					v = (parent.get(j) + min) / 2;
+				else if(v < min[j]) {
+					v = (parent.get(j) + min[j]) / 2;
 				}
 				
 				child.add(v);

@@ -5,6 +5,9 @@ import java.util.Vector;
 public class C16 extends AbstractFunction {
     private double[] o = new double[]{0.365972807627352,	0.429881383400138,	-0.420917679577772,	0.984265986788929,	0.324792771198785,	0.463737106835568,	0.989554882052943,	0.307453878359996,	0.625094764380575,	-0.358589007202526,	0.24624504504104, -0.96149609569083, -0.184146201911073,	-0.030609388103067,	0.13366054512765,	0.450280168292005,	-0.662063233352676,	0.720384516339946,	0.518473305175091,	-0.969074121149791,	-0.221655317677079,	0.327361832246864,	-0.695097713581401,	-0.671724285177815,	-0.534907819936839,	-0.003991036739113,	0.486452090756303,	-0.689962754053575,	-0.138437260109118,	-0.626943354458217};
 	private final double e = 0.0001;
+	private static int dimension = -1;
+	private static double[] domainsMin = new double[]{-10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10, -10};	
+	private static double[] domainsMax = new double[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
 
     public Double f(Vector<Double> x) {
         double[] z;
@@ -71,5 +74,17 @@ public class C16 extends AbstractFunction {
 		}
 
 		return (g1 + g2 + h1 + h2)/4;
+    }
+    
+    public int getDimension() {
+    	return dimension;
+    }
+    
+    public double[] getDomainsMin() {
+    	return domainsMin;
+    }
+    
+    public double[] getDomainsMax() {
+    	return domainsMax;
     }
 }

@@ -4,7 +4,10 @@ import java.util.Vector;
 
 public class C01 extends AbstractFunction {
 	private double[] o = new double[]{0.030858718087483,	-0.078632292353156, 0.048651146638038,	-0.069089831066354,	-0.087918542941928,	0.088982639811141, 0.074143235639847,	-0.086527593580149,	-0.020616531903907,	0.055586106499231, 0.059285954883598,	-0.040671485554685,	-0.087399911887693,	-0.01842585125741, -0.005184912793062,	-0.039892037937026, 0.036509229387458,	0.026046414854433, -0.067133862936029,	0.082780189144943,	-0.049336722577062,	0.018503188080959, 0.051610619131255, 0.018613117768432, 0.093448598181657,	-0.071208840780873,	-0.036535677894572,	-0.03126128526933, 0.099243805247963,	0.053872445945574};
-
+	private static int dimension = -1;
+	private static double[] domainsMin = new double[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};	
+	private static double[] domainsMax = new double[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+	
     public Double f(Vector<Double> x) {
         double[] z;
 		double f1, f2, f3, f4;
@@ -63,5 +66,17 @@ public class C01 extends AbstractFunction {
 		}
 
 		return (g1 + g2)/2;
+    }
+    
+    public int getDimension() {
+    	return dimension;
+    }
+    
+    public double[] getDomainsMin() {
+    	return domainsMin;
+    }
+    
+    public double[] getDomainsMax() {
+    	return domainsMax;
     }
 }

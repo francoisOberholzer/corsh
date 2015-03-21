@@ -4,10 +4,10 @@ import java.util.Vector;
 import java.lang.Math;
 
 public class MiscFunctions {
-	public static Vector<Double> getCoordinates(double min, double max, int dimension) {
+	public static Vector<Double> getCoordinates(double[] min, double[] max, int dimension) {
 		Vector<Double> result = new Vector<Double>();
 		for(int i = 0; i < dimension; i++) {
-			result.add(getRandom(min, max));
+			result.add(getRandom(min[i], max[i]));
 		}
 		return result;
 	}
