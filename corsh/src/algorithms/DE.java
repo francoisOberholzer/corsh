@@ -7,7 +7,8 @@ import java.util.Vector;
 import org.apache.commons.math3.stat.descriptive.moment.Mean;
 import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation;
 
-import functions.AbstractFunction;
+import problems.AbstractProblem;
+
 import general.MiscFunctions;
 
 public class DE {
@@ -16,7 +17,7 @@ public class DE {
 	private static int POPSIZE = 100; //Pop Size
 	private static int MAXGEN = 200; //Maximum Generations, Stopping Condition
 	
-	public static String write(AbstractFunction funct) {
+	public static String write(AbstractProblem funct) {
 		StringBuilder result = new StringBuilder();
 		Mean m = new Mean();
 		StandardDeviation std = new StandardDeviation();
@@ -71,7 +72,7 @@ public class DE {
 		return result.toString();
 	}
 	
-	private static double evolution(AbstractFunction funct, int dimension) {
+	private static double evolution(AbstractProblem funct, int dimension) {
 		double bestFitness = Double.MAX_VALUE;
 		
 		//Initialize Population		

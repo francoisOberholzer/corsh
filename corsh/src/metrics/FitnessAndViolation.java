@@ -6,13 +6,19 @@ import java.lang.Math;
 import java.text.DecimalFormat;
 import java.util.Vector;
 
-import functions.AbstractFunction;
+import problems.AbstractProblem;
+
 
 public class FitnessAndViolation {
-	public static void write(AbstractFunction funct) {
+	public static void write(AbstractProblem funct, int id) {
 		try {
-			PrintWriter writerFit = new PrintWriter("Fitness.dat");
-			PrintWriter writerVal = new PrintWriter("Violation.dat");
+			if(funct.getDimension() != -1) {
+				System.out.println("Fitness and Violation called for non extendible problem");
+				return;
+			}
+			
+			PrintWriter writerFit = new PrintWriter(id + "_Fitness.dat");
+			PrintWriter writerVal = new PrintWriter(id + "_Violation.dat");
 		
 			Vector<Double> in = new Vector<Double>();
 			in.add(0.0);

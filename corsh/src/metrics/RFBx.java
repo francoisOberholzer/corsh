@@ -1,6 +1,5 @@
 package metrics;
 
-import functions.AbstractFunction;
 import general.BinaryFlag;
 import general.MiscFunctions;
 
@@ -11,8 +10,10 @@ import java.util.Vector;
 import org.apache.commons.math3.stat.descriptive.moment.Mean;
 import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation;
 
+import problems.AbstractProblem;
+
 public class RFBx {
-	public static String write(AbstractFunction funct) {
+	public static String write(AbstractProblem funct) {
 		StringBuilder result = new StringBuilder();
 		Mean m = new Mean();
 		StandardDeviation std = new StandardDeviation();
@@ -67,7 +68,7 @@ public class RFBx {
 		return result.toString();
 	}
 	
-	private static double crossing(AbstractFunction funct, int dimension) {
+	private static double crossing(AbstractProblem funct, int dimension) {
 		int numSteps = 1000;
 		int numWalks = dimension;
 		double[] min = funct.getDomainsMin();

@@ -1,7 +1,0 @@
-package functions;
-
-import java.util.Vector;
-
-public class G01 extends AbstractFunction {
-
-}
