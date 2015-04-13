@@ -84,7 +84,7 @@ public class FVC {
 			int size = dimension * 1000;
 				
 			if(writeFile) {
-				PrintWriter writer = new PrintWriter(id + "_" + dimension + "D_" + "FVC.dat");
+				PrintWriter writer = new PrintWriter((id+1) + "_" + dimension + "D" + "FVC.dat");
 				
 				writer.println("# FVC " + dimension + "D Coordinates");
 				

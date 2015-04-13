@@ -35,7 +35,7 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Start.java" partName="Start.java" path="/home/francois/Documents/corsh/corsh/src/general/Start.java" title="Start.java" tooltip="corsh/src/general/Start.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/corsh/src/general/Start.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="914" selectionTopPixel="1251"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3498" selectionTopPixel="1251"/>
 </editor>
 </editors>
 <views>
@@ -147,163 +147,164 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/general/Start.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/metrics/FitnessAndViolation.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/metrics/FVC.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/general/MiscFunctions.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/problems/G21.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/problems/G22.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/algorithms/DE.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/general/Start.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/metrics/FVC.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/metrics/FitnessAndViolation.java"/>
 </editors>
-<item historyLabel="FVC.java" index="2">
-<position/>
-</item>
-<item historyLabel="FitnessAndViolation.java" index="1">
-<position info="not_deleted" x="576" y="0"/>
-</item>
-<item historyLabel="FVC.java" index="2">
-<position/>
-</item>
-<item historyLabel="Start.java" index="0">
-<position info="not_deleted" x="3059" y="0"/>
-</item>
-<item historyLabel="FVC.java" index="2">
-<position info="not_deleted" x="3291" y="4"/>
-</item>
-<item historyLabel="MiscFunctions.java" index="3">
+<item historyLabel="MiscFunctions.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="FVC.java" index="2">
+<item historyLabel="FVC.java" index="1">
 <position info="not_deleted" x="2462" y="11"/>
 </item>
-<item historyLabel="G21.java" index="4">
+<item historyLabel="G21.java" index="3">
 <position info="not_deleted" x="378" y="0"/>
 </item>
 <item historyLabel="Start.java" index="0">
 <position info="not_deleted" x="3059" y="0"/>
 </item>
-<item historyLabel="FVC.java" index="2">
+<item historyLabel="FVC.java" index="1">
 <position info="not_deleted" x="3674" y="0"/>
 </item>
-<item historyLabel="G21.java" index="4">
+<item historyLabel="G21.java" index="3">
 <position info="not_deleted" x="378" y="0"/>
 </item>
-<item historyLabel="MiscFunctions.java" index="3">
+<item historyLabel="MiscFunctions.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="FVC.java" index="2">
+<item historyLabel="FVC.java" index="1">
 <position info="not_deleted" x="3674" y="0"/>
 </item>
-<item historyLabel="FVC.java" index="2">
+<item historyLabel="FVC.java" index="1">
 <position/>
 </item>
-<item historyLabel="FVC.java" index="2">
+<item historyLabel="FVC.java" index="1">
 <position info="not_deleted" x="3599" y="0"/>
 </item>
-<item historyLabel="G21.java" index="4">
+<item historyLabel="G21.java" index="3">
 <position info="not_deleted" x="1097" y="0"/>
 </item>
-<item historyLabel="MiscFunctions.java" index="3">
+<item historyLabel="MiscFunctions.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="FVC.java" index="2">
+<item historyLabel="FVC.java" index="1">
 <position info="not_deleted" x="3631" y="0"/>
 </item>
-<item historyLabel="G21.java" index="4">
+<item historyLabel="G21.java" index="3">
 <position info="not_deleted" x="275" y="0"/>
 </item>
-<item historyLabel="FVC.java" index="2">
+<item historyLabel="FVC.java" index="1">
 <position info="not_deleted" x="3631" y="0"/>
 </item>
-<item historyLabel="G22.java" index="5">
+<item historyLabel="G22.java" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="G22.java" index="5">
+<item historyLabel="G22.java" index="4">
 <position/>
 </item>
-<item historyLabel="G22.java" index="5">
+<item historyLabel="G22.java" index="4">
 <position/>
 </item>
-<item historyLabel="G22.java" index="5">
+<item historyLabel="G22.java" index="4">
 <position info="not_deleted" x="217" y="6"/>
 </item>
-<item historyLabel="MiscFunctions.java" index="3">
+<item historyLabel="MiscFunctions.java" index="2">
 <position info="not_deleted" x="338" y="0"/>
 </item>
-<item historyLabel="G22.java" index="5">
+<item historyLabel="G22.java" index="4">
 <position info="not_deleted" x="217" y="6"/>
 </item>
-<item historyLabel="FVC.java" index="2">
+<item historyLabel="FVC.java" index="1">
 <position info="not_deleted" x="3599" y="0"/>
 </item>
-<item historyLabel="G22.java" index="5">
+<item historyLabel="G22.java" index="4">
 <position info="not_deleted" x="217" y="6"/>
 </item>
-<item historyLabel="MiscFunctions.java" index="3">
+<item historyLabel="MiscFunctions.java" index="2">
 <position info="not_deleted" x="338" y="0"/>
 </item>
-<item historyLabel="FVC.java" index="2">
+<item historyLabel="FVC.java" index="1">
 <position info="not_deleted" x="3599" y="0"/>
 </item>
-<item historyLabel="MiscFunctions.java" index="3">
+<item historyLabel="MiscFunctions.java" index="2">
 <position info="not_deleted" x="338" y="0"/>
 </item>
-<item historyLabel="FVC.java" index="2">
+<item historyLabel="FVC.java" index="1">
 <position info="not_deleted" x="3599" y="0"/>
 </item>
-<item historyLabel="MiscFunctions.java" index="3">
+<item historyLabel="MiscFunctions.java" index="2">
 <position info="not_deleted" x="318" y="0"/>
 </item>
-<item historyLabel="G22.java" index="5">
+<item historyLabel="G22.java" index="4">
 <position info="not_deleted" x="217" y="6"/>
 </item>
-<item historyLabel="MiscFunctions.java" index="3">
+<item historyLabel="MiscFunctions.java" index="2">
 <position info="not_deleted" x="318" y="0"/>
 </item>
-<item historyLabel="G22.java" index="5">
+<item historyLabel="G22.java" index="4">
 <position info="not_deleted" x="217" y="6"/>
 </item>
-<item historyLabel="MiscFunctions.java" index="3">
+<item historyLabel="MiscFunctions.java" index="2">
 <position info="not_deleted" x="489" y="0"/>
 </item>
 <item historyLabel="Start.java" index="0">
 <position info="not_deleted" x="3059" y="0"/>
 </item>
-<item historyLabel="G22.java" index="5">
+<item historyLabel="G22.java" index="4">
 <position info="not_deleted" x="1473" y="0"/>
 </item>
 <item historyLabel="Start.java" index="0">
 <position info="not_deleted" x="3767" y="0"/>
 </item>
-<item historyLabel="FVC.java" index="2">
+<item historyLabel="FVC.java" index="1">
 <position info="not_deleted" x="3737" y="0"/>
 </item>
 <item historyLabel="Start.java" index="0">
 <position info="not_deleted" x="3767" y="0"/>
 </item>
-<item historyLabel="DE.java" index="6">
+<item historyLabel="DE.java" index="5">
 <position info="not_deleted" x="904" y="0"/>
 </item>
-<item historyLabel="Start.java" index="7">
+<item historyLabel="Start.java" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="DE.java" index="6">
+<item historyLabel="DE.java" index="5">
 <position info="not_deleted" x="904" y="0"/>
 </item>
-<item historyLabel="Start.java" index="7">
+<item historyLabel="Start.java" index="6">
 <position info="not_deleted" x="914" y="0"/>
 </item>
-<item historyLabel="DE.java" index="6">
+<item historyLabel="DE.java" index="5">
 <position info="not_deleted" x="1213" y="1"/>
 </item>
-<item historyLabel="Start.java" index="7">
+<item historyLabel="Start.java" index="6">
 <position info="not_deleted" x="914" y="0"/>
 </item>
-<item historyLabel="DE.java" index="6">
+<item historyLabel="DE.java" index="5">
 <position info="not_deleted" x="3611" y="12"/>
 </item>
-<item active="true" historyLabel="Start.java" index="7">
+<item historyLabel="Start.java" index="6">
 <position info="not_deleted" x="914" y="0"/>
+</item>
+<item historyLabel="FVC.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="FitnessAndViolation.java" index="8">
+<position info="not_deleted" x="560" y="0"/>
+</item>
+<item historyLabel="FVC.java" index="7">
+<position info="not_deleted" x="2697" y="0"/>
+</item>
+<item historyLabel="FitnessAndViolation.java" index="8">
+<position info="not_deleted" x="496" y="0"/>
+</item>
+<item active="true" historyLabel="Start.java" index="6">
+<position info="not_deleted" x="3498" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -322,6 +323,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FitnessAndViolation.java" tooltip="corsh/src/metrics/FitnessAndViolation.java">
+<persistable path="/corsh/src/metrics/FitnessAndViolation.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FVC.java" tooltip="corsh/src/metrics/FVC.java">
+<persistable path="/corsh/src/metrics/FVC.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Start.java" tooltip="corsh/src/general/Start.java">
 <persistable path="/corsh/src/general/Start.java"/>
 </file>
@@ -336,12 +343,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MiscFunctions.java" tooltip="corsh/src/general/MiscFunctions.java">
 <persistable path="/corsh/src/general/MiscFunctions.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FVC.java" tooltip="corsh/src/metrics/FVC.java">
-<persistable path="/corsh/src/metrics/FVC.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FitnessAndViolation.java" tooltip="corsh/src/metrics/FitnessAndViolation.java">
-<persistable path="/corsh/src/metrics/FitnessAndViolation.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="C01.java" tooltip="corsh/src/problems/C01.java">
 <persistable path="/corsh/src/problems/C01.java"/>
