@@ -12,8 +12,8 @@ import problems.AbstractProblem;
 public class FitnessAndViolation {
 	public static void write(AbstractProblem funct, int id) {
 		try {
-			if(funct.getDimension() != -1) {
-				System.out.println("Fitness and Violation called for non extendible problem");
+			if((funct.getDimension() != -1) && (funct.getDimension() != 2)) {
+				System.out.println("Fitness and Violation called for non extendible or non 2D problem");
 				return;
 			}
 			

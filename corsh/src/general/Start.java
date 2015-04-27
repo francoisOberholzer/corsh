@@ -86,14 +86,14 @@ public class Start {
 					writer.println();
 					System.out.println("Starting Simulation for " + (i+1) + "...");
 					
-					if(problems[i].getDimension() == -1) {
+					if((problems[i].getDimension() == -1) || (problems[i].getDimension() == 2)) {
 						FitnessAndViolation.write(problems[i], i);
 					}
 					writer.println(FVC.write(problems[i], i));
-					writer.println(FsR.write(problems[i]));
-					writer.println(RFBx.write(problems[i]));
-					writer.println(PiIZ_001.write(problems[i]));
-					writer.println(PiIZ_025.write(problems[i]));		
+					writer.println(FsR.write(problems[i], i));
+					writer.println(RFBx.write(problems[i], i));
+					writer.println(PiIZ_001.write(problems[i], i));
+					writer.println(PiIZ_025.write(problems[i], i));		
 				}
 				
 				System.out.println("Finished.");

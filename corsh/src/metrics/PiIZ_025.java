@@ -2,6 +2,8 @@ package metrics;
 
 import general.MiscFunctions;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -13,7 +15,7 @@ import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation;
 import problems.AbstractProblem;
 
 public class PiIZ_025 {
-	public static String write(AbstractProblem funct) {
+	public static String write(AbstractProblem funct, int id) {
 		StringBuilder result = new StringBuilder();
 		Mean m = new Mean();
 		StandardDeviation std = new StandardDeviation();
@@ -31,10 +33,28 @@ public class PiIZ_025 {
 				result30d[i] = idealZone(funct, 30);
 			}
 			
+			try {
+				PrintWriter writer = new PrintWriter((id+1) + "_" + dimension + "D_" + "PilZ025_Raw.dat");
+				
+				writer.println("Raw 10D");
+				for(int i = 0; i < 30; i++) {
+					writer.println(result10d[i]);
+				}
+				writer.println("Raw 30D");
+				for(int i = 0; i < 30; i++) {
+					writer.println(result30d[i]);
+				}
+				
+				writer.close();
+			}
+			catch (FileNotFoundException fnfe) {
+				System.out.println("Error RAW file not found.");
+			}
+			
 			Arrays.sort(result10d);
 			Arrays.sort(result30d);
 			
-			result.append("\n Proportion in Ideal Zone \n");
+			result.append("\nProportion in Ideal Zone 0.25 \n");
 			
 			result.append("10D\n");
 			result.append("Mean IdealZone: " + m.evaluate(result10d, 0, 30) + "\n");
@@ -55,12 +75,26 @@ public class PiIZ_025 {
 				resultArray[i] = idealZone(funct, dimension);
 			}
 			
+			try {
+				PrintWriter writer = new PrintWriter((id+1) + "_" + dimension + "D_" + "PilZ025_Raw.dat");
+
+				writer.println("Raw " + dimension + "D");
+				for(int i = 0; i < 30; i++) {
+					writer.println(resultArray[i]);
+				}
+				
+				writer.close();
+			}
+			catch (FileNotFoundException fnfe) {
+				System.out.println("Error RAW file not found.");
+			}
+			
 			Arrays.sort(resultArray);
 			
-			result.append("\n Proportion in Ideal Zone \n");
+			result.append("\nProportion in Ideal Zone 0.25 \n");
 			
 			result.append("Mean IdealZone: " + m.evaluate(resultArray, 0, dimension) + "\n");
-			result.append("Max  IdealZone: " + resultArray[dimension] + "\n");
+			result.append("Max  IdealZone: " + resultArray[29] + "\n");
 			result.append("Min  IdealZone: " + resultArray[0] + "\n");
 			result.append("Standard Deviation: " + std.evaluate(resultArray) + "\n");
 		}

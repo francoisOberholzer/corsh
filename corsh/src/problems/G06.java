@@ -8,6 +8,17 @@ public class G06 extends AbstractProblem {
 	private static double[] domainsMin = new double[]{13, 0};	
 	private static double[] domainsMax = new double[]{100, 100};
 	
+	public static void main(String[] args) {
+		Vector<Double> in = new Vector<Double>();
+		in.add(14.09500000000000064);
+		in.add(0.8429607892154795668);
+		G06 ex = new G06();
+		double res = ex.f(in);
+		double vio = ex.violation(in);
+		System.out.println("Fitness: " + res);
+		System.out.println("Violation: " + vio);
+	}
+	
     public Double f(Vector<Double> x) {
     	double f;
     	

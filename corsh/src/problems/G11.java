@@ -20,7 +20,7 @@ public class G11 extends AbstractProblem {
     public double violation(Vector<Double> x) {
     	double h;
     	
-    	h = x.get(1) - x.get(0) * x.get(0);
+    	h = x.get(1) - (x.get(0) * x.get(0));
 
 		if ((h - e) <= 0) {
 			h = 0;

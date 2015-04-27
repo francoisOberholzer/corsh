@@ -38,10 +38,28 @@ public class FVC {
 			correlation(funct, 10, true, id);
 			correlation(funct, 30, true, id);
 			
+			try {
+				PrintWriter writer = new PrintWriter((id+1) + "_" + dimension + "D_" + "FVC_Raw.dat");
+				
+				writer.println("Raw 10D");
+				for(int i = 0; i < 30; i++) {
+					writer.println(result10d[i]);
+				}
+				writer.println("Raw 30D");
+				for(int i = 0; i < 30; i++) {
+					writer.println(result30d[i]);
+				}
+				
+				writer.close();
+			}
+			catch (FileNotFoundException fnfe) {
+				System.out.println("Error RAW file not found.");
+			}
+			
 			Arrays.sort(result10d);
 			Arrays.sort(result30d);
 			
-			result.append("\n Correlation Ratio \n");
+			result.append("\nCorrelation Ratio (FVC)\n");
 			
 			result.append("10D\n");
 			result.append("Mean Correlation: " + m.evaluate(result10d, 0, 30) + "\n");
@@ -64,9 +82,23 @@ public class FVC {
 			
 			correlation(funct, dimension, true, id);
 			
+			try {
+				PrintWriter writer = new PrintWriter((id+1) + "_" + dimension + "D_" + "FVC_Raw.dat");
+
+				writer.println("Raw " + dimension + "D");
+				for(int i = 0; i < 30; i++) {
+					writer.println(resultArray[i]);
+				}
+				
+				writer.close();
+			}
+			catch (FileNotFoundException fnfe) {
+				System.out.println("Error RAW file not found.");
+			}
+			
 			Arrays.sort(resultArray);
 			
-			result.append("\n Correlation Ratio \n");
+			result.append("\nCorrelation Ratio (FVC)\n");
 			
 			result.append("Mean Correlation: " + m.evaluate(resultArray, 0, 30) + "\n");
 			result.append("Max  Correlation: " + resultArray[29] + "\n");
