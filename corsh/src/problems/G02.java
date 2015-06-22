@@ -21,6 +21,7 @@ public class G02 extends AbstractProblem {
 		     f2 = f2 * Math.cos(x.get(i)) * Math.cos(x.get(i));
 		     f3 = f3 + ((double) (i + 1)) * x.get(i) * x.get(i);
 		 }
+		 
 		 f = Math.abs((f1 - (2 * f2)) / Math.sqrt(f3));
 		 f = -f;
 		 

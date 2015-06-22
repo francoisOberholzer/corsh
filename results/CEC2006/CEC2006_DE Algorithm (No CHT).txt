@@ -1,0 +1,193 @@
+Results for DE Algorithm (No CHT) as run on CEC2006
+
+*****************************************
+Problem: 1
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 2
+*****************************************
+
+Mean Fitness: -122.69131788820528
+Max  Fitness: -85.75069603991264
+Min  Fitness: -178.81687706622748
+Standard Deviation: 30.872058557687353
+
+
+*****************************************
+Problem: 3
+*****************************************
+
+Mean Fitness: -99999.7139752001
+Max  Fitness: -99999.68394474285
+Min  Fitness: -99999.78664707717
+Standard Deviation: 0.07473439934820333
+
+
+*****************************************
+Problem: 4
+*****************************************
+
+Mean Fitness: -32217.431037100003
+Max  Fitness: -32217.431037100003
+Min  Fitness: -32217.431037100003
+Standard Deviation: 5.664203243113556E-12
+
+
+*****************************************
+Problem: 5
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 6
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 7
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 8
+*****************************************
+
+Mean Fitness: -1558.5454565440396
+Max  Fitness: -1558.5454565440393
+Min  Fitness: -1558.5454565440396
+Standard Deviation: 3.6977612338884917E-13
+
+
+*****************************************
+Problem: 9
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 10
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 11
+*****************************************
+
+Mean Fitness: 6.513103272531638E-54
+Max  Fitness: 1.960618288383244E-53
+Min  Fitness: 2.512785352908044E-54
+Standard Deviation: 6.25899629684385E-46
+
+
+*****************************************
+Problem: 12
+*****************************************
+
+Mean Fitness: -1.0
+Max  Fitness: -1.0
+Min  Fitness: -1.0
+Standard Deviation: 0.0
+
+
+*****************************************
+Problem: 13
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 14
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 15
+*****************************************
+
+Mean Fitness: 400.0
+Max  Fitness: 400.0
+Min  Fitness: 400.0
+Standard Deviation: 2.366580246719119E-13
+
+
+*****************************************
+Problem: 16
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 17
+*****************************************
+
+Mean Fitness: 8213.326122722678
+Max  Fitness: 8213.326122722685
+Min  Fitness: 8213.326122722674
+Standard Deviation: 1.3406703235008223E-11
+
+
+*****************************************
+Problem: 18
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 19
+*****************************************
+
+Mean Fitness: -59.985237310652636
+Max  Fitness: -59.98192505423258
+Min  Fitness: -59.98939957035848
+Standard Deviation: 0.004067441363237722
+
+
+*****************************************
+Problem: 20
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 21
+*****************************************
+
+Mean Fitness: 9.31466236914878E-26
+Max  Fitness: 2.0855853171892964E-25
+Min  Fitness: 5.650202170063998E-26
+Standard Deviation: 3.571435845708896E-24
+
+
+*****************************************
+Problem: 22
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 23
+*****************************************
+
+Mean Fitness: -3899.999995936463
+Max  Fitness: -3899.999994570238
+Min  Fitness: -3899.9999979161494
+Standard Deviation: 2.502122209425308E-6
+
+
+*****************************************
+Problem: 24
+*****************************************
+
+Mean Fitness: -7.0
+Max  Fitness: -7.0
+Min  Fitness: -7.0
+Standard Deviation: 0.0
+

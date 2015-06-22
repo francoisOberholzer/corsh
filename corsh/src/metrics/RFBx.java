@@ -1,7 +1,6 @@
 package metrics;
 
-import general.BinaryFlag;
-import general.MiscFunctions;
+import general.RandFunctions;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -22,8 +21,13 @@ public class RFBx {
 		int dimension = funct.getDimension();
 		
 		if(dimension == -1) {
+			double[] result2d = new double[30];
 			double[] result10d = new double[30];
 			double[] result30d = new double[30];
+			
+			for(int i = 0; i < 30; i++) {
+				result2d[i] = crossing(funct, 2);
+			}
 			
 			for(int i = 0; i < 30; i++) {
 				result10d[i] = crossing(funct, 10);
@@ -36,6 +40,10 @@ public class RFBx {
 			try {
 				PrintWriter writer = new PrintWriter((id+1) + "_" + dimension + "D_" + "RFBx_Raw.dat");
 				
+				writer.println("Raw 2D");
+				for(int i = 0; i < 30; i++) {
+					writer.println(result2d[i]);
+				}
 				writer.println("Raw 10D");
 				for(int i = 0; i < 30; i++) {
 					writer.println(result10d[i]);
@@ -51,10 +59,17 @@ public class RFBx {
 				System.out.println("Error RAW file not found.");
 			}
 			
+			Arrays.sort(result2d);
 			Arrays.sort(result10d);
 			Arrays.sort(result30d);
 			
 			result.append("\nRatio of Feasibility Boundary Crossings (RFBx)\n");
+			
+			result.append("2D\n");
+			result.append("Mean Crossings: " + m.evaluate(result2d, 0, 30) + "\n");
+			result.append("Max  Crossings: " + result2d[29] + "\n");
+			result.append("Min  Crossings: " + result2d[0] + "\n");
+			result.append("Standard Deviation: " + std.evaluate(result2d) + "\n");
 			
 			result.append("10D\n");
 			result.append("Mean Crossings: " + m.evaluate(result10d, 0, 30) + "\n");
@@ -129,13 +144,13 @@ public class RFBx {
 			
 			//Initialize
 			for(int i = 0; i < dimension; i++) {
-	    	    double offset = MiscFunctions.getRandom(0,1)*((max[i] - min[i])*0.5);
+	    	    double offset = RandFunctions.getRandom(0,1)*((max[i] - min[i])*0.5);
 	    	    if (bf.isSet(i))
 	    	       temp.add(max[i] - offset);
 	            else
 	    	       temp.add(min[i] + offset); 
 	    	}
-	        int randDim = (int)Math.floor(MiscFunctions.getRandom(0,1)*dimension);
+	        int randDim = (int)Math.floor(RandFunctions.getRandom(0,1)*dimension);
 		    if (bf.isSet(randDim))
 	            temp.set(randDim, max[randDim]);
 	        else
@@ -146,7 +161,7 @@ public class RFBx {
 	        	steps.add(new Vector<Double>(dimension));
 	        	for(int j = 0; j < dimension; j++) {
 	        		steps.get(i).add(temp.get(j));
-	        		smallRandomChange = (MiscFunctions.getRandom(0,1)*(max[j]-min[j]) * 0.01);
+	        		smallRandomChange = (RandFunctions.getRandom(0,1)*(max[j]-min[j]) * 0.01);
 	                
 	                if (bf.isSet(j)) 
 	                    smallRandomChange = -smallRandomChange;

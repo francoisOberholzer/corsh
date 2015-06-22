@@ -5,39 +5,39 @@ Problem: 1
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: -0.9996447127669474
-Max  Correlation: -0.9996315624793888
-Min  Correlation: -0.9996572778240995
-Standard Deviation: 7.31566931223357E-6
+Correlation Ratio (FVC)
+Mean Correlation: -0.999644100481828
+Max  Correlation: -0.999631121609109
+Min  Correlation: -0.9996587446698103
+Standard Deviation: 8.028183147585432E-6
 
 
-Feasibility Ratio 
+Feasibility Ratio (FsR) 
 Mean Feasibility: 0.0
-Max  Feasibility: 0.0
+Max  Feasibility: 7.692307692307693E-5
 Min  Feasibility: 0.0
-Standard Deviation: 2.3471428971489592E-5
+Standard Deviation: 1.951601013095865E-5
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.0
 Max  Crossings: 0.0
 Min  Crossings: 0.0
 Standard Deviation: 0.0
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.006656804733727811
-Max  IdealZone: 0.008076923076923077
-Min  IdealZone: 0.005076923076923077
-Standard Deviation: 0.0012144950801327831
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.005911242603550296
+Max  IdealZone: 0.009
+Min  IdealZone: 0.0034615384615384616
+Standard Deviation: 0.0013760047617157563
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.4893786982248521
-Max  IdealZone: 0.49715384615384617
-Min  IdealZone: 0.46992307692307694
-Standard Deviation: 0.00859655008314225
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.4865562130177515
+Max  IdealZone: 0.5104615384615384
+Min  IdealZone: 0.4704615384615385
+Standard Deviation: 0.010790009006562263
 
 
 *****************************************
@@ -45,39 +45,39 @@ Problem: 2
 *****************************************
 
 
- Correlation Ratio 
+Correlation Ratio (FVC)
 Mean Correlation: NaN
 Max  Correlation: NaN
-Min  Correlation: -0.012237344335240308
+Min  Correlation: -0.012177330336096304
 Standard Deviation: NaN
 
 
-Feasibility Ratio 
-Mean Feasibility: 0.99996
+Feasibility Ratio (FsR) 
+Mean Feasibility: 0.999965
 Max  Feasibility: 1.0
 Min  Feasibility: 0.9999
-Standard Deviation: 3.407226937304923E-5
+Standard Deviation: 2.8567323186165143E-5
 
 
- Ration of Feasibility Boundary Crossings 
-Mean Crossings: 0.017952952952952954
-Max  Crossings: 0.01881881881881882
-Min  Crossings: 0.016566566566566566
-Standard Deviation: 9.113378515150889E-4
+Ratio of Feasibility Boundary Crossings (RFBx)
+Mean Crossings: 0.01795045045045045
+Max  Crossings: 0.020270270270270275
+Min  Crossings: 0.017067067067067072
+Standard Deviation: 8.226932818588048E-4
 
 
- Proportion in Ideal Zone 
+Proportion in Ideal Zone 0.01 
 Mean IdealZone: 7.499999999999999E-6
-Max  IdealZone: 5.0E-5
+Max  IdealZone: 4.5E-4
 Min  IdealZone: 0.0
-Standard Deviation: 1.290549201456229E-4
+Standard Deviation: 1.2157964136894917E-4
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.0082275
-Max  IdealZone: 0.07325
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.015170000000000003
+Max  IdealZone: 0.1814
 Min  IdealZone: 0.0
-Standard Deviation: 0.06937425830606941
+Standard Deviation: 0.05619576079749428
 
 
 *****************************************
@@ -85,39 +85,39 @@ Problem: 3
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: -0.7527634297599302
-Max  Correlation: -0.7427780122194608
-Min  Correlation: -0.7667503516066159
-Standard Deviation: 0.005713652272755059
+Correlation Ratio (FVC)
+Mean Correlation: -0.7546648654744104
+Max  Correlation: -0.7471796897318009
+Min  Correlation: -0.7614249453576228
+Standard Deviation: 0.004208535643018631
 
 
-Feasibility Ratio 
-Mean Feasibility: 0.00172
-Max  Feasibility: 0.0022
-Min  Feasibility: 0.0013
-Standard Deviation: 6.144710836513613E-4
+Feasibility Ratio (FsR) 
+Mean Feasibility: 0.00201
+Max  Feasibility: 0.0038
+Min  Feasibility: 0.0017
+Standard Deviation: 5.091800936958278E-4
 
 
- Ration of Feasibility Boundary Crossings 
-Mean Crossings: 0.004804804804804804
-Max  Crossings: 0.004904904904904904
+Ratio of Feasibility Boundary Crossings (RFBx)
+Mean Crossings: 0.004784784784784784
+Max  Crossings: 0.005005005005005004
 Min  Crossings: 0.004704704704704704
-Standard Deviation: 8.038153882855244E-5
+Standard Deviation: 8.592190557182934E-5
 
 
- Proportion in Ideal Zone 
+Proportion in Ideal Zone 0.01 
 Mean IdealZone: 1.0E-4
-Max  IdealZone: 1.0E-4
+Max  IdealZone: 4.0E-4
 Min  IdealZone: 1.0E-4
-Standard Deviation: 7.76079152261361E-5
+Standard Deviation: 8.603661343041526E-5
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 3.3E-4
-Max  IdealZone: 5.0E-4
-Min  IdealZone: 2.0E-4
-Standard Deviation: 4.982267406086021E-4
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 2.9E-4
+Max  IdealZone: 0.0024
+Min  IdealZone: 1.0E-4
+Standard Deviation: 6.407610417649298E-4
 
 
 *****************************************
@@ -125,39 +125,39 @@ Problem: 4
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: -0.35931343309629965
-Max  Correlation: -0.3377375376203317
-Min  Correlation: -0.38587309623562005
-Standard Deviation: 0.013396644554138786
+Correlation Ratio (FVC)
+Mean Correlation: -0.35930637416201
+Max  Correlation: -0.33959938158050673
+Min  Correlation: -0.3817375610499617
+Standard Deviation: 0.011354060897038545
 
 
-Feasibility Ratio 
-Mean Feasibility: 0.26268
-Max  Feasibility: 0.2656
-Min  Feasibility: 0.2604
-Standard Deviation: 0.004934215516028932
+Feasibility Ratio (FsR) 
+Mean Feasibility: 0.26148
+Max  Feasibility: 0.2882
+Min  Feasibility: 0.2578
+Standard Deviation: 0.007165575431489634
 
 
- Ration of Feasibility Boundary Crossings 
-Mean Crossings: 0.005005005005005005
-Max  Crossings: 0.005205205205205205
-Min  Crossings: 0.004804804804804805
-Standard Deviation: 9.758085380741278E-4
+Ratio of Feasibility Boundary Crossings (RFBx)
+Mean Crossings: 0.005245245245245245
+Max  Crossings: 0.008208208208208207
+Min  Crossings: 0.004404404404404405
+Standard Deviation: 9.413741431934049E-4
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.01928
-Max  IdealZone: 0.0216
-Min  IdealZone: 0.016
-Standard Deviation: 0.004323818023327366
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.01836
+Max  IdealZone: 0.0374
+Min  IdealZone: 0.0168
+Standard Deviation: 0.0054209639894314595
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.54652
-Max  IdealZone: 0.5552
-Min  IdealZone: 0.536
-Standard Deviation: 0.011855391130223191
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.54952
+Max  IdealZone: 0.581
+Min  IdealZone: 0.5378
+Standard Deviation: 0.010094871806100813
 
 
 *****************************************
@@ -165,39 +165,39 @@ Problem: 5
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: -0.379826686732918
-Max  Correlation: -0.341452830153303
-Min  Correlation: -0.40908441981777705
-Standard Deviation: 0.013613220886948411
+Correlation Ratio (FVC)
+Mean Correlation: -0.37828420051151224
+Max  Correlation: -0.352222978951436
+Min  Correlation: -0.41227836739239715
+Standard Deviation: 0.013342187843326634
 
 
-Feasibility Ratio 
+Feasibility Ratio (FsR) 
 Mean Feasibility: 0.0
 Max  Feasibility: 0.0
 Min  Feasibility: 0.0
 Standard Deviation: 0.0
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.0
 Max  Crossings: 0.0
 Min  Crossings: 0.0
 Standard Deviation: 0.0
 
 
- Proportion in Ideal Zone 
+Proportion in Ideal Zone 0.01 
 Mean IdealZone: 0.0
 Max  IdealZone: 0.0
 Min  IdealZone: 0.0
 Standard Deviation: 0.0
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.0344375
-Max  IdealZone: 0.036
-Min  IdealZone: 0.033
-Standard Deviation: 0.004045262945576044
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.0365625
+Max  IdealZone: 0.05075
+Min  IdealZone: 0.03525
+Standard Deviation: 0.003777590075909402
 
 
 *****************************************
@@ -205,39 +205,39 @@ Problem: 6
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: 0.9676086136521532
-Max  Correlation: 0.969970247492562
-Min  Correlation: 0.9644447396111853
-Standard Deviation: 0.0015395267489169712
+Correlation Ratio (FVC)
+Mean Correlation: 0.9676391062597768
+Max  Correlation: 0.9716917409229349
+Min  Correlation: 0.9631378477844628
+Standard Deviation: 0.001795746730485857
 
 
-Feasibility Ratio 
+Feasibility Ratio (FsR) 
 Mean Feasibility: 0.0
-Max  Feasibility: 0.0
+Max  Feasibility: 5.0E-4
 Min  Feasibility: 0.0
-Standard Deviation: 1.7287295182088022E-4
+Standard Deviation: 1.5256428831468235E-4
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.0
-Max  Crossings: 0.0
+Max  Crossings: 0.001001001001001001
 Min  Crossings: 0.0
-Standard Deviation: 5.045114444381691E-4
+Standard Deviation: 1.8275694277783322E-4
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.136
-Max  IdealZone: 0.138
-Min  IdealZone: 0.1355
-Standard Deviation: 0.0065317306854406065
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.1375
+Max  IdealZone: 0.163
+Min  IdealZone: 0.137
+Standard Deviation: 0.0072381691023367875
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.7335
-Max  IdealZone: 0.7415
-Min  IdealZone: 0.731
-Standard Deviation: 0.014307180095981548
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.7245
+Max  IdealZone: 0.794
+Min  IdealZone: 0.7125
+Standard Deviation: 0.0167297656131598
 
 
 *****************************************
@@ -245,39 +245,39 @@ Problem: 7
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: 0.2615157582899577
-Max  Correlation: 0.2780503106605027
-Min  Correlation: 0.24150260652302694
-Standard Deviation: 0.00891353134097337
+Correlation Ratio (FVC)
+Mean Correlation: 0.2631589670043899
+Max  Correlation: 0.2853207485732069
+Min  Correlation: 0.24191222808712345
+Standard Deviation: 0.009108983050220157
 
 
-Feasibility Ratio 
+Feasibility Ratio (FsR) 
 Mean Feasibility: 0.0
 Max  Feasibility: 0.0
 Min  Feasibility: 0.0
 Standard Deviation: 0.0
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.0
-Max  Crossings: 0.0
+Max  Crossings: 4.004004004004004E-4
 Min  Crossings: 0.0
-Standard Deviation: 6.108680212800095E-5
+Standard Deviation: 9.231892640188471E-5
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.0
-Max  IdealZone: 0.0
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 2.0E-5
+Max  IdealZone: 5.0E-4
 Min  IdealZone: 0.0
-Standard Deviation: 9.994251221140298E-5
+Standard Deviation: 1.2410599844719315E-4
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.52591
-Max  IdealZone: 0.5432
-Min  IdealZone: 0.4962
-Standard Deviation: 0.028846451404300835
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.53001
+Max  IdealZone: 0.6096
+Min  IdealZone: 0.5053
+Standard Deviation: 0.02811590215559494
 
 
 *****************************************
@@ -285,39 +285,39 @@ Problem: 8
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: 0.0043000862829136914
-Max  Correlation: 0.05490683752820456
-Min  Correlation: -0.04295723828994448
-Standard Deviation: 0.026294017045763136
+Correlation Ratio (FVC)
+Mean Correlation: -0.0027327520179054937
+Max  Correlation: 0.04648708730363147
+Min  Correlation: -0.06691968360612169
+Standard Deviation: 0.024151058302841075
 
 
-Feasibility Ratio 
-Mean Feasibility: 0.004999999999999999
-Max  Feasibility: 0.006
+Feasibility Ratio (FsR) 
+Mean Feasibility: 0.00475
+Max  Feasibility: 0.0135
 Min  Feasibility: 0.0045
-Standard Deviation: 0.0023118883161188596
+Standard Deviation: 0.002235039663820438
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.0
-Max  Crossings: 0.0
+Max  Crossings: 0.005005005005005005
 Min  Crossings: 0.0
-Standard Deviation: 0.001463630185158551
+Standard Deviation: 0.0013335169291055825
 
 
- Proportion in Ideal Zone 
+Proportion in Ideal Zone 0.01 
 Mean IdealZone: 5.0E-4
-Max  IdealZone: 5.0E-4
+Max  IdealZone: 0.001
 Min  IdealZone: 5.0E-4
-Standard Deviation: 5.532038347287741E-4
+Standard Deviation: 1.5256428831468235E-4
 
 
- Proportion in Ideal Zone 
+Proportion in Ideal Zone 0.25 
 Mean IdealZone: 5.0E-4
-Max  IdealZone: 5.0E-4
+Max  IdealZone: 0.746
 Min  IdealZone: 5.0E-4
-Standard Deviation: 0.31817503857533164
+Standard Deviation: 0.18789154979072
 
 
 *****************************************
@@ -325,39 +325,39 @@ Problem: 9
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: -0.002458087843769281
-Max  Correlation: 0.015355632978102881
-Min  Correlation: -0.02800319172018148
-Standard Deviation: 0.011083816829728506
+Correlation Ratio (FVC)
+Mean Correlation: 5.503382724594935E-4
+Max  Correlation: 0.022660356707353283
+Min  Correlation: -0.023181288997870187
+Standard Deviation: 0.011874038105799687
 
 
-Feasibility Ratio 
+Feasibility Ratio (FsR) 
 Mean Feasibility: 0.0
 Max  Feasibility: 0.0
 Min  Feasibility: 0.0
 Standard Deviation: 0.0
 
 
- Ration of Feasibility Boundary Crossings 
-Mean Crossings: 0.003575003575003575
-Max  Crossings: 0.004576004576004576
-Min  Crossings: 0.002574002574002574
-Standard Deviation: 0.0014114388640943545
+Ratio of Feasibility Boundary Crossings (RFBx)
+Mean Crossings: 6.741435312863885E-4
+Max  Crossings: 0.00286000286000286
+Min  Crossings: 0.0
+Standard Deviation: 6.414244312552415E-4
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.3246530612244898
-Max  IdealZone: 0.3291428571428571
-Min  IdealZone: 0.3191428571428571
-Standard Deviation: 0.006530715604389668
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.326
+Max  IdealZone: 0.3427142857142857
+Min  IdealZone: 0.32257142857142856
+Standard Deviation: 0.005327412852735858
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.7524693877551021
-Max  IdealZone: 0.7572857142857143
-Min  IdealZone: 0.747
-Standard Deviation: 0.006292057181847499
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.7530408163265306
+Max  IdealZone: 0.7688571428571429
+Min  IdealZone: 0.7475714285714286
+Standard Deviation: 0.005116847199584787
 
 
 *****************************************
@@ -365,39 +365,39 @@ Problem: 10
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: 0.14910449825944536
-Max  Correlation: 0.17483873757560583
-Min  Correlation: 0.13065886251810718
-Standard Deviation: 0.01273201558837904
+Correlation Ratio (FVC)
+Mean Correlation: 0.15080648751650752
+Max  Correlation: 0.17893467176460326
+Min  Correlation: 0.12604066715688572
+Standard Deviation: 0.010825857647510024
 
 
-Feasibility Ratio 
+Feasibility Ratio (FsR) 
 Mean Feasibility: 0.0
 Max  Feasibility: 0.0
 Min  Feasibility: 0.0
-Standard Deviation: 3.17135164628078E-5
+Standard Deviation: 0.0
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.0
 Max  Crossings: 0.0
 Min  Crossings: 0.0
 Standard Deviation: 0.0
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.0065
-Max  IdealZone: 0.0075
-Min  IdealZone: 0.0055
-Standard Deviation: 0.0021411908546091984
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.00603125
+Max  IdealZone: 0.01525
+Min  IdealZone: 0.005
+Standard Deviation: 0.002186294824005048
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.47675
-Max  IdealZone: 0.489375
-Min  IdealZone: 0.47
-Standard Deviation: 0.01700259657316744
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.4735625
+Max  IdealZone: 0.527
+Min  IdealZone: 0.460625
+Standard Deviation: 0.01687196332830664
 
 
 *****************************************
@@ -405,39 +405,39 @@ Problem: 11
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: -0.4056121566238929
-Max  Correlation: -0.3713524492406614
-Min  Correlation: -0.44182448826216425
-Standard Deviation: 0.015141423856287226
+Correlation Ratio (FVC)
+Mean Correlation: -0.4091699460668786
+Max  Correlation: -0.37904089873769187
+Min  Correlation: -0.43362245673603544
+Standard Deviation: 0.015698825702431418
 
 
-Feasibility Ratio 
-Mean Feasibility: 0.7757499999999999
-Max  Feasibility: 0.79
-Min  Feasibility: 0.775
-Standard Deviation: 0.01034214955757575
+Feasibility Ratio (FsR) 
+Mean Feasibility: 0.786
+Max  Feasibility: 0.8245
+Min  Feasibility: 0.7855
+Standard Deviation: 0.010405306449060047
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.005005005005005005
-Max  Crossings: 0.005005005005005005
+Max  Crossings: 0.015515515515515516
 Min  Crossings: 0.005005005005005005
-Standard Deviation: 0.0023927469264254124
+Standard Deviation: 0.0025498608162058843
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.07875
-Max  IdealZone: 0.0835
-Min  IdealZone: 0.0785
-Standard Deviation: 0.007125234418406273
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.07725
+Max  IdealZone: 0.111
+Min  IdealZone: 0.077
+Standard Deviation: 0.00812624879881424
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.6445
-Max  IdealZone: 0.6555
-Min  IdealZone: 0.6365
-Standard Deviation: 0.010758864295061094
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.645
+Max  IdealZone: 0.6935
+Min  IdealZone: 0.6435
+Standard Deviation: 0.012911958726735454
 
 
 *****************************************
@@ -445,39 +445,39 @@ Problem: 12
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: 0.4634535105587639
-Max  Correlation: 0.493814322148194
-Min  Correlation: 0.4376406206098554
-Standard Deviation: 0.01507401146236384
+Correlation Ratio (FVC)
+Mean Correlation: 0.4596623681277192
+Max  Correlation: 0.4906729656188864
+Min  Correlation: 0.431353017937632
+Standard Deviation: 0.013895634137937726
 
 
-Feasibility Ratio 
-Mean Feasibility: 0.04044444444444444
-Max  Feasibility: 0.043666666666666666
-Min  Feasibility: 0.039
-Standard Deviation: 0.004886985871349419
+Feasibility Ratio (FsR) 
+Mean Feasibility: 0.043333333333333335
+Max  Feasibility: 0.060333333333333336
+Min  Feasibility: 0.041666666666666664
+Standard Deviation: 0.0036876965713781656
 
 
- Ration of Feasibility Boundary Crossings 
-Mean Crossings: 0.019908797686575466
-Max  Crossings: 0.022022022022022022
-Min  Crossings: 0.01868535201868535
-Standard Deviation: 0.004478956029723816
+Ratio of Feasibility Boundary Crossings (RFBx)
+Mean Crossings: 0.020687354020687353
+Max  Crossings: 0.03670337003670337
+Min  Crossings: 0.020020020020020016
+Standard Deviation: 0.004452190433510232
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.07055555555555555
-Max  IdealZone: 0.07333333333333333
-Min  IdealZone: 0.07
-Standard Deviation: 0.006380605991790879
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.06777777777777778
+Max  IdealZone: 0.09266666666666666
+Min  IdealZone: 0.066
+Standard Deviation: 0.006904761716022118
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.7398888888888889
-Max  IdealZone: 0.753
-Min  IdealZone: 0.726
-Standard Deviation: 0.017974755250324492
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.7482222222222222
+Max  IdealZone: 0.8096666666666666
+Min  IdealZone: 0.74
+Standard Deviation: 0.017087667425169695
 
 
 *****************************************
@@ -485,39 +485,39 @@ Problem: 13
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: 0.11386783668747341
-Max  Correlation: 0.1363595578503312
-Min  Correlation: 0.09862026110502453
-Standard Deviation: 0.011162720191945962
+Correlation Ratio (FVC)
+Mean Correlation: 0.11705912941480169
+Max  Correlation: 0.13780420351787187
+Min  Correlation: 0.09218225939165063
+Standard Deviation: 0.01176012534958444
 
 
-Feasibility Ratio 
+Feasibility Ratio (FsR) 
 Mean Feasibility: 0.0
 Max  Feasibility: 0.0
 Min  Feasibility: 0.0
 Standard Deviation: 0.0
 
 
- Ration of Feasibility Boundary Crossings 
-Mean Crossings: 0.0027227227227227227
-Max  Crossings: 0.004004004004004004
-Min  Crossings: 0.002002002002002002
-Standard Deviation: 0.0018960613310383878
+Ratio of Feasibility Boundary Crossings (RFBx)
+Mean Crossings: 0.003763763763763764
+Max  Crossings: 0.008208208208208207
+Min  Crossings: 0.0032032032032032033
+Standard Deviation: 0.0014698492044919742
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.0
-Max  IdealZone: 0.0
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 4.0E-5
+Max  IdealZone: 0.0014
 Min  IdealZone: 0.0
-Standard Deviation: 3.0663168216240656E-4
+Standard Deviation: 2.713101461469859E-4
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.003
-Max  IdealZone: 0.0034
-Min  IdealZone: 0.0026
-Standard Deviation: 0.001145827011476813
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.00336
+Max  IdealZone: 0.0066
+Min  IdealZone: 0.003
+Standard Deviation: 8.804387620914379E-4
 
 
 *****************************************
@@ -525,39 +525,39 @@ Problem: 14
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: -0.9857626544572268
-Max  Correlation: -0.9851486670714843
-Min  Correlation: -0.9863011880270096
-Standard Deviation: 3.3863559489580764E-4
+Correlation Ratio (FVC)
+Mean Correlation: -0.985712215095522
+Max  Correlation: -0.9847637228236422
+Min  Correlation: -0.9862738218947394
+Standard Deviation: 3.414768173842846E-4
 
 
-Feasibility Ratio 
+Feasibility Ratio (FsR) 
 Mean Feasibility: 0.0
 Max  Feasibility: 0.0
 Min  Feasibility: 0.0
 Standard Deviation: 0.0
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.0
 Max  Crossings: 0.0
 Min  Crossings: 0.0
 Standard Deviation: 0.0
 
 
- Proportion in Ideal Zone 
+Proportion in Ideal Zone 0.01 
 Mean IdealZone: 0.0
 Max  IdealZone: 0.0
 Min  IdealZone: 0.0
 Standard Deviation: 0.0
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.20659
-Max  IdealZone: 0.2213
-Min  IdealZone: 0.1852
-Standard Deviation: 0.032612613207620836
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.20736
+Max  IdealZone: 0.2693
+Min  IdealZone: 0.1919
+Standard Deviation: 0.02183874654312176
 
 
 *****************************************
@@ -565,39 +565,39 @@ Problem: 15
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: -0.9929078674938001
-Max  Correlation: -0.9921162184777425
-Min  Correlation: -0.9935494848616871
-Standard Deviation: 3.6637302694763794E-4
+Correlation Ratio (FVC)
+Mean Correlation: -0.9928809533896893
+Max  Correlation: -0.9922952957973754
+Min  Correlation: -0.9935967968465329
+Standard Deviation: 3.6989309078633547E-4
 
 
-Feasibility Ratio 
-Mean Feasibility: 0.028
-Max  Feasibility: 0.03
-Min  Feasibility: 0.02666666666666667
-Standard Deviation: 0.0034404995330674054
+Feasibility Ratio (FsR) 
+Mean Feasibility: 0.028555555555555556
+Max  Feasibility: 0.039
+Min  Feasibility: 0.028333333333333332
+Standard Deviation: 0.003184493078746188
 
 
- Ration of Feasibility Boundary Crossings 
-Mean Crossings: 0.002002002002002002
-Max  Crossings: 0.002669336002669336
-Min  Crossings: 0.001668335001668335
-Standard Deviation: 0.0012556731548533527
+Ratio of Feasibility Boundary Crossings (RFBx)
+Mean Crossings: 0.003225447669892114
+Max  Crossings: 0.008008008008008008
+Min  Crossings: 0.003003003003003003
+Standard Deviation: 9.916891613906686E-4
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.001888888888888889
-Max  IdealZone: 0.002
-Min  IdealZone: 0.0016666666666666668
-Standard Deviation: 0.0015019782612667892
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 8.888888888888889E-4
+Max  IdealZone: 0.007
+Min  IdealZone: 3.333333333333333E-4
+Standard Deviation: 0.0015924470514744533
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.154
-Max  IdealZone: 0.15933333333333333
-Min  IdealZone: 0.151
-Standard Deviation: 0.01702775137035198
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.15088888888888888
+Max  IdealZone: 0.25066666666666665
+Min  IdealZone: 0.145
+Standard Deviation: 0.02293113963044484
 
 
 *****************************************
@@ -605,39 +605,39 @@ Problem: 16
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: 0.7324345492859327
-Max  Correlation: 0.7504946217317839
-Min  Correlation: 0.7172586172663481
-Standard Deviation: 0.00838938568495325
+Correlation Ratio (FVC)
+Mean Correlation: 0.7308796092339346
+Max  Correlation: 0.7497601631603998
+Min  Correlation: 0.7152639744025598
+Standard Deviation: 0.00797010580459912
 
 
-Feasibility Ratio 
+Feasibility Ratio (FsR) 
 Mean Feasibility: 0.0
-Max  Feasibility: 0.0
+Max  Feasibility: 0.001
 Min  Feasibility: 0.0
-Standard Deviation: 1.942861972369154E-4
+Standard Deviation: 2.110727934574492E-4
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.0
 Max  Crossings: 0.0
 Min  Crossings: 0.0
 Standard Deviation: 0.0
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.20296
-Max  IdealZone: 0.2118
-Min  IdealZone: 0.1962
-Standard Deviation: 0.21712570605500645
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.20412
+Max  IdealZone: 0.7652
+Min  IdealZone: 0.198
+Standard Deviation: 0.23959947575403664
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.50872
-Max  IdealZone: 0.5146
-Min  IdealZone: 0.5024
-Standard Deviation: 0.21700572840577168
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.512
+Max  IdealZone: 0.9966
+Min  IdealZone: 0.5082
+Standard Deviation: 0.23346031103291673
 
 
 *****************************************
@@ -645,39 +645,39 @@ Problem: 17
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: -0.026776939388865637
-Max  Correlation: -0.0015677713647609525
-Min  Correlation: -0.06369603864875323
-Standard Deviation: 0.016492036821735258
+Correlation Ratio (FVC)
+Mean Correlation: -0.021020190224908863
+Max  Correlation: 0.015587624650778198
+Min  Correlation: -0.054161491076021105
+Standard Deviation: 0.016909945028047536
 
 
-Feasibility Ratio 
-Mean Feasibility: 0.01583333333333333
-Max  Feasibility: 0.016833333333333332
-Min  Feasibility: 0.014333333333333333
-Standard Deviation: 0.0014547780965992129
+Feasibility Ratio (FsR) 
+Mean Feasibility: 0.015444444444444443
+Max  Feasibility: 0.02
+Min  Feasibility: 0.014166666666666666
+Standard Deviation: 0.0014209255343619485
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.0
 Max  Crossings: 0.0
 Min  Crossings: 0.0
 Standard Deviation: 0.0
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.0016111111111111111
-Max  IdealZone: 0.002
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.0018333333333333333
+Max  IdealZone: 0.005
 Min  IdealZone: 0.0013333333333333333
-Standard Deviation: 0.001009042766802414
+Standard Deviation: 9.78635116991747E-4
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.2995833333333333
-Max  IdealZone: 0.31866666666666665
-Min  IdealZone: 0.26616666666666666
-Standard Deviation: 0.024496488267100228
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.3086388888888889
+Max  IdealZone: 0.383
+Min  IdealZone: 0.29683333333333334
+Standard Deviation: 0.021368583186113788
 
 
 *****************************************
@@ -685,39 +685,39 @@ Problem: 18
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: 0.19327480849475076
-Max  Correlation: 0.2108906402332177
-Min  Correlation: 0.17300307711526539
-Standard Deviation: 0.01035681623124474
+Correlation Ratio (FVC)
+Mean Correlation: 0.19622213841261896
+Max  Correlation: 0.21649963768518138
+Min  Correlation: 0.17793959752188743
+Standard Deviation: 0.010762732280137239
 
 
-Feasibility Ratio 
+Feasibility Ratio (FsR) 
 Mean Feasibility: 0.0
 Max  Feasibility: 0.0
 Min  Feasibility: 0.0
 Standard Deviation: 0.0
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.0
 Max  Crossings: 0.0
 Min  Crossings: 0.0
 Standard Deviation: 0.0
 
 
- Proportion in Ideal Zone 
+Proportion in Ideal Zone 0.01 
 Mean IdealZone: 0.0
 Max  IdealZone: 0.0
 Min  IdealZone: 0.0
 Standard Deviation: 0.0
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.16077777777777777
-Max  IdealZone: 0.17333333333333334
-Min  IdealZone: 0.142
-Standard Deviation: 0.03175408850966452
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.16187654320987654
+Max  IdealZone: 0.2891111111111111
+Min  IdealZone: 0.1388888888888889
+Standard Deviation: 0.039084189220541646
 
 
 *****************************************
@@ -725,39 +725,39 @@ Problem: 19
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: -0.0633487646536998
-Max  Correlation: -0.04868104459938729
-Min  Correlation: -0.08602473254179806
-Standard Deviation: 0.008319882273418103
+Correlation Ratio (FVC)
+Mean Correlation: -0.06326130774374586
+Max  Correlation: -0.05059863039602878
+Min  Correlation: -0.08403868298155173
+Standard Deviation: 0.006833104362435374
 
 
-Feasibility Ratio 
-Mean Feasibility: 0.33064
-Max  Feasibility: 0.3343333333333333
-Min  Feasibility: 0.32153333333333334
-Standard Deviation: 0.004915471963427717
+Feasibility Ratio (FsR) 
+Mean Feasibility: 0.33328444444444444
+Max  Feasibility: 0.34246666666666664
+Min  Feasibility: 0.3277333333333333
+Standard Deviation: 0.0037482930981214985
 
 
- Ration of Feasibility Boundary Crossings 
-Mean Crossings: 0.006846846846846846
-Max  Crossings: 0.0072739406072739425
-Min  Crossings: 0.006072739406072738
-Standard Deviation: 5.137809309661469E-4
+Ratio of Feasibility Boundary Crossings (RFBx)
+Mean Crossings: 0.0066955844733622505
+Max  Crossings: 0.008541875208541876
+Min  Crossings: 0.0060727394060727385
+Standard Deviation: 6.611265377342431E-4
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.06930222222222222
-Max  IdealZone: 0.07466666666666667
-Min  IdealZone: 0.0626
-Standard Deviation: 0.007257131428964679
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.07177777777777777
+Max  IdealZone: 0.0902
+Min  IdealZone: 0.067
+Standard Deviation: 0.006544007231913868
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.8303511111111112
-Max  IdealZone: 0.8548
-Min  IdealZone: 0.8120666666666667
-Standard Deviation: 0.023403544502373672
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.834
+Max  IdealZone: 0.891
+Min  IdealZone: 0.8087333333333333
+Standard Deviation: 0.023460929832551786
 
 
 *****************************************
@@ -765,39 +765,39 @@ Problem: 20
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: 0.5545628250312145
-Max  Correlation: 0.5611743498770362
-Min  Correlation: 0.546756742895412
-Standard Deviation: 0.0037711473752227065
+Correlation Ratio (FVC)
+Mean Correlation: 0.5533201974442187
+Max  Correlation: 0.5610475749575485
+Min  Correlation: 0.5448628803964616
+Standard Deviation: 0.00416163273567694
 
 
-Feasibility Ratio 
+Feasibility Ratio (FsR) 
 Mean Feasibility: 0.0
 Max  Feasibility: 0.0
 Min  Feasibility: 0.0
 Standard Deviation: 0.0
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.0
 Max  Crossings: 0.0
 Min  Crossings: 0.0
 Standard Deviation: 0.0
 
 
- Proportion in Ideal Zone 
+Proportion in Ideal Zone 0.01 
 Mean IdealZone: 0.0
 Max  IdealZone: 0.0
 Min  IdealZone: 0.0
 Standard Deviation: 0.0
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.035984375
-Max  IdealZone: 0.05333333333333334
-Min  IdealZone: 0.024125
-Standard Deviation: 0.011233910820138053
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.031781250000000004
+Max  IdealZone: 0.058375
+Min  IdealZone: 0.025083333333333332
+Standard Deviation: 0.008378249283902836
 
 
 *****************************************
@@ -805,39 +805,39 @@ Problem: 21
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: -0.23977746278174414
-Max  Correlation: -0.21961616676355292
-Min  Correlation: -0.26115743604449065
-Standard Deviation: 0.010700221942509042
+Correlation Ratio (FVC)
+Mean Correlation: -0.236462458390253
+Max  Correlation: -0.2122981682485634
+Min  Correlation: -0.25981398584441145
+Standard Deviation: 0.009969939910583684
 
 
-Feasibility Ratio 
-Mean Feasibility: 0.009673469387755103
-Max  Feasibility: 0.010285714285714285
-Min  Feasibility: 0.008714285714285714
-Standard Deviation: 0.0012366671061025173
+Feasibility Ratio (FsR) 
+Mean Feasibility: 0.009306122448979591
+Max  Feasibility: 0.013142857142857144
+Min  Feasibility: 0.008
+Standard Deviation: 0.0013057192082203044
 
 
- Ration of Feasibility Boundary Crossings 
-Mean Crossings: 0.005699577128148557
-Max  Crossings: 0.006006006006006005
-Min  Crossings: 0.0054340054340054345
-Standard Deviation: 9.625762798264732E-4
+Ratio of Feasibility Boundary Crossings (RFBx)
+Mean Crossings: 0.005393148250291108
+Max  Crossings: 0.009152009152009153
+Min  Crossings: 0.004576004576004576
+Standard Deviation: 0.0010832136741861847
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.09542857142857143
-Max  IdealZone: 0.09857142857142857
-Min  IdealZone: 0.09428571428571429
-Standard Deviation: 0.0036907044794055903
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.0963265306122449
+Max  IdealZone: 0.10971428571428571
+Min  IdealZone: 0.095
+Standard Deviation: 0.0034157567030005742
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.4916938775510204
-Max  IdealZone: 0.49557142857142855
-Min  IdealZone: 0.4857142857142857
-Standard Deviation: 0.006610606423641837
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.4903469387755102
+Max  IdealZone: 0.5147142857142857
+Min  IdealZone: 0.4867142857142857
+Standard Deviation: 0.006248398340400071
 
 
 *****************************************
@@ -845,39 +845,39 @@ Problem: 22
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: -0.001647337620468392
-Max  Correlation: 0.017712352663943613
-Min  Correlation: -0.016168360359849906
-Standard Deviation: 0.008820212384710455
+Correlation Ratio (FVC)
+Mean Correlation: 9.608968580674293E-4
+Max  Correlation: 0.012824602644827765
+Min  Correlation: -0.013557857996458303
+Standard Deviation: 0.007431925015340527
 
 
-Feasibility Ratio 
+Feasibility Ratio (FsR) 
 Mean Feasibility: 0.0
-Max  Feasibility: 0.0
+Max  Feasibility: 4.545454545454545E-5
 Min  Feasibility: 0.0
 Standard Deviation: 8.298826628866153E-6
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.0
 Max  Crossings: 0.0
 Min  Crossings: 0.0
 Standard Deviation: 0.0
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.09950826446280991
-Max  IdealZone: 0.1020909090909091
-Min  IdealZone: 0.09581818181818182
-Standard Deviation: 0.0019166492166345203
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.09931198347107438
+Max  IdealZone: 0.10518181818181818
+Min  IdealZone: 0.09577272727272727
+Standard Deviation: 0.002101891221843783
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.4978037190082645
-Max  IdealZone: 0.501
-Min  IdealZone: 0.4909090909090909
-Standard Deviation: 0.0035811031010762107
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.49861570247933884
+Max  IdealZone: 0.5076818181818182
+Min  IdealZone: 0.4955
+Standard Deviation: 0.0030643354116596877
 
 
 *****************************************
@@ -885,39 +885,39 @@ Problem: 23
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: 0.8917991687405686
-Max  Correlation: 0.8958971053649881
-Min  Correlation: 0.887089554655425
-Standard Deviation: 0.0024140322650474605
+Correlation Ratio (FVC)
+Mean Correlation: 0.8915128282458874
+Max  Correlation: 0.8949653287236428
+Min  Correlation: 0.8878449871914981
+Standard Deviation: 0.002440963731197452
 
 
-Feasibility Ratio 
-Mean Feasibility: 7.407407407407407E-5
-Max  Feasibility: 1.1111111111111112E-4
+Feasibility Ratio (FsR) 
+Mean Feasibility: 1.234567901234568E-4
+Max  Feasibility: 4.4444444444444447E-4
 Min  Feasibility: 0.0
-Standard Deviation: 1.5143230832467992E-4
+Standard Deviation: 1.0079857103552627E-4
 
 
- Ration of Feasibility Boundary Crossings 
+Ratio of Feasibility Boundary Crossings (RFBx)
 Mean Crossings: 0.0
-Max  Crossings: 0.0
+Max  Crossings: 2.2244466688911134E-4
 Min  Crossings: 0.0
-Standard Deviation: 1.0257658489098299E-4
+Standard Deviation: 8.43174333865981E-5
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.001691358024691358
-Max  IdealZone: 0.0028888888888888888
-Min  IdealZone: 6.666666666666666E-4
-Standard Deviation: 0.0018895611454908259
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.0020246913580246914
+Max  IdealZone: 0.00811111111111111
+Min  IdealZone: 0.0012222222222222222
+Standard Deviation: 0.0015895259911059348
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.46871604938271605
-Max  IdealZone: 0.48733333333333334
-Min  IdealZone: 0.45111111111111113
-Standard Deviation: 0.031182686548791305
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.461
+Max  IdealZone: 0.5572222222222222
+Min  IdealZone: 0.4441111111111111
+Standard Deviation: 0.03316582025699263
 
 
 *****************************************
@@ -925,37 +925,37 @@ Problem: 24
 *****************************************
 
 
- Correlation Ratio 
-Mean Correlation: -0.6430244222750681
-Max  Correlation: -0.6159654695942878
-Min  Correlation: -0.664221031919156
-Standard Deviation: 0.0113397079101991
+Correlation Ratio (FVC)
+Mean Correlation: -0.641936584429278
+Max  Correlation: -0.618017966244194
+Min  Correlation: -0.671249313820715
+Standard Deviation: 0.01150223175307896
 
 
-Feasibility Ratio 
-Mean Feasibility: 0.42525
-Max  Feasibility: 0.4275
-Min  Feasibility: 0.4235
-Standard Deviation: 0.009445381404954361
+Feasibility Ratio (FsR) 
+Mean Feasibility: 0.421
+Max  Feasibility: 0.4725
+Min  Feasibility: 0.417
+Standard Deviation: 0.013416504246892958
 
 
- Ration of Feasibility Boundary Crossings 
-Mean Crossings: 0.01001001001001001
-Max  Crossings: 0.011011011011011011
+Ratio of Feasibility Boundary Crossings (RFBx)
+Mean Crossings: 0.01051051051051051
+Max  Crossings: 0.021021021021021023
 Min  Crossings: 0.01001001001001001
-Standard Deviation: 0.0032678901685783885
+Standard Deviation: 0.002275558667291033
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.01825
-Max  IdealZone: 0.019
-Min  IdealZone: 0.018
-Standard Deviation: 0.003929552049578277
+Proportion in Ideal Zone 0.01 
+Mean IdealZone: 0.01925
+Max  IdealZone: 0.0335
+Min  IdealZone: 0.019
+Standard Deviation: 0.003893702549018079
 
 
- Proportion in Ideal Zone 
-Mean IdealZone: 0.46725
-Max  IdealZone: 0.4785
-Min  IdealZone: 0.463
-Standard Deviation: 0.016867477037458674
+Proportion in Ideal Zone 0.25 
+Mean IdealZone: 0.47824999999999995
+Max  IdealZone: 0.518
+Min  IdealZone: 0.4765
+Standard Deviation: 0.010277528214843127
 

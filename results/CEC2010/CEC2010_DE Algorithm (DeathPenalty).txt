@@ -1,0 +1,109 @@
+Results for DE Algorithm (DeathPenalty) as run on CEC2010
+
+*****************************************
+Problem: 1
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 2
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 3
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 4
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 5
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 6
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 7
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 8
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 9
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 10
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 11
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 12
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 13
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 14
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 15
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 16
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 17
+*****************************************
+
+No or very little Feasible Region in this problem landscape
+
+*****************************************
+Problem: 18
+*****************************************
+
+No or very little Feasible Region in this problem landscape

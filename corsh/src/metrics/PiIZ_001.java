@@ -1,6 +1,6 @@
 package metrics;
 
-import general.MiscFunctions;
+import general.RandFunctions;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -22,8 +22,13 @@ public class PiIZ_001 {
 		int dimension = funct.getDimension();
 		
 		if(dimension == -1) {
+			double[] result2d = new double[30];
 			double[] result10d = new double[30];
 			double[] result30d = new double[30];
+			
+			for(int i = 0; i < 30; i++) {
+				result2d[i] = idealZone(funct, 2);
+			}
 			
 			for(int i = 0; i < 30; i++) {
 				result10d[i] = idealZone(funct, 10);
@@ -36,6 +41,10 @@ public class PiIZ_001 {
 			try {
 				PrintWriter writer = new PrintWriter((id+1) + "_" + dimension + "D_" + "PilZ001_Raw.dat");
 				
+				writer.println("Raw 2D");
+				for(int i = 0; i < 30; i++) {
+					writer.println(result2d[i]);
+				}
 				writer.println("Raw 10D");
 				for(int i = 0; i < 30; i++) {
 					writer.println(result10d[i]);
@@ -51,10 +60,17 @@ public class PiIZ_001 {
 				System.out.println("Error RAW file not found.");
 			}
 			
+			Arrays.sort(result2d);
 			Arrays.sort(result10d);
 			Arrays.sort(result30d);
 			
 			result.append("\nProportion in Ideal Zone 0.01 \n");
+			
+			result.append("2D\n");
+			result.append("Mean IdealZone: " + m.evaluate(result2d, 0, 30) + "\n");
+			result.append("Max  IdealZone: " + result2d[29] + "\n");
+			result.append("Min  IdealZone: " + result2d[0] + "\n");
+			result.append("Standard Deviation: " + std.evaluate(result2d) + "\n");
 			
 			result.append("10D\n");
 			result.append("Mean IdealZone: " + m.evaluate(result10d, 0, 30) + "\n");
@@ -116,7 +132,7 @@ public class PiIZ_001 {
 		ArrayList<Double> violations = new ArrayList<>(size);
 
 		for(int i = 0; i < size; i++) {
-			Vector<Double> coordinates = MiscFunctions.getCoordinates(funct.getDomainsMin(), funct.getDomainsMax(), dimension);
+			Vector<Double> coordinates = RandFunctions.getCoordinates(funct.getDomainsMin(), funct.getDomainsMax(), dimension);
 			fitnesses.add((double) funct.f(coordinates));
 			violations.add((double) funct.violation(coordinates));
 		}	

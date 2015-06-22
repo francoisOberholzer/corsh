@@ -30,6 +30,12 @@ public class G09 extends AbstractProblem {
 		if (g2 <= 0) {
 			g2 = 0;
 		}
+		if (g3 <= 0) {
+			g3 = 0;
+		}
+		if (g4 <= 0) {
+			g4 = 0;
+		}
 
 		return (g1 + g2 + g3 + g4)/4;
     }

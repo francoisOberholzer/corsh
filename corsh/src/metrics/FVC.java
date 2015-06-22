@@ -1,6 +1,6 @@
 package metrics;
 
-import general.MiscFunctions;
+import general.RandFunctions;
 
 import java.io.PrintWriter;
 import java.io.FileNotFoundException;
@@ -23,8 +23,13 @@ public class FVC {
 		int dimension = funct.getDimension();
 		
 		if(dimension == -1) {
+			double[] result2d = new double[30];
 			double[] result10d = new double[30];
 			double[] result30d = new double[30];
+			
+			for(int i = 0; i < 30; i++) {
+				result2d[i] = correlation(funct, 2, false, id);
+			}
 			
 			for(int i = 0; i < 30; i++) {
 				result10d[i] = correlation(funct, 10, false, id);
@@ -41,6 +46,10 @@ public class FVC {
 			try {
 				PrintWriter writer = new PrintWriter((id+1) + "_" + dimension + "D_" + "FVC_Raw.dat");
 				
+				writer.println("Raw 2D");
+				for(int i = 0; i < 30; i++) {
+					writer.println(result2d[i]);
+				}
 				writer.println("Raw 10D");
 				for(int i = 0; i < 30; i++) {
 					writer.println(result10d[i]);
@@ -56,10 +65,17 @@ public class FVC {
 				System.out.println("Error RAW file not found.");
 			}
 			
+			Arrays.sort(result2d);
 			Arrays.sort(result10d);
 			Arrays.sort(result30d);
 			
 			result.append("\nCorrelation Ratio (FVC)\n");
+			
+			result.append("2D\n");
+			result.append("Mean Correlation: " + m.evaluate(result2d, 0, 30) + "\n");
+			result.append("Max  Correlation: " + result2d[29] + "\n");
+			result.append("Min  Correlation: " + result2d[0] + "\n");
+			result.append("Standard Deviation: " + std.evaluate(result2d) + "\n");
 			
 			result.append("10D\n");
 			result.append("Mean Correlation: " + m.evaluate(result10d, 0, 30) + "\n");
@@ -121,7 +137,7 @@ public class FVC {
 				writer.println("# FVC " + dimension + "D Coordinates");
 				
 				for(int i = 0; i < size; i++) {
-					Vector<Double> coordinates = MiscFunctions.getCoordinates(funct.getDomainsMin(), funct.getDomainsMax(), dimension);
+					Vector<Double> coordinates = RandFunctions.getCoordinates(funct.getDomainsMin(), funct.getDomainsMax(), dimension);
 
 					double resFit = (double) funct.f(coordinates);
 					double resVal = (double) funct.violation(coordinates);
@@ -137,7 +153,7 @@ public class FVC {
 				double[][] data = new double[2][size];
 				
 				for(int i = 0; i < size; i++) {
-					Vector<Double> coordinates = MiscFunctions.getCoordinates(funct.getDomainsMin(), funct.getDomainsMax(), dimension);
+					Vector<Double> coordinates = RandFunctions.getCoordinates(funct.getDomainsMin(), funct.getDomainsMax(), dimension);
 
 					double resFit = (double) funct.f(coordinates);
 					double resVal = (double) funct.violation(coordinates);
