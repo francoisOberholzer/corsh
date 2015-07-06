@@ -17,10 +17,9 @@ public class DE {
 	private static double CR = 0.5; //Crossover Constant
 	private static double F = 0.5; //Scaling Factor
 	private static int POPSIZE = 100; //Pop Size
-	private static int MAXGEN = 200; //Maximum Generations, Stopping Condition
-	private static double PENALTY = 1; //Penalty Coefficient
+	private static double ADDPENALTYCOEFF = 1; //AdaptivePenalty Coefficient
 	
-	public static String write(AbstractProblem funct, int cht, int id, int maxFunctionEvaluations) { //ID: 0 - None, 1 - DeathPenalty, 2 - Penalty, 3 - PieceWise
+	public static String write(AbstractProblem funct, int cht, int id, int maxFunctionEvaluations) { //ID: 0 - None, 1 - DeathPenalty, 2 - AdaptivePenalty, 3 - PieceWise
 		StringBuilder result = new StringBuilder();
 		Mean m = new Mean();
 		StandardDeviation std = new StandardDeviation();
@@ -159,7 +158,7 @@ public class DE {
 			for(int j = 0; j < dimension; j++) {
 				population.get(i).add(RandFunctions.getRandom(funct.getDomainsMin()[j], funct.getDomainsMax()[j]));
 			}
-			if(cht == 1) { //For Death Penalty, initialize to valid start positions
+			if(cht == 1) { //For DeathPenalty, initialize to valid start positions
 				boolean flag = true;
 				while(flag) {
 					population.get(i).clear();
@@ -180,7 +179,7 @@ public class DE {
 		}
 		
 		//DE
-		for(int gen = 0; gen < MAXGEN; gen++) { //For each generation
+		while(currentEvaluations < maxFunctionEvaluations) { //Until stopping condition is met
 			for(int i = 0; i < POPSIZE; i++) { //For each individual in Pop
 				//Different Constraint Handling Techniques
 				if(cht == 0) { //None
@@ -194,7 +193,9 @@ public class DE {
 					
 					//Replacement
 					double childFitness = funct.f(child);
+					currentEvaluations++;
 					double parentFitness = funct.f(parent);
+					currentEvaluations++;
 
 					if(childFitness > parentFitness) {
 						newPopulation.add(parent);
@@ -223,8 +224,10 @@ public class DE {
 					if(funct.violation(child) == 0) {
 						//Replacement
 						double childFitness = funct.f(child);
+						currentEvaluations++;
 						double parentFitness = funct.f(parent);
-	
+						currentEvaluations++;
+						
 						if(childFitness > parentFitness) {
 							newPopulation.add(parent);
 							
@@ -242,6 +245,7 @@ public class DE {
 					}
 					else {
 						double parentFitness = funct.f(parent);
+						currentEvaluations++;
 						
 						newPopulation.add(parent);
 					
@@ -252,7 +256,7 @@ public class DE {
 					
 					
 				}
-				else if(cht == 2) { //Penalty
+				else if(cht == 2) { //AdaptivePenalty
 					//Mutation and Crossover
 					int[] randomIndividuals = getRandomIndividuals(i);
 					Vector<Double> parent = population.get(i);
@@ -262,14 +266,18 @@ public class DE {
 					Vector<Double> child = recombine(parent, r1, r2, r3, dimension, funct.getDomainsMin(), funct.getDomainsMax());
 					
 					//Replacement
-					double childFitness = funct.f(child) + (funct.violation(child) * PENALTY);
-					double parentFitness = funct.f(parent) + (funct.violation(parent) * PENALTY);
+					double childFitness = funct.f(child) + (funct.violation(child) * ADDPENALTYCOEFF);
+					currentEvaluations++;
+					double parentFitness = funct.f(parent) + (funct.violation(parent) * ADDPENALTYCOEFF);
+					currentEvaluations++;
 
 					if(childFitness > parentFitness) {
 						newPopulation.add(parent);
 						
 						if(funct.f(parent) < bestFitness) {
 							bestFitness = funct.f(parent);
+							currentEvaluations++;
+							currentEvaluations++;
 						}
 					}
 					else {
@@ -277,6 +285,8 @@ public class DE {
 						
 						if(funct.f(child) < bestFitness) {
 							bestFitness = funct.f(child);
+							currentEvaluations++;
+							currentEvaluations++;
 						}
 					}
 				}
@@ -291,7 +301,9 @@ public class DE {
 					
 					//Replacement
 					double childFitness = funct.f(child);
+					currentEvaluations++;
 					double parentFitness = funct.f(parent);
+					currentEvaluations++;
 					double childViolation = funct.violation(child);
 					double parentViolation = funct.violation(parent);
 

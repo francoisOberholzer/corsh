@@ -20,11 +20,11 @@ public class Start {
 		Object selectedIntention = JOptionPane.showInputDialog(null, "What do you want to do?", "CORSH", JOptionPane.INFORMATION_MESSAGE, null, optionsIntention, optionsIntention[0]);
 		
 		if(selectedIntention.toString().equals("DE") || selectedIntention.toString().equals("ALL")) { //DE Options
-			Object[] optionsDE = { "ALL", "NONE", "DeathPenalty", "Penalty", "PieceWise"}; //Constraint Handling Options
+			Object[] optionsDE = { "ALL", "NONE", "DeathPenalty", "AdaptivePenalty", "PieceWise"}; //Constraint Handling Options
 			selectedDE = JOptionPane.showInputDialog(null, "Which Constraint Handling Technique do you want to use?", "CORSH", JOptionPane.INFORMATION_MESSAGE, null, optionsDE, optionsDE[0]);
 		
 			Object[] optionsEvaluations = { "500000", "100000", "50000", "10000"}; //FunctionEvaluations
-			selectedEvaluations = JOptionPane.showInputDialog(null, "What is the maximum amount of Function Evaluations?", "CORSH", JOptionPane.INFORMATION_MESSAGE, null, optionsEvaluations, optionsEvaluations[0]);
+			selectedEvaluations = JOptionPane.showInputDialog(null, "What is the maximum amount of Function Evaluations (*D) ?", "CORSH", JOptionPane.INFORMATION_MESSAGE, null, optionsEvaluations, optionsEvaluations[0]);
 		}
 		
 		Object[] optionsProblems = { "CEC2006", "CEC2010"}; //Problems
@@ -129,7 +129,7 @@ public class Start {
 				return;
 			}
 			try {
-				PrintWriter writer = new PrintWriter(problemSet + "_DE_Penalty.txt");
+				PrintWriter writer = new PrintWriter(problemSet + "_DE_AdaptivePenalty.txt");
 				writer.println("Results for DE as run on " + problemSet);
 				System.out.println("Performing DE on " + problemSet);
 				
@@ -182,7 +182,7 @@ public class Start {
 			if(constrainHandlingTechnique.equals("DeathPenalty")) {
 				cht = 1;
 			}
-			else if(constrainHandlingTechnique.equals("Penalty")) {
+			else if(constrainHandlingTechnique.equals("AdaptivePenalty")) {
 				cht = 2;
 			}
 			else if(constrainHandlingTechnique.equals("PieceWise")) {
