@@ -43,6 +43,25 @@ public class G03 extends AbstractProblem {
 		return h;
     }
     
+    public double[] violationArray(Vector<Double> x) {
+    	double h, h1;
+    	
+    	h1 = 0.0;
+    	
+    	for(int i = 0; i < dimension; i++)
+    	{
+    	    h1 = h1 + x.get(i) * x.get(i);
+    	}
+    	
+    	h = h1 - 1.0;
+
+		if ((h - e) <= 0) {
+			h = 0;
+		}
+
+		return new double[] {h};
+    }
+    
     public int getDimension() {
     	return dimension;
     }
@@ -53,5 +72,9 @@ public class G03 extends AbstractProblem {
     
     public double[] getDomainsMax() {
     	return domainsMax;
+    }
+    
+    public String getName() { 
+    	return "G03_10D";
     }
 }

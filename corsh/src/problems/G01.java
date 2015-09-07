@@ -64,6 +64,50 @@ public class G01 extends AbstractProblem {
 		return (g1 + g2 + g3 + g4 + g5 + g6 + g7 + g8 + g9)/9;
     }
     
+    public double[] violationArray(Vector<Double> x) {
+    	double g1, g2, g3, g4, g5, g6, g7, g8, g9;
+    	
+    	g1 = 2.0 * x.get(0) + 2.0 * x.get(1) + x.get(9) + x.get(10) - 10.;
+    	g2 = 2.0 * x.get(0) + 2.0 * x.get(2) + x.get(9) + x.get(11) - 10.;
+    	g3 = 2.0 * x.get(1) + 2.0 * x.get(2) + x.get(10) + x.get(11) - 10.;
+    	g4 = -8.0 * x.get(0) + x.get(9);
+    	g5 = -8.0 * x.get(1) + x.get(10);
+    	g6 = -8.0 * x.get(2) + x.get(11);
+    	g7 = -2.0 * x.get(3) - x.get(4) + x.get(9);
+    	g8 = -2.0 * x.get(5) - x.get(6) + x.get(10);
+    	g9 = -2.0 * x.get(7) - x.get(8) + x.get(11);
+    	
+		if (g1 <= 0) {
+			g1 = 0;
+		}
+		if (g2 <= 0) {
+			g2 = 0;
+		}
+		if (g3 <= 0) {
+			g3 = 0;
+		}
+		if (g4 <= 0) {
+			g4 = 0;
+		}
+		if (g5 <= 0) {
+			g5 = 0;
+		}
+		if (g6 <= 0) {
+			g6 = 0;
+		}
+		if (g7 <= 0) {
+			g7 = 0;
+		}
+		if (g8 <= 0) {
+			g8 = 0;
+		}
+		if (g9 <= 0) {
+			g9 = 0;
+		}
+
+		return new double[] {g1, g2, g3, g4, g5, g6, g7, g8, g9};
+    }
+    
     public int getDimension() {
     	return dimension;
     }
@@ -74,5 +118,9 @@ public class G01 extends AbstractProblem {
     
     public double[] getDomainsMax() {
     	return domainsMax;
+    }
+    
+    public String getName() { 
+    	return "G01_13D";
     }
 }

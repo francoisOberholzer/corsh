@@ -15,7 +15,7 @@ public class RandFunctions {
 	public static double getRandom(double min, double max) {
 		double result = Math.random();
 		result = result * Math.abs(max-min);
-		result = result + Math.abs(min);
+		result = result + min;
 		return result;
 	}
 }

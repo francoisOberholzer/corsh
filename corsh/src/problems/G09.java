@@ -40,6 +40,30 @@ public class G09 extends AbstractProblem {
 		return (g1 + g2 + g3 + g4)/4;
     }
     
+    public double[] violationArray(Vector<Double> x) {
+    	double g1, g2, g3, g4;
+    	
+    	g1 = -127.0 + 2 * x.get(0) * x.get(0) + 3.0 * Math.pow(x.get(1), 4) + x.get(2) + 4.0 * x.get(3) * x.get(3) + 5.0 * x.get(4);
+    	g2 = -282.0 + 7.0 * x.get(0) + 3.0 * x.get(1) + 10.0 * x.get(2) * x.get(2) + x.get(3) - x.get(4);
+  	  	g3 = -196.0 + 23.0 * x.get(0) + x.get(1) * x.get(1) + 6.0 * x.get(5) * x.get(5) - 8.0 * x.get(6);
+  	  	g4 = 4.0 * x.get(0) * x.get(0) + x.get(1) * x.get(1) - 3.0 * x.get(0) * x.get(1) + 2.0 * x.get(2) * x.get(2) + 5.0 * x.get(5) - 11.0 * x.get(6);
+    	
+		if (g1 <= 0) {
+			g1 = 0;
+		}
+		if (g2 <= 0) {
+			g2 = 0;
+		}
+		if (g3 <= 0) {
+			g3 = 0;
+		}
+		if (g4 <= 0) {
+			g4 = 0;
+		}
+
+		return new double[] {g1, g2, g3, g4};
+    }
+    
     public int getDimension() {
     	return dimension;
     }
@@ -50,5 +74,9 @@ public class G09 extends AbstractProblem {
     
     public double[] getDomainsMax() {
     	return domainsMax;
+    }
+    
+    public String getName() { 
+    	return "G09_7D";
     }
 }

@@ -52,6 +52,30 @@ public class G02 extends AbstractProblem {
 		return (g1 + g2)/2;
     }
     
+    public double[] violationArray(Vector<Double> x) {
+    	double g1, g2;
+    	g1 = 1.0;
+		g2 = 0.0;
+    	
+    	for(int i = 0; i < dimension; i++)
+		{
+    		g1 = g1 * x.get(i);
+		    g2 = g2 + x.get(i);
+		}
+    	
+    	g1 = 0.75 - g1;
+    	g2 = g2 - 7.5 * ((double) dimension);
+    	
+		if (g1 <= 0) {
+			g1 = 0;
+		}
+		if (g2 <= 0) {
+			g2 = 0;
+		}
+
+		return new double[] {g1, g2};
+    }
+    
     public int getDimension() {
     	return dimension;
     }
@@ -62,5 +86,9 @@ public class G02 extends AbstractProblem {
     
     public double[] getDomainsMax() {
     	return domainsMax;
+    }
+    
+    public String getName() { 
+    	return "G02_20D";
     }
 }

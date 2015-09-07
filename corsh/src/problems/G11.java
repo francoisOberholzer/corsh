@@ -29,6 +29,18 @@ public class G11 extends AbstractProblem {
 		return h;
     }
     
+    public double[] violationArray(Vector<Double> x) {
+    	double h;
+    	
+    	h = x.get(1) - (x.get(0) * x.get(0));
+
+		if ((h - e) <= 0) {
+			h = 0;
+		}
+
+		return new double[] {h};
+    }
+    
     public int getDimension() {
     	return dimension;
     }
@@ -39,5 +51,9 @@ public class G11 extends AbstractProblem {
     
     public double[] getDomainsMax() {
     	return domainsMax;
+    }
+    
+    public String getName() { 
+    	return "G11_2D";
     }
 }

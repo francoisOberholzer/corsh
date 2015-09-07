@@ -44,6 +44,26 @@ public class G14 extends AbstractProblem {
 		return (h1 + h2 + h3)/3;
     }
     
+    public double[] violationArray(Vector<Double> x) {
+    	double h1, h2, h3;
+    	
+    	h1 = x.get(0) + 2.0 * x.get(1) + 2.0 * x.get(2) + x.get(5) + x.get(9) - 2.0;
+    	h2 = x.get(3) + 2.0 * x.get(4) + x.get(5) + x.get(6) - 1.0;
+  	  	h3 = x.get(2) + x.get(6) + x.get(7) + 2.0 * x.get(8) + x.get(9) - 1.0;
+  	  
+		if ((h1 - e) <= 0) {
+			h1 = 0;
+		}
+		if ((h2 - e) <= 0) {
+			h2 = 0;
+		}
+		if ((h3 - e) <= 0) {
+			h3 = 0;
+		}
+
+		return new double[] {h1, h2, h3};
+    }
+    
     public int getDimension() {
     	return dimension;
     }
@@ -54,5 +74,9 @@ public class G14 extends AbstractProblem {
     
     public double[] getDomainsMax() {
     	return domainsMax;
+    }
+    
+    public String getName() { 
+    	return "G14_10D";
     }
 }

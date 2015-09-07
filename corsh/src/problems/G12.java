@@ -42,6 +42,31 @@ public class G12 extends AbstractProblem {
 		return g;
     }
     
+    public double[] violationArray(Vector<Double> x) {
+    	double g, gt;
+    	
+    	g = (x.get(0) - 1.) * (x.get(0) - 1.) + (x.get(1) - 1.) * (x.get(1) - 1.) + (x.get(2) - 1.) * (x.get(2) - 1.) - 0.0625;
+    	
+  	  	for(int i = 1; i <= 9; i++)
+  	    {
+  	    	for(int j = 1; j <= 9; j++)
+  	    	{
+  	    		for(int k = 1; k <= 9; k++)
+  	    		{
+  	    			gt = (x.get(0) - i) * (x.get(0) - i) + (x.get(1) - j) * (x.get(1) - j) + (x.get(2) - k) * (x.get(2) - k) - 0.0625;
+  	    			if (gt < g)
+  	    				g = gt;
+  	    		}
+  	    	}
+  	    }
+    	
+		if (g <= 0) {
+			g = 0;
+		}
+
+		return new double[] {g};
+    }
+    
     public int getDimension() {
     	return dimension;
     }
@@ -52,5 +77,9 @@ public class G12 extends AbstractProblem {
     
     public double[] getDomainsMax() {
     	return domainsMax;
+    }
+    
+    public String getName() { 
+    	return "G12_3D";
     }
 }
