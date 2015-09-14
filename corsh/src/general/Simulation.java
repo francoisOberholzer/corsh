@@ -1,10 +1,7 @@
 package general;
 
-import java.util.Arrays;
-
 import org.apache.commons.math3.stat.descriptive.moment.Mean;
 import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation;
-
 import problems.AbstractProblem;
 import algorithms.AbstractAlgorithm;
 
@@ -29,16 +26,30 @@ public class Simulation {
 			for(int p = 0; p < problems.length; p++) { //For every problem
 				double[][] results = new double[30][2]; //Fitness and Violation
 				double[] resultsFitOnly = new double[30]; //Only Fitness
+				double[] resultsVioOnly = new double[30]; //Only Violation
+				double maxFitness = Double.MIN_VALUE;
+				double minFitness = Double.MAX_VALUE;
+				double maxViolation = 0;
+				double minViolation = 0;
 				
 				for(int i = 0; i < 30; i++) { //For 30 times
 					results[i] = algorithms[a].run(problems[p], maxEvaluations);
 					resultsFitOnly[i] = results[i][0];
+					resultsVioOnly[i] = results[i][1];
+					
+					if(resultsFitOnly[i] > maxFitness) {
+						maxFitness = resultsFitOnly[i];
+						maxViolation = resultsVioOnly[i];
+					}
+					else if(resultsFitOnly[i] < minFitness) {
+						minFitness = resultsFitOnly[i];
+						minViolation = resultsVioOnly[i];
+					}
 				}
 				
 				//Print
 				Print.printRaw(algorithms[a].getName(), problems[p].getName(), results);	
-				Arrays.sort(resultsFitOnly);
-				Print.printResult(algorithms[a].getName(), problems[p].getName(), m.evaluate(resultsFitOnly, 0, 30), resultsFitOnly[29], resultsFitOnly[0], std.evaluate(resultsFitOnly));
+				Print.printResult(algorithms[a].getName(), problems[p].getName(), m.evaluate(resultsFitOnly, 0, 30), m.evaluate(resultsVioOnly, 0, 30), maxFitness, maxViolation, minFitness, minViolation, std.evaluate(resultsFitOnly), std.evaluate(resultsVioOnly));
 			}
 		}
 	}

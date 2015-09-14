@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="20" version="2.0">
 <workbenchAdvisor/>
-<window height="1052" width="1110" x="0" y="0">
+<window height="1052" width="964" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -14,7 +14,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="160" y="34"/>
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="92" y="34"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="128" y="34"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="356" y="34"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="236" y="34"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -34,13 +34,13 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StartSims.java" partName="StartSims.java" path="/home/francois/Documents/corsh/corsh/src/general/StartSims.java" title="StartSims.java" tooltip="corsh/src/general/StartSims.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StartSims.java" partName="StartSims.java" path="/home/francois/Documents/corsh/corsh/src/general/StartSims.java" title="StartSims.java" tooltip="corsh/src/general/StartSims.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/corsh/src/general/StartSims.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DE_5_PieceWise_POC.java" partName="DE_5_PieceWise_POC.java" path="/home/francois/Documents/corsh/corsh/src/algorithms/DE_5_PieceWise_POC.java" title="DE_5_PieceWise_POC.java" tooltip="corsh/src/algorithms/DE_5_PieceWise_POC.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/corsh/src/algorithms/DE_5_PieceWise_POC.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="20" selectionOffset="1360" selectionTopPixel="2605"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Simulation.java" partName="Simulation.java" path="/home/francois/Documents/corsh/corsh/src/general/Simulation.java" title="Simulation.java" tooltip="corsh/src/general/Simulation.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/corsh/src/general/Simulation.java"/>
+<editorState selectionHorizontalPixel="69" selectionLength="0" selectionOffset="0" selectionTopPixel="276"/>
 </editor>
 </editors>
 <views>
@@ -139,6 +139,15 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/general/StartSims.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/algorithms/DE_5_PieceWise_POC.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/general/StartGraphs.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/general/StartDEConvergenceTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/algorithms/DE_Convergence.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/algorithms/DE_0_NoCHT.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/general/Simulation.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/general/Print.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/general/StartSims.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/general/Simulation.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/corsh/src/general/Simulation.java"/>
 </editors>
 <item historyLabel="StartSims.java" index="0">
 <position info="not_deleted" x="0" y="0"/>
@@ -146,7 +155,121 @@
 <item historyLabel="DE_5_PieceWise_POC.java" index="1">
 <position info="not_deleted" x="1360" y="20"/>
 </item>
-<item active="true" historyLabel="StartSims.java" index="0">
+<item historyLabel="StartSims.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="StartGraphs.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="StartSims.java" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="StartDEConvergenceTest.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="DE_Convergence.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="DE_0_NoCHT.java" index="5">
+<position info="not_deleted" x="2175" y="0"/>
+</item>
+<item historyLabel="DE_Convergence.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Print.java" index="7">
+<position info="not_deleted" x="617" y="0"/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position info="not_deleted" x="572" y="0"/>
+</item>
+<item historyLabel="Print.java" index="7">
+<position info="not_deleted" x="620" y="0"/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position info="not_deleted" x="572" y="0"/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position info="not_deleted" x="1642" y="0"/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position info="not_deleted" x="1680" y="0"/>
+</item>
+<item historyLabel="Print.java" index="7">
+<position info="not_deleted" x="1465" y="0"/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position info="not_deleted" x="1653" y="0"/>
+</item>
+<item historyLabel="Print.java" index="7">
+<position info="not_deleted" x="1465" y="0"/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position info="not_deleted" x="1653" y="0"/>
+</item>
+<item historyLabel="Print.java" index="7">
+<position info="not_deleted" x="1384" y="0"/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position info="not_deleted" x="1653" y="0"/>
+</item>
+<item historyLabel="Print.java" index="7">
+<position info="not_deleted" x="1384" y="0"/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position info="not_deleted" x="1653" y="0"/>
+</item>
+<item historyLabel="Print.java" index="7">
+<position info="not_deleted" x="1429" y="0"/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position info="not_deleted" x="1653" y="0"/>
+</item>
+<item historyLabel="Print.java" index="7">
+<position info="not_deleted" x="1429" y="0"/>
+</item>
+<item historyLabel="Simulation.java" index="6">
+<position info="not_deleted" x="154" y="0"/>
+</item>
+<item historyLabel="Print.java" index="7">
+<position info="not_deleted" x="1957" y="0"/>
+</item>
+<item historyLabel="StartSims.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Simulation.java" index="9">
+<position info="not_deleted" x="1343" y="14"/>
+</item>
+<item historyLabel="StartSims.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="Simulation.java" index="10">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
@@ -166,8 +289,8 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DE_5_PieceWise_POC.java" tooltip="corsh/src/algorithms/DE_5_PieceWise_POC.java">
-<persistable path="/corsh/src/algorithms/DE_5_PieceWise_POC.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Simulation.java" tooltip="corsh/src/general/Simulation.java">
+<persistable path="/corsh/src/general/Simulation.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StartSims.java" tooltip="corsh/src/general/StartSims.java">
 <persistable path="/corsh/src/general/StartSims.java"/>
@@ -175,11 +298,23 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Print.java" tooltip="corsh/src/general/Print.java">
 <persistable path="/corsh/src/general/Print.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MET_FVC.java" tooltip="corsh/src/algorithms/MET_FVC.java">
-<persistable path="/corsh/src/algorithms/MET_FVC.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DE_0_NoCHT.java" tooltip="corsh/src/algorithms/DE_0_NoCHT.java">
+<persistable path="/corsh/src/algorithms/DE_0_NoCHT.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DE_Convergence.java" tooltip="corsh/src/algorithms/DE_Convergence.java">
+<persistable path="/corsh/src/algorithms/DE_Convergence.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StartDEConvergenceTest.java" tooltip="corsh/src/general/StartDEConvergenceTest.java">
+<persistable path="/corsh/src/general/StartDEConvergenceTest.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StartGraphs.java" tooltip="corsh/src/general/StartGraphs.java">
 <persistable path="/corsh/src/general/StartGraphs.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DE_5_PieceWise_POC.java" tooltip="corsh/src/algorithms/DE_5_PieceWise_POC.java">
+<persistable path="/corsh/src/algorithms/DE_5_PieceWise_POC.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MET_FVC.java" tooltip="corsh/src/algorithms/MET_FVC.java">
+<persistable path="/corsh/src/algorithms/MET_FVC.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DE_6_PieceWise_Epsilon.java" tooltip="corsh/src/algorithms/DE_6_PieceWise_Epsilon.java">
 <persistable path="/corsh/src/algorithms/DE_6_PieceWise_Epsilon.java"/>
@@ -193,23 +328,11 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DE_2_Penalty_Mean.java" tooltip="corsh/src/algorithms/DE_2_Penalty_Mean.java">
 <persistable path="/corsh/src/algorithms/DE_2_Penalty_Mean.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Simulation.java" tooltip="corsh/src/general/Simulation.java">
-<persistable path="/corsh/src/general/Simulation.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DE_0_NoCHT.java" tooltip="corsh/src/algorithms/DE_0_NoCHT.java">
-<persistable path="/corsh/src/algorithms/DE_0_NoCHT.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DE_1_Brickwall.java" tooltip="corsh/src/algorithms/DE_1_Brickwall.java">
 <persistable path="/corsh/src/algorithms/DE_1_Brickwall.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MET_RFBx.java" tooltip="corsh/src/algorithms/MET_RFBx.java">
 <persistable path="/corsh/src/algorithms/MET_RFBx.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MET_PiIZ_025.java" tooltip="corsh/src/algorithms/MET_PiIZ_025.java">
-<persistable path="/corsh/src/algorithms/MET_PiIZ_025.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MET_PiIZ_001.java" tooltip="corsh/src/algorithms/MET_PiIZ_001.java">
-<persistable path="/corsh/src/algorithms/MET_PiIZ_001.java"/>
 </file>
 </mruList>
 </workbench>
