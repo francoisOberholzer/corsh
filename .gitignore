@@ -8,3 +8,8 @@ corsh/bin
 .metadata/
 out/
 out/production/
+fitnessLandscapeCode/
+*.classpath
+*.class
+*.prefs
+*.project
