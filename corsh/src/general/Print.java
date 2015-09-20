@@ -95,12 +95,35 @@ public class Print {
 		fitnesses.add(_fitness);
 		violations.add(_violation);
 	}
+
+	public void printUnconstrainedDEProgress(Vector<Double> _position, double _fitness) {
+		positions.add(_position);
+		fitnesses.add(_fitness);
+	}
+
+	public void printUnconstrainedDEProgressFinal(String titleAlgorithm, String titleProblem) {
+		try {
+			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_DE_PROGRESS.txt");
+
+			writer.println("Position - Fitness");
+
+			for(int i = 0; i < positions.size(); i++) {
+				writer.println(positions.get(i) + " - " + fitnesses.get(i) );
+			}
+
+			writer.close();
+		}
+		catch (FileNotFoundException fnfe) {
+			System.out.println("Error file not found.");
+			return;
+		}
+	}
 	
 	public void printDEProgressFinal(String titleAlgorithm, String titleProblem) {
 		try {
 			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_DE_PROGRESS.txt");
 			
-			writer.println("Fitness - Violation - Position");
+			writer.println("Position - Fitness - Violation");
 			
 			for(int i = 0; i < positions.size(); i++) {
 				writer.println(positions.get(i) + " - " + fitnesses.get(i) + " - " + violations.get(i));
