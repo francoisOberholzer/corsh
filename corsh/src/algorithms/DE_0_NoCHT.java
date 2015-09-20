@@ -3,6 +3,7 @@ package algorithms;
 import java.util.ArrayList;
 import java.util.Vector;
 import problems.AbstractProblem;
+import general.Print;
 import general.RandFunctions;
 
 public class DE_0_NoCHT extends AbstractAlgorithm {
@@ -11,12 +12,14 @@ public class DE_0_NoCHT extends AbstractAlgorithm {
 	private static int POPSIZE = 100; //Pop Size
 	
 	public double[] run(AbstractProblem funct, int maxEvaluations) {
+		Vector<Double> bestPosition = null;
 		double bestFitness = Double.MAX_VALUE;
 		double bestViolation = 0;
 		int currentEvaluations = 0;
 		int evaluationsTillNextPrint = POPSIZE;
 		int dimension = funct.getDimension();
 		maxEvaluations = maxEvaluations * dimension;
+		Print print = new Print();
 		
 		//Initialize Population
 		ArrayList<Vector<Double>> population = new ArrayList<Vector<Double>>();
@@ -51,6 +54,7 @@ public class DE_0_NoCHT extends AbstractAlgorithm {
 					if(parentFitness < bestFitness) {
 						bestFitness = parentFitness;
 						bestViolation = funct.violation(parent);
+						bestPosition = parent;
 					}
 				}
 				else {
@@ -59,11 +63,13 @@ public class DE_0_NoCHT extends AbstractAlgorithm {
 					if(childFitness < bestFitness) {
 						bestFitness = childFitness;
 						bestViolation = funct.violation(child);
+						bestPosition = child;
 					}
 				}
 				
 				if(currentEvaluations > evaluationsTillNextPrint) {
 					evaluationsTillNextPrint += POPSIZE;
+					print.printDEProgress(bestPosition, bestFitness, bestViolation);
 				}
 			}
 			
@@ -71,6 +77,8 @@ public class DE_0_NoCHT extends AbstractAlgorithm {
 			population = newPopulation;
 			newPopulation = new ArrayList<Vector<Double>>(POPSIZE);
 		}
+			
+		print.printDEProgressFinal(this.getName(), funct.getName());
 		
 		double[] result = new double[]{bestFitness, bestViolation};
 		
