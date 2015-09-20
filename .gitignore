@@ -1,0 +1,10 @@
+
+corsh/corsh.iml
+corsh/.settings/
+corsh/.project
+corsh/bin
+
+.idea/
+.metadata/
+out/
+out/production/
