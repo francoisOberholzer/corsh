@@ -2,7 +2,7 @@
 corsh/corsh.iml
 corsh/.settings/
 corsh/.project
-corsh/bin
+corsh/bin/
 
 .idea/
 .metadata/
