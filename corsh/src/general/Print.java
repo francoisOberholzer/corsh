@@ -11,7 +11,8 @@ public class Print {
 	ArrayList<Double> fitnesses = new ArrayList<Double>();
 	ArrayList<Double> violations = new ArrayList<Double>();
 	
-	public static void printRaw(String titleAlgorithm, String titleProblem, double[][] values) {
+	//Main print function, printing best solution from Simulation's 30 runs
+	public static void printBestRuns(String titleAlgorithm, String titleProblem, double[][] values) {
 		try {
 			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_RAW.txt");
 			
@@ -29,22 +30,8 @@ public class Print {
 		}
 	}
 	
-	public static void printFVC(String titleProblem, double[][] values) {
-		try {
-			PrintWriter writer = new PrintWriter("FVC_" + titleProblem + ".txt");
-			
-			for(int i = 0; i < values[1].length; i++) {	
-				writer.println(values[0][i] + " " + values[1][i]);
-			}
-			
-			writer.close();
-		}
-		catch (FileNotFoundException fnfe) {
-			System.out.println("Error file not found.");
-			return;
-		}
-	}
-	
+	//Being taken out, in favor of more general output which can be parsed by scripts
+	/*
 	public static void printResult(String titleAlgorithm, String titleProblem, double meanFit, double meanVio, double maxFit, double maxVio, double minFit, double minVio, double stddevFit, double stddevVio) {
 		try {
 			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_RESULTS.txt");
@@ -88,19 +75,35 @@ public class Print {
 			System.out.println("Error file not found.");
 			return;
 		}
-	}
+	}*/
 	
+	//DE Progress for Constrained and Unconstrained functions
 	public void printDEProgress(Vector<Double> _position, double _fitness, double _violation) {
 		positions.add(_position);
 		fitnesses.add(_fitness);
 		violations.add(_violation);
 	}
-
 	public void printUnconstrainedDEProgress(Vector<Double> _position, double _fitness) {
 		positions.add(_position);
 		fitnesses.add(_fitness);
 	}
-
+	public void printDEProgressFinal(String titleAlgorithm, String titleProblem) {
+		try {
+			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_DE_PROGRESS.txt");
+			
+			writer.println("Position - Fitness - Violation");
+			
+			for(int i = 0; i < positions.size(); i++) {
+				writer.println(positions.get(i) + " - " + fitnesses.get(i) + " - " + violations.get(i));
+			}
+			
+			writer.close();
+		}
+		catch (FileNotFoundException fnfe) {
+			System.out.println("Error file not found.");
+			return;
+		}
+	}
 	public void printUnconstrainedDEProgressFinal(String titleAlgorithm, String titleProblem) {
 		try {
 			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_DE_PROGRESS.txt");
@@ -119,14 +122,13 @@ public class Print {
 		}
 	}
 	
-	public void printDEProgressFinal(String titleAlgorithm, String titleProblem) {
+	//For drawing FVC graphs, called by Start_Metrics_FVCGraphs
+	public static void printFVC(String titleProblem, double[][] values) {
 		try {
-			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_DE_PROGRESS.txt");
+			PrintWriter writer = new PrintWriter("FVC_" + titleProblem + ".txt");
 			
-			writer.println("Position - Fitness - Violation");
-			
-			for(int i = 0; i < positions.size(); i++) {
-				writer.println(positions.get(i) + " - " + fitnesses.get(i) + " - " + violations.get(i));
+			for(int i = 0; i < values[1].length; i++) {	
+				writer.println(values[0][i] + " " + values[1][i]);
 			}
 			
 			writer.close();
@@ -137,6 +139,7 @@ public class Print {
 		}
 	}
 	
+	//For drawing Convergence graphs, called by Start_DE_Convergence
 	public static void printConvergenceGraphs(String titleProblem, double[][] values, int num) {
 		try {
 			PrintWriter writer = new PrintWriter(titleProblem + "_CONVERGENCE_" + num + ".dat");

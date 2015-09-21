@@ -82,7 +82,7 @@ import problems.cec2010.C18_2D;
 import problems.cec2010.C18_30D;
 import algorithms.metrics.MET_FVC;
 
-public class Start_FVC_Graphs {
+public class Start_Metrics_FVCGraphs {
 	public static void main(String[] args) {
 		MET_FVC algorithm = new MET_FVC();
 		AbstractProblem[] problems = null;	
