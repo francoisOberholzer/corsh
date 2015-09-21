@@ -30,6 +30,25 @@ public class Print {
 		}
 	}
 	
+	//New suggested main print function, printing best solution from Simulation's 30 runs
+	public static void printBestRunsSuggested(String titleAlgorithm, String titleProblem, Solution[] solutions) {
+		try {
+			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_RAW.txt");
+			
+			writer.println("Fitness # Violation # Position"); //# might work better than - for separating numbers when parsing negative numbers
+			
+			for(int i = 0; i < solutions.length; i++) {
+				writer.println(solutions[i].getFitness() + " # " + solutions[i].getViolation() + " # " + solutions[i].getPosition());
+			}
+			
+			writer.close();
+		}
+		catch (FileNotFoundException fnfe) {
+			System.out.println("Error file not found.");
+			return;
+		}
+	}
+	
 	//Being taken out, in favor of more general output which can be parsed by scripts
 	/*
 	public static void printResult(String titleAlgorithm, String titleProblem, double meanFit, double meanVio, double maxFit, double maxVio, double minFit, double minVio, double stddevFit, double stddevVio) {
