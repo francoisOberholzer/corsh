@@ -1,6 +1,8 @@
 package algorithms.metrics;
 
 import general.RandFunctions;
+import general.Solution;
+
 import java.util.Vector;
 
 import algorithms.AbstractAlgorithm;
@@ -8,7 +10,7 @@ import algorithms.AbstractAlgorithm;
 import problems.AbstractProblem;
 
 public class MET_FsR extends AbstractAlgorithm {
-	public double[] run(AbstractProblem funct, int maxEvaluations) {
+	public Solution run(AbstractProblem funct, int maxEvaluations) {
 		double counter = 0.0;
 		int dimension = funct.getDimension();
 		int size = dimension * 1000;
@@ -21,10 +23,7 @@ public class MET_FsR extends AbstractAlgorithm {
 			}
 		}	
 
-		double[] result = new double[2];
-		
-		result[0] = counter/size;
-		result[1] = 0.0;
+		Solution result = new Solution(counter/size);
 		
 		return result;
 	}

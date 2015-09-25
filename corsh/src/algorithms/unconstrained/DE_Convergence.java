@@ -7,13 +7,14 @@ import algorithms.AbstractAlgorithm;
 import problems.AbstractProblem;
 import general.Print;
 import general.RandFunctions;
+import general.Solution;
 
 public class DE_Convergence extends AbstractAlgorithm {
 	private static double CR = 0.5; //Crossover Constant
 	private static double F = 0.5; //Scaling Factor
 	private static int POPSIZE = 100; //Pop Size
 	
-	public double[] run(AbstractProblem funct, int maxEvaluations) {
+	public Solution run(AbstractProblem funct, int maxEvaluations) {
 		double bestFitness = Double.MAX_VALUE;
 		double bestViolation = 0;
 		int currentEvaluations = 0;
@@ -88,7 +89,7 @@ public class DE_Convergence extends AbstractAlgorithm {
 			newPopulation = new ArrayList<Vector<Double>>(POPSIZE);
 		}
 		
-		double[] result = new double[]{bestFitness, bestViolation};
+		Solution result = new Solution(bestFitness, bestViolation, null);
 		
 		return result;
 	}

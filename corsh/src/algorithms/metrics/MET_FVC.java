@@ -1,6 +1,8 @@
 package algorithms.metrics;
 
 import general.RandFunctions;
+import general.Solution;
+
 import java.util.Vector;
 import org.apache.commons.math3.stat.correlation.SpearmansCorrelation;
 
@@ -9,7 +11,7 @@ import algorithms.AbstractAlgorithm;
 import problems.AbstractProblem;
 
 public class MET_FVC extends AbstractAlgorithm {
-	public double[] run(AbstractProblem funct, int maxEvaluations) {
+	public Solution run(AbstractProblem funct, int maxEvaluations) {
 		int dimension = funct.getDimension();
 		int size = dimension * 1000;
 			
@@ -24,12 +26,9 @@ public class MET_FVC extends AbstractAlgorithm {
 			data[0][i] = resFit;
 			data[1][i] = resVal;
 		}
-		
-		double[] result = new double[2];
-		
-		result[0] = spearmansCorrelation(data[0], data[1]);
-		result[1] = 0.0;
 
+		Solution result = new Solution(spearmansCorrelation(data[0], data[1]));
+		
 		return result;
 	}
 	

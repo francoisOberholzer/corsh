@@ -11,34 +11,15 @@ public class Print {
 	ArrayList<Double> fitnesses = new ArrayList<Double>();
 	ArrayList<Double> violations = new ArrayList<Double>();
 	
-	//Main print function, printing best solution from Simulation's 30 runs
-	public static void printBestRuns(String titleAlgorithm, String titleProblem, double[][] values) {
+	//Main print function, printing best solutions from Simulation's 30 runs
+	public static void printBestRuns(String titleAlgorithm, String titleProblem, Solution[] solutions) {
 		try {
 			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_RAW.txt");
 			
-			writer.println("Fitness - Violation");
-			
-			for(int i = 0; i < values.length; i++) {
-				writer.println(values[i][0] + " - " + values[i][1]);
-			}
-			
-			writer.close();
-		}
-		catch (FileNotFoundException fnfe) {
-			System.out.println("Error file not found.");
-			return;
-		}
-	}
-	
-	//New suggested main print function, printing best solution from Simulation's 30 runs
-	public static void printBestRunsSuggested(String titleAlgorithm, String titleProblem, Solution[] solutions) {
-		try {
-			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_RAW.txt");
-			
-			writer.println("Fitness # Violation # Position"); //# might work better than - for separating numbers when parsing negative numbers
+			writer.println("Fitness | Violation | Position | Miscellaneous");
 			
 			for(int i = 0; i < solutions.length; i++) {
-				writer.println(solutions[i].getFitness() + " # " + solutions[i].getViolation() + " # " + solutions[i].getPosition());
+				writer.println(solutions[i].getFitness() + " | " + solutions[i].getViolation() + " | " + solutions[i].getPosition() + " | " + solutions[i].getMiscellaneous());
 			}
 			
 			writer.close();

@@ -7,6 +7,7 @@ import algorithms.AbstractAlgorithm;
 import problems.AbstractProblem;
 import general.Print;
 import general.RandFunctions;
+import general.Solution;
 
 /**
  * Created by David on 2015-09-10.
@@ -25,7 +26,7 @@ public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
     private static double F = 0.5; //Scaling Factor
     private static int POPSIZE = 100; //Pop Size
 
-    public double[] run(AbstractProblem problem, int maxEvaluations) {
+    public Solution run(AbstractProblem problem, int maxEvaluations) {
         Vector<Double> bestPosition = null;
         double bestFitness = Double.MAX_VALUE;
         int currentEvaluations = 0;
@@ -92,7 +93,7 @@ public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
 
         print.printUnconstrainedDEProgressFinal(this.getName(), problem.getName());
 
-        double[] result = new double[]{bestFitness, 0};
+        Solution result = new Solution(bestFitness, bestPosition);
 
         return result;
 

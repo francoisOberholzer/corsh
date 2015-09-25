@@ -7,13 +7,14 @@ import algorithms.AbstractAlgorithm;
 import problems.AbstractProblem;
 import general.Print;
 import general.RandFunctions;
+import general.Solution;
 
 public class DE_4_PieceWise_Standard extends AbstractAlgorithm {
 	private static double CR = 0.5; //Crossover Constant
 	private static double F = 0.5; //Scaling Factor
 	private static int POPSIZE = 100; //Pop Size
 	
-	public double[] run(AbstractProblem funct, int maxEvaluations) {
+	public Solution run(AbstractProblem funct, int maxEvaluations) {
 		Vector<Double> bestPosition = null;
 		double bestFitness = Double.MAX_VALUE;
 		double bestViolation = 0;
@@ -116,7 +117,7 @@ public class DE_4_PieceWise_Standard extends AbstractAlgorithm {
 			newPopulation = new ArrayList<Vector<Double>>(POPSIZE);
 		}
 		
-		double[] result = new double[]{bestFitness, bestViolation};
+		Solution result = new Solution(bestFitness, bestViolation, bestPosition);
 		
 		return result;
 	}

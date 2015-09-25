@@ -1,6 +1,8 @@
 package algorithms.metrics;
 
 import general.RandFunctions;
+import general.Solution;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Vector;
@@ -10,7 +12,7 @@ import algorithms.AbstractAlgorithm;
 import problems.AbstractProblem;
 
 public class MET_PiIZ_001 extends AbstractAlgorithm {
-	public double[] run(AbstractProblem funct, int maxEvaluations) {
+	public Solution run(AbstractProblem funct, int maxEvaluations) {
 		double counter = 0.0;
 		double borderViolation;
 		double borderFitness;
@@ -44,10 +46,7 @@ public class MET_PiIZ_001 extends AbstractAlgorithm {
 			}
 		}	
 		
-		double[] result = new double[2];
-		
-		result[0] = counter/size;
-		result[1] = 0.0;
+		Solution result = new Solution(counter/size);
 		
 		return result;
 	}

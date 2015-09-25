@@ -2,6 +2,8 @@ package algorithms.metrics;
 
 import general.BinaryFlag;
 import general.RandFunctions;
+import general.Solution;
+
 import java.util.ArrayList;
 import java.util.Vector;
 
@@ -10,7 +12,7 @@ import algorithms.AbstractAlgorithm;
 import problems.AbstractProblem;
 
 public class MET_RFBx extends AbstractAlgorithm {
-	public double[] run(AbstractProblem funct, int maxEvaluations) {
+	public Solution run(AbstractProblem funct, int maxEvaluations) {
 		int numSteps = 1000;
 		int dimension = funct.getDimension();
 		int numWalks = dimension;
@@ -92,12 +94,9 @@ public class MET_RFBx extends AbstractAlgorithm {
 	        for(int s = 0; s < numSkips; s++) {
 	        	walkSpecifier.next();
 	        }
-		}
-        
-		double[] result = new double[2];
-		
-		result[0] = sumCrossings/numWalks;
-		result[1] = 0.0;
+		}	
+
+		Solution result = new Solution(sumCrossings/numWalks);
 		
         return result;
 	}

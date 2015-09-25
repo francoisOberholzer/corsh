@@ -8,6 +8,7 @@ import algorithms.AbstractAlgorithm;
 import problems.AbstractProblem;
 import general.Print;
 import general.RandFunctions;
+import general.Solution;
 
 public class DE_3_Penalty_Max extends AbstractAlgorithm {
 	private static double CR = 0.5; //Crossover Constant
@@ -15,7 +16,7 @@ public class DE_3_Penalty_Max extends AbstractAlgorithm {
 	private static int POPSIZE = 100; //Pop Size
 	private static double ADDPENALTYCOEFF = 1; //Penalty Coefficient
 	
-	public double[] run(AbstractProblem funct, int maxEvaluations) {
+	public Solution run(AbstractProblem funct, int maxEvaluations) {
 		Vector<Double> bestPosition = null;
 		double bestFitness = Double.MAX_VALUE;
 		double bestViolation = 0;
@@ -90,7 +91,7 @@ public class DE_3_Penalty_Max extends AbstractAlgorithm {
 			newPopulation = new ArrayList<Vector<Double>>(POPSIZE);
 		}
 		
-		double[] result = new double[]{bestFitness, bestViolation};
+		Solution result = new Solution(bestFitness, bestViolation, bestPosition);
 		
 		return result;
 	}
