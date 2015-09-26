@@ -20,6 +20,14 @@ public class U_Rosenbrock extends AbstractProblem {
         }
     }
 
+    public U_Rosenbrock(int dim){
+        dimension=dim;
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 2.048;
+            domainsMin[i] = -2.048;
+        }
+    }
+
     public Double fitness(Vector<Double> x) {
         double tmp = 0.0;
         for (int i = 0; i < getDimension()-1; ++i) {

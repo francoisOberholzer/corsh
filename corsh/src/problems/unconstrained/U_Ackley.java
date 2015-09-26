@@ -19,6 +19,14 @@ public class U_Ackley extends AbstractProblem{
         }
     }
 
+    public U_Ackley(int dim) {
+        dimension = dim;
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 32.768;
+            domainsMin[i] = -32.768;
+        }
+    }
+
     public Double fitness(Vector<Double> x) {
         double sumsq = 0.0;
         double sumcos = 0.0;

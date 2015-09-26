@@ -20,6 +20,14 @@ public class U_Spherical extends AbstractProblem {
         }
     }
 
+    public U_Spherical(int dim){
+        dimension=dim;
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 100;
+            domainsMin[i] = -100;
+        }
+    }
+
     public Double fitness(Vector<Double> x) {
         double tmp = 0;
         for (int i = 0; i < getDimension(); i++) {

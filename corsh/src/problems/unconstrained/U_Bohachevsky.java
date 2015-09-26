@@ -19,6 +19,14 @@ public class U_Bohachevsky extends AbstractProblem {
         }
     }
 
+    public U_Bohachevsky(int dim){
+        dimension=dim;
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 100;
+            domainsMin[i] = -100;
+        }
+    }
+
     public Double fitness(Vector<Double> x) {
         return x.get(0)*x.get(0) + 2*x.get(1)*x.get(1) - 0.3*Math.cos(3*Math.PI*x.get(0))
                 - 0.4*Math.cos(4*Math.PI*x.get(1))+0.7;

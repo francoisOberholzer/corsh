@@ -19,6 +19,14 @@ public class U_Quadric extends AbstractProblem {
         }
     }
 
+    public U_Quadric(int dim){
+        dimension=dim;
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 100;
+            domainsMin[i] = -100;
+        }
+    }
+
     public Double fitness(Vector<Double> x) {
         double sumsq = 0.0;
         double sum;

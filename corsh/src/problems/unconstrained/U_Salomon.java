@@ -19,6 +19,14 @@ public class U_Salomon extends AbstractProblem {
         }
     }
 
+    public U_Salomon(int dim){
+        dimension=dim;
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 100;
+            domainsMin[i] = -100;
+        }
+    }
+
     public Double fitness(Vector<Double> x) {
         double sumSquares = 0.0;
         for (int i = 0; i < getDimension(); i++) {

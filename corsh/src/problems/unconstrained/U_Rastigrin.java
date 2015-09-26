@@ -20,6 +20,14 @@ public class U_Rastigrin extends AbstractProblem {
         }
     }
 
+    public U_Rastigrin(int dim){
+        dimension=dim;
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 5.12;
+            domainsMin[i] = -5.12;
+        }
+    }
+
     public Double fitness(Vector<Double> x) {
         double tmp = 0;
         for (int i = 0; i < getDimension(); ++i) {

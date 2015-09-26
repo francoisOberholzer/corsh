@@ -19,6 +19,14 @@ public class U_Schwefel2_22 extends AbstractProblem {
         }
     }
 
+    public U_Schwefel2_22(int dim){
+        dimension=dim;
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 10;
+            domainsMin[i] = -10;
+        }
+    }
+
     public Double fitness(Vector<Double> x) {
         double sum = 0;
         double product = 0;

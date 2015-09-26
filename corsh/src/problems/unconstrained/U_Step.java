@@ -19,6 +19,14 @@ public class U_Step extends AbstractProblem {
         }
     }
 
+    public U_Step(int dim){
+        dimension=dim;
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 100;
+            domainsMin[i] = -100;
+        }
+    }
+
     public Double fitness(Vector<Double> x) {
         double sum = 0.0;
         for (int i = 0; i < getDimension(); ++i) {

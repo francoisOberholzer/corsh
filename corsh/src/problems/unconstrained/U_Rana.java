@@ -19,6 +19,14 @@ public class U_Rana extends AbstractProblem {
         }
     }
 
+    public U_Rana(int dim){
+        dimension=dim;
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 512;
+            domainsMin[i] = -512;
+        }
+    }
+
     private double f102(double x, double y) {
         double term1 = x * Math.sin(Math.sqrt(Math.abs(y+1-x)))
                 * Math.cos(Math.sqrt(Math.abs(x+y+1)));

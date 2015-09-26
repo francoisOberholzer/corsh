@@ -18,6 +18,15 @@ public class U_Beale extends AbstractProblem {
             domainsMin[i] = -4.5;
         }
     }
+    public U_Beale(int dim){
+        if(dim>2){
+            System.out.println(getName()+ " should work in up to 2 dimensions");
+        }
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 4.5;
+            domainsMin[i] = -4.5;
+        }
+    }
 
     public Double fitness(Vector<Double> x) {
         double x1 = x.get(0);

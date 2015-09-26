@@ -20,6 +20,14 @@ public class U_SixHumpCamelBack extends AbstractProblem {
         }
     }
 
+    public U_SixHumpCamelBack(int dim){
+        dimension=dim;
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 5.12;
+            domainsMin[i] = -5.12;
+        }
+    }
+
     public Double fitness(Vector<Double> x) {
         double x1 = x.get(0);
         double x2 = x.get(1);

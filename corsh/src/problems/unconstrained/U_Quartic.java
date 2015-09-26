@@ -19,6 +19,14 @@ public class U_Quartic extends AbstractProblem {
         }
     }
 
+    public U_Quartic(int dim){
+        dimension=dim;
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 1.28;
+            domainsMin[i] = -1.28;
+        }
+    }
+
     public Double fitness(Vector<Double> x) {
         double tmp = 0;
         for (int i = 0; i < getDimension(); i++) {

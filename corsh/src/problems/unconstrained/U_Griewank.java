@@ -19,6 +19,14 @@ public class U_Griewank extends AbstractProblem{
         }
     }
 
+    public U_Griewank(int dim){
+        dimension=dim;
+        for (int i = 0; i < getDimension(); i++) {
+            domainsMax[i] = 600;
+            domainsMin[i] = -600;
+        }
+    }
+
     public Double fitness(Vector<Double> x) {
         double sumsq = 0;
         double prod = 1;
