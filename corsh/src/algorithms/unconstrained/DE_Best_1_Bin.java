@@ -122,15 +122,15 @@ public class DE_Best_1_Bin extends AbstractAlgorithm {
                 double v = bestIndividual.get(j) + (F * (ran1.get(j) - ran2.get(j)));
 
                 //check bounds
-                if(v > max[j]) {
-                    while(v > max[j]) {
-                        v = (targetVector.get(j) + max[j]) * RandFunctions.getRandom(0.0, 1.0);
-                    }
+                int counter = 0; //prevent infinite loop
+                while(v > max[j] || counter<100) {
+                    v = (targetVector.get(j) + max[j]) * RandFunctions.getRandom(0.0, 1.0);
+                    counter++;
                 }
-                else if(v < min[j]) {
-                    while(v < min[j]) {
-                        v = (targetVector.get(j) + min[j]) * RandFunctions.getRandom(0.0, 1.0);
-                    }
+                counter = 0;
+                while(v < min[j] || counter<100) {
+                    v = (targetVector.get(j) + min[j]) * RandFunctions.getRandom(0.0, 1.0);
+                    counter++;
                 }
 
                 trialVector.add(v);

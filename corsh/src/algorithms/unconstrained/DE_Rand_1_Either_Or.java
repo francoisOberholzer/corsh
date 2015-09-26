@@ -1,30 +1,21 @@
 package algorithms.unconstrained;
 
-import java.util.ArrayList;
-import java.util.Vector;
-
-import algorithms.AbstractAlgorithm;
-import problems.AbstractProblem;
 import general.Print;
 import general.RandFunctions;
 import general.Solution;
+import problems.AbstractProblem;
+
+import java.util.ArrayList;
+import java.util.Vector;
 
 /**
- * Created by David on 2015-09-10.
- *
- * Naming conventions come from:
- * Differential Evolution: A practical Approach To Global Optimization
- * by:
- * Kennith V. Price; Rainer M. Storm; Jouni A. Lampinen
- * ISBN-10 3-540-20950-6 Springer Berlin Heidelberg New York
- * ISBN-13 978-3-540-20950-8 Springer Berlin Heidelberg New York
- *
- * Refer to Pages 42,139
+ * Created by David on 2015-09-26.
  */
-public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
+public class DE_Rand_1_Either_Or {
     private static double CR = 0.5; //Crossover Constant
     private static double F = 0.5; //Scaling Factor
     private static int POPSIZE = 100; //Pop Size
+    private static double PF = 0.5; // mutation probability
 
     public Solution run(AbstractProblem problem, int maxEvaluations) {
         Vector<Double> bestPosition = null;
@@ -55,7 +46,15 @@ public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
                 Vector<Double> r1 = CurrentPopulationPx.get(randomIndividuals[0]);
                 Vector<Double> r2 = CurrentPopulationPx.get(randomIndividuals[1]);
                 Vector<Double> r3 = CurrentPopulationPx.get(randomIndividuals[2]);
-                Vector<Double> trialVector = recombine(targetVector, r1, r2, r3, dimension, problem.getDomainsMin(), problem.getDomainsMax());
+
+                Vector<Double> trialVector;
+
+                if(RandFunctions.getRandom(0,1) < PF) {
+                    trialVector = recombineEither(targetVector, r1, r2, r3, dimension, problem.getDomainsMin(), problem.getDomainsMax());
+                }
+                else{
+                    trialVector = recombineOr(targetVector, r1, r2, r3, dimension, problem.getDomainsMin(), problem.getDomainsMax());
+                }
 
                 //Replacement
                 double trialVectorFitness = problem.fitness(trialVector);
@@ -99,8 +98,10 @@ public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
 
     }
 
-    //Recombine
-    private static Vector<Double> recombine(Vector<Double> targetVector, Vector<Double> ran1, Vector<Double> ran2, Vector<Double> ran3, int dimension, double[] min, double[] max) {
+
+    //Recombine Either
+    private static Vector<Double> recombineEither(Vector<Double> targetVector, Vector<Double> ran1, Vector<Double> ran2,
+                                                  Vector<Double> ran3, int dimension, double[] min, double[] max) {
         int jrandom = (int) RandFunctions.getRandom(0,dimension-1);
         Vector<Double> trialVector = new Vector<Double>(dimension);
 
@@ -108,6 +109,39 @@ public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
         for(int j = 0; j < dimension; j++) {
             if((RandFunctions.getRandom(0,1) < CR) || (j == jrandom)) {
                 double v = ran3.get(j) + (F * (ran1.get(j) - ran2.get(j)));
+
+                //check bounds
+                int counter = 0; //prevent infinite loop
+                while(v > max[j] || counter<100) {
+                    v = (targetVector.get(j) + max[j]) * RandFunctions.getRandom(0.0, 1.0);
+                    counter++;
+                }
+                counter = 0;
+                while(v < min[j] || counter<100) {
+                    v = (targetVector.get(j) + min[j]) * RandFunctions.getRandom(0.0, 1.0);
+                    counter++;
+                }
+
+                trialVector.add(v);
+            }
+            else {
+                trialVector.add(targetVector.get(j));
+            }
+        }
+
+        return trialVector;
+    }
+
+    //Recombine Or
+    private static Vector<Double> recombineOr(Vector<Double> targetVector, Vector<Double> ran1, Vector<Double> ran2,
+                                              Vector<Double> ran3, int dimension, double[] min, double[] max) {
+        int jrandom = (int) RandFunctions.getRandom(0,dimension-1);
+        Vector<Double> trialVector = new Vector<Double>(dimension);
+
+        //Create the trialVector from the base vector and mutant vector
+        for(int j = 0; j < dimension; j++) {
+            if((RandFunctions.getRandom(0,1) < CR) || (j == jrandom)) {
+                double v = ran3.get(j) +0.5*(F+1) * ( ran1.get(j) + ran2.get(j) - 2*ran3.get(j));
 
                 //check bounds
                 int counter = 0; //prevent infinite loop
@@ -156,6 +190,6 @@ public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
     }
 
     public String getName() {
-        return "DE_Rand_1_Bin_Classic";
+        return "DE_Rand_1_Either_Or";
     }
 }
