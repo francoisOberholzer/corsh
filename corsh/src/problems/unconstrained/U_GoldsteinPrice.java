@@ -30,7 +30,7 @@ public class U_GoldsteinPrice extends AbstractProblem{
         }
     }
 
-    public Double f(Vector<Double> x) {
+    public Double fitness(Vector<Double> x) {
         double part1 = 1 + (x.get(0)+x.get(1)+1.0)*(x.get(0)+x.get(1)+1.0)*(19.0 - 14.0*x.get(0) + 3*x.get(0)*x.get(0)
                 - 14*x.get(1) + 6*x.get(0)*x.get(1) + 3*x.get(1)*x.get(1));
         double part2 = 30 + (2*x.get(0)-3*x.get(1))*(2*x.get(0)-3*x.get(1)) * (18 - 32*x.get(0) + 12*x.get(0)*x.get(0)

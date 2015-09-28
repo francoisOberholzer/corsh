@@ -29,24 +29,24 @@ public class Start_Unconstrained_DEs {
 
 
     private static AbstractProblem[] getProblemsList() {
-        AbstractProblem[] problems = new AbstractProblem[17];
+        AbstractProblem[] problems = new AbstractProblem[16];
 
         problems[0] = new U_Ackley();
         problems[1] = new U_Beale();
         problems[2] = new U_Bohachevsky();
         problems[3] = new U_GoldsteinPrice();
-        problems[5] = new U_Griewank();
-        problems[6] = new U_Quadric();
-        problems[7] = new U_Quartic();
-        problems[8] = new U_Rana();
-        problems[9] = new U_Rastigrin();
-        problems[10] = new U_Rosenbrock();
-        problems[11] = new U_Salomon();
-        problems[12] = new U_Schwefel2_22();
-        problems[13] = new U_Schwefel2_26();
-        problems[14] = new U_SixHumpCamelBack();
-        problems[15] = new U_Spherical();
-        problems[16] = new U_Step();
+        problems[4] = new U_Griewank();
+        problems[5] = new U_Quadric();
+        problems[6] = new U_Quartic();
+        problems[7] = new U_Rana();
+        problems[8] = new U_Rastigrin();
+        problems[9] = new U_Rosenbrock();
+        problems[10] = new U_Salomon();
+        problems[11] = new U_Schwefel2_22();
+        problems[12] = new U_Schwefel2_26();
+        problems[13] = new U_SixHumpCamelBack();
+        problems[14] = new U_Spherical();
+        problems[15] = new U_Step();
         return problems;
     }
 
