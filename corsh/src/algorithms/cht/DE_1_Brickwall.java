@@ -125,14 +125,24 @@ public class DE_1_Brickwall extends AbstractAlgorithm {
 			if((RandFunctions.getRandom(0,1) < CR) || (j == jrandom)) {
 				double v = ran3.get(j) + (F * (ran1.get(j) - ran2.get(j)));
 				
-				if(v > max[j]) {
-					v = (parent.get(j) + max[j]) / 2;
-				}
-				else if(v < min[j]) {
-					v = (parent.get(j) + min[j]) / 2;
-				}
-				
-				child.add(v);
+				//Check bounds
+				int counter = 0; //Prevent infinite loop
+		        while(v > max[j] && counter < 1000) {
+		            v = (parent.get(j) + max[j]) * RandFunctions.getRandom(0.0, 1.0);
+		            counter++;
+		        }
+		        counter = 0;
+		        while(v < min[j] && counter < 1000) {
+		            v = (parent.get(j) + min[j]) * RandFunctions.getRandom(0.0, 1.0);
+		            counter++;
+		        }
+		        
+		        if(v > max[j] || v < min[j]) {
+		        	child.add(parent.get(j));
+		        }
+		        else {
+		        	child.add(v);
+		        }
 			}
 			else {
 				child.add(parent.get(j));
