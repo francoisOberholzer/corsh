@@ -19,7 +19,7 @@ import algorithms.AbstractAlgorithm;
  * ISBN-10 3-540-20950-6 Springer Berlin Heidelberg New York
  * ISBN-13 978-3-540-20950-8 Springer Berlin Heidelberg New York
  *
- * Refer to Pages 139,140
+ * Refer to Pages 139,140,205
  */
 public class DE_Best_1_Bin extends AbstractAlgorithm {
 
@@ -117,26 +117,24 @@ public class DE_Best_1_Bin extends AbstractAlgorithm {
 
         //Create the trialVector from the base vector and mutant vector
         for(int j = 0; j < dimension; j++) {
+            trialVector.add(targetVector.get(j)); //parent
             if((RandFunctions.getRandom(0,1) < CR) || (j == jrandom)) {
 
                 double v = bestIndividual.get(j) + (F * (ran1.get(j) - ran2.get(j)));
 
                 //check bounds
                 int counter = 0; //prevent infinite loop
-                while(v > max[j] || counter<100) {
+                while(v > max[j] || counter<1000) {
                     v = (targetVector.get(j) + max[j]) * RandFunctions.getRandom(0.0, 1.0);
                     counter++;
                 }
                 counter = 0;
-                while(v < min[j] || counter<100) {
+                while(v < min[j] || counter<1000) {
                     v = (targetVector.get(j) + min[j]) * RandFunctions.getRandom(0.0, 1.0);
                     counter++;
                 }
 
                 trialVector.add(v);
-            }
-            else {
-                trialVector.add(targetVector.get(j));
             }
         }
 
