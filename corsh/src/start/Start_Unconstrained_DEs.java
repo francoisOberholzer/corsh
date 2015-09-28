@@ -29,7 +29,7 @@ public class Start_Unconstrained_DEs {
 
 
     private static AbstractProblem[] getProblemsList() {
-        AbstractProblem[] problems = new AbstractProblem[16];
+        AbstractProblem[] problems = new AbstractProblem[17];
 
         problems[0] = new U_Ackley();
         problems[1] = new U_Beale();
