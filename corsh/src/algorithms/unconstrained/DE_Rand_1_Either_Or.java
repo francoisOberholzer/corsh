@@ -1,5 +1,6 @@
 package algorithms.unconstrained;
 
+import algorithms.AbstractAlgorithm;
 import general.Print;
 import general.RandFunctions;
 import general.Solution;
@@ -11,7 +12,7 @@ import java.util.Vector;
 /**
  * Created by David on 2015-09-26.
  */
-public class DE_Rand_1_Either_Or {
+public class DE_Rand_1_Either_Or extends AbstractAlgorithm {
     private static double CR = 0.5; //Crossover Constant
     private static double F = 0.5; //Scaling Factor
     private static int POPSIZE = 100; //Pop Size

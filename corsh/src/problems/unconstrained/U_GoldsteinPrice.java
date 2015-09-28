@@ -1,11 +1,14 @@
 package problems.unconstrained;
 
+
+import problems.AbstractProblem;
+
 import java.util.Vector;
 
 /**
  * Created by David on 2015-09-17.
  */
-public class U_GoldsteinPrice {
+public class U_GoldsteinPrice extends AbstractProblem{
     private static int dimension = 2;
     private static double[] domainsMin = new double[dimension];
     private static double[] domainsMax = new double[dimension];
