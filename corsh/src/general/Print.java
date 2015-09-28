@@ -16,10 +16,10 @@ public class Print {
 		try {
 			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_RAW.txt");
 			
-			writer.println("Fitness | Violation | Position | Miscellaneous");
+			writer.println("Fitness : Violation : Position : Miscellaneous");
 			
 			for(int i = 0; i < solutions.length; i++) {
-				writer.println(solutions[i].getFitness() + " | " + solutions[i].getViolation() + " | " + solutions[i].getPosition() + " | " + solutions[i].getMiscellaneous());
+				writer.println(solutions[i].getFitness() + " : " + solutions[i].getViolation() + " : " + solutions[i].getPosition() + " : " + solutions[i].getMiscellaneous());
 			}
 			
 			writer.close();
