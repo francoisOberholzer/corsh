@@ -111,19 +111,24 @@ public class DE_Rand_1_Either_Or extends AbstractAlgorithm {
             if((RandFunctions.getRandom(0,1) < CR) || (j == jrandom)) {
                 double v = ran3.get(j) + (F * (ran1.get(j) - ran2.get(j)));
 
-                //check bounds
-                int counter = 0; //prevent infinite loop
-                while(v > max[j] || counter<100) {
+                //Check bounds
+                int counter = 0; //Prevent infinite loop
+                while(v > max[j] && counter < 1000) {
                     v = (targetVector.get(j) + max[j]) * RandFunctions.getRandom(0.0, 1.0);
                     counter++;
                 }
                 counter = 0;
-                while(v < min[j] || counter<100) {
+                while(v < min[j] && counter < 1000) {
                     v = (targetVector.get(j) + min[j]) * RandFunctions.getRandom(0.0, 1.0);
                     counter++;
                 }
 
-                trialVector.add(v);
+                if(v > max[j] || v < min[j]) {
+                    trialVector.add(targetVector.get(j));
+                }
+                else {
+                    trialVector.add(v);
+                }
             }
             else {
                 trialVector.add(targetVector.get(j));

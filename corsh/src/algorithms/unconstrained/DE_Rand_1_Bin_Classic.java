@@ -100,7 +100,8 @@ public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
     }
 
     //Recombine
-    private static Vector<Double> recombine(Vector<Double> targetVector, Vector<Double> ran1, Vector<Double> ran2, Vector<Double> ran3, int dimension, double[] min, double[] max) {
+    private static Vector<Double> recombine(Vector<Double> targetVector, Vector<Double> ran1, Vector<Double> ran2,
+                                            Vector<Double> ran3, int dimension, double[] min, double[] max) {
         int jrandom = (int) RandFunctions.getRandom(0,dimension-1);
         Vector<Double> trialVector = new Vector<Double>(dimension);
 
@@ -109,19 +110,24 @@ public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
             if((RandFunctions.getRandom(0,1) < CR) || (j == jrandom)) {
                 double v = ran3.get(j) + (F * (ran1.get(j) - ran2.get(j)));
 
-                //check bounds
-                int counter = 0; //prevent infinite loop
-                while(v > max[j] || counter<100) {
+                //Check bounds
+                int counter = 0; //Prevent infinite loop
+                while(v > max[j] && counter < 1000) {
                     v = (targetVector.get(j) + max[j]) * RandFunctions.getRandom(0.0, 1.0);
                     counter++;
                 }
                 counter = 0;
-                while(v < min[j] || counter<100) {
+                while(v < min[j] && counter < 1000) {
                     v = (targetVector.get(j) + min[j]) * RandFunctions.getRandom(0.0, 1.0);
                     counter++;
                 }
 
-                trialVector.add(v);
+                if(v > max[j] || v < min[j]) {
+                    trialVector.add(targetVector.get(j));
+                }
+                else {
+                    trialVector.add(v);
+                }
             }
             else {
                 trialVector.add(targetVector.get(j));
