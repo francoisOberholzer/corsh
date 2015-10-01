@@ -111,23 +111,14 @@ public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
                 double v = ran3.get(j) + (F * (ran1.get(j) - ran2.get(j)));
 
                 //Check bounds
-                int counter = 0; //Prevent infinite loop
-                while(v > max[j] && counter < 1000) {
+                if(v > max[j]) {
                     v = (targetVector.get(j) + max[j]) * RandFunctions.getRandom(0.0, 1.0);
-                    counter++;
                 }
-                counter = 0;
-                while(v < min[j] && counter < 1000) {
+                if(v < min[j]) {
                     v = (targetVector.get(j) + min[j]) * RandFunctions.getRandom(0.0, 1.0);
-                    counter++;
                 }
 
-                if(v > max[j] || v < min[j]) {
-                    trialVector.add(targetVector.get(j));
-                }
-                else {
-                    trialVector.add(v);
-                }
+                trialVector.add(v);
             }
             else {
                 trialVector.add(targetVector.get(j));
