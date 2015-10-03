@@ -20,8 +20,10 @@ public class Simulation {
 	//Run all algorithms on all problems
 	public void run() {
 		for(int a = 0; a < algorithms.length; a++) { //For every algorithm
+			System.out.println("Starting " + algorithms[a].getName());
 			for(int p = 0; p < problems.length; p++) { //For every problem
 				Solution[] results = new Solution[30];
+				System.out.println("\t on  " + problems[p].getName());
 				
 				for(int i = 0; i < 30; i++) { //For 30 times
 					results[i] = algorithms[a].run(problems[p], maxEvaluations);

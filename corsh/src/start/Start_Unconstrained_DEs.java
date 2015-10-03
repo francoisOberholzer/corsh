@@ -5,6 +5,7 @@ import algorithms.unconstrained.DE_Best_1_Bin;
 import algorithms.unconstrained.DE_Rand_1_Bin_Classic;
 import algorithms.unconstrained.DE_Rand_1_Either_Or;
 import algorithms.unconstrained.DE_Target_to_Best_1_Bin;
+import general.Simulation;
 import problems.*;
 import problems.unconstrained.*;
 
@@ -16,15 +17,13 @@ public class Start_Unconstrained_DEs {
         //Setup Simulation
         AbstractAlgorithm[] algorithms = getAlgorithmsList();
         AbstractProblem[] problems = getProblemsList();
+        Simulation sim = new Simulation(algorithms, problems, 10000);
+        sim.run();
 
         //Run Simulation
-        for (int i = 0; i < algorithms.length; i++) {
-            System.out.println("Starting " + algorithms[i].getName());
-            for (int j = 0; j < problems.length; j++) {
-                System.out.println("Starting with run " + j + ": " + problems[j].getName());
-                algorithms[i].run(problems[j], 100); //10000
-            }
-        }
+
+        //    System.out.println("Starting " + algorithms[i].getName()); ADD THIS TO SIMULATION CLASS
+        
     }
 
 
