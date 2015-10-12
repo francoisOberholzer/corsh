@@ -35,13 +35,14 @@ public class U_Weierstrass extends AbstractProblem {
     }
 
     public Double fitness(Vector<Double> x) {
-        double sum1 = 0;
-        double sum2 = 0;
-        for(int i = 0; i < getDimension(); ++i){
-            sum1 += x.get(i) * x.get(i);
-            sum2 += 0.5 * (i + 1) * x.get(i);
+        double tmp = 0;
+
+        for (int i = 0; i < getDimension(); i++) {
+            for(int k = 0; k <= kMax; k++) {
+                tmp += Math.pow(a, k) * Math.cos(2 * Math.PI * Math.pow(b, k) * (x.get(i) + 0.5));
+            }
         }
-        return sum1 + (sum2 * sum2) + (sum2 * sum2 * sum2 * sum2);
+        return tmp - getDimension() * constant;
     }
 
     /**
