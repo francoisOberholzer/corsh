@@ -30,53 +30,6 @@ public class Print {
 		}
 	}
 	
-	//Being taken out, in favor of more general output which can be parsed by scripts
-	/*
-	public static void printResult(String titleAlgorithm, String titleProblem, double meanFit, double meanVio, double maxFit, double maxVio, double minFit, double minVio, double stddevFit, double stddevVio) {
-		try {
-			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_RESULTS.txt");
-			
-			writer.println("MEAN FITNESS");
-			writer.println(meanFit);
-			writer.println("");
-			
-			writer.println("MAX FITNESS");
-			writer.println(maxFit);
-			writer.println("");
-			
-			writer.println("MIN FITNESS");
-			writer.println(minFit);
-			writer.println("");
-			
-			writer.println("STDDEV FITNESS");
-			writer.println(stddevFit);
-			writer.println("");
-			writer.println("");
-			
-			writer.println("MEAN VIOLATION");
-			writer.println(meanVio);
-			writer.println("");
-			
-			writer.println("MAX VIOLATION");
-			writer.println(maxVio);
-			writer.println("");
-			
-			writer.println("MIN VIOLATION");
-			writer.println(minVio);
-			writer.println("");
-		
-			writer.println("STDDEV VIOLATION");
-			writer.println(stddevVio);
-			writer.println("");
-			
-			writer.close();
-		}
-		catch (FileNotFoundException fnfe) {
-			System.out.println("Error file not found.");
-			return;
-		}
-	}*/
-	
 	//DE Progress for Constrained and Unconstrained functions
 	public void printDEProgress(Vector<Double> _position, double _fitness, double _violation) {
 		positions.add(_position);

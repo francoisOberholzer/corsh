@@ -1,7 +1,5 @@
 package general;
 
-//import org.apache.commons.math3.stat.descriptive.moment.Mean;
-//import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation;
 import problems.AbstractProblem;
 import algorithms.AbstractAlgorithm;
 
