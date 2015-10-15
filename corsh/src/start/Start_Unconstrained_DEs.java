@@ -3,8 +3,6 @@ package start;
 import algorithms.AbstractAlgorithm;
 import algorithms.unconstrained.DE_Best_1_Bin;
 import algorithms.unconstrained.DE_Rand_1_Bin_Classic;
-import algorithms.unconstrained.DE_Rand_1_Either_Or;
-import algorithms.unconstrained.DE_Target_to_Best_1_Bin;
 import general.Simulation;
 import problems.*;
 import problems.unconstrained.*;
@@ -57,9 +55,9 @@ public class Start_Unconstrained_DEs {
         AbstractAlgorithm[] algorithmsList = new AbstractAlgorithm[4];
 
         algorithmsList[0] = new DE_Rand_1_Bin_Classic();
-        algorithmsList[1] = new DE_Target_to_Best_1_Bin();
+        //algorithmsList[1] = new DE_Target_to_Best_1_Bin();
         algorithmsList[2] = new DE_Best_1_Bin();
-        algorithmsList[3] = new DE_Rand_1_Either_Or();
+       // algorithmsList[3] = new DE_Rand_1_Either_Or();
 
         return algorithmsList;
     }

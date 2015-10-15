@@ -1,6 +1,7 @@
 package algorithms.cht;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Vector;
 
 import algorithms.AbstractAlgorithm;
@@ -15,7 +16,7 @@ public class DE_1_Brickwall extends AbstractAlgorithm {
 	private static int POPSIZE = 100; //Pop Size
 	
 	public Solution run(AbstractProblem funct, int maxEvaluations) {
-		Vector<Double> bestPosition = null;
+		Vector<Double> bestPosition = new Vector<Double>(Arrays.asList(0.0));
 		double bestFitness = Double.MAX_VALUE;
 		double bestViolation = 0;
 		int currentEvaluations = 0;
@@ -27,7 +28,7 @@ public class DE_1_Brickwall extends AbstractAlgorithm {
 		//Initialize Population
 		ArrayList<Vector<Double>> population = new ArrayList<Vector<Double>>();
 		ArrayList<Vector<Double>> newPopulation = new ArrayList<Vector<Double>>();
-		for(int i = 0; i < POPSIZE; i++) {
+		for(int i = 0; i <= POPSIZE; i++) {
 			population.add(new Vector<Double>());
 			for(int j = 0; j < dimension; j++) {
 				population.get(i).add(RandFunctions.getRandom(funct.getDomainsMin()[j], funct.getDomainsMax()[j]));
@@ -173,6 +174,6 @@ public class DE_1_Brickwall extends AbstractAlgorithm {
 	
 	//Get Name
 	public String getName() { 
-		return "DE_DeathPenalty";
+		return "DE_BrickWall";
 	}
 }

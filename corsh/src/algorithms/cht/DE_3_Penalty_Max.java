@@ -17,7 +17,7 @@ public class DE_3_Penalty_Max extends AbstractAlgorithm {
 	private static double ADDPENALTYCOEFF = 1; //Penalty Coefficient
 	
 	public Solution run(AbstractProblem funct, int maxEvaluations) {
-		Vector<Double> bestPosition = null;
+		Vector<Double> bestPosition = new Vector<Double>(Arrays.asList(0.0));
 		double bestFitness = Double.MAX_VALUE;
 		double bestViolation = 0;
 		int currentEvaluations = 0;
@@ -29,7 +29,7 @@ public class DE_3_Penalty_Max extends AbstractAlgorithm {
 		//Initialize Population
 		ArrayList<Vector<Double>> population = new ArrayList<Vector<Double>>();
 		ArrayList<Vector<Double>> newPopulation = new ArrayList<Vector<Double>>();
-		for(int i = 0; i < POPSIZE; i++) {
+		for(int i = 0; i <= POPSIZE; i++) {
 			population.add(new Vector<Double>());
 			for(int j = 0; j < dimension; j++) {
 				population.get(i).add(RandFunctions.getRandom(funct.getDomainsMin()[j], funct.getDomainsMax()[j]));
