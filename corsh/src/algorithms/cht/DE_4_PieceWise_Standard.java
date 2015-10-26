@@ -28,7 +28,7 @@ public class DE_4_PieceWise_Standard extends AbstractAlgorithm {
 		//Initialize Population
 		ArrayList<Vector<Double>> population = new ArrayList<Vector<Double>>();
 		ArrayList<Vector<Double>> newPopulation = new ArrayList<Vector<Double>>();
-		for(int i = 0; i <= POPSIZE; i++) {
+		for(int i = 0; i < POPSIZE; i++) {
 			population.add(new Vector<Double>());
 			for(int j = 0; j < dimension; j++) {
 				population.get(i).add(RandFunctions.getRandom(funct.getDomainsMin()[j], funct.getDomainsMax()[j]));

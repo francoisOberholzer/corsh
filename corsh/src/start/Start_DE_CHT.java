@@ -92,14 +92,14 @@ import algorithms.cht.DE_6_PieceWise_Epsilon;
 public class Start_DE_CHT {
 	public static void main(String[] args) {
 		//Algorithms
-		AbstractAlgorithm[] algorithms = new AbstractAlgorithm[7];
-		algorithms[0] = new DE_0_NoCHT();
-		algorithms[1] = new DE_1_Brickwall();
-		algorithms[2] = new DE_2_Penalty_Mean();
-		algorithms[3] = new DE_3_Penalty_Max();
-		algorithms[4] = new DE_4_PieceWise_Standard();
-		algorithms[5] = new DE_5_PieceWise_POC();
-		algorithms[6] = new DE_6_PieceWise_Epsilon();
+		AbstractAlgorithm[] algorithms = new AbstractAlgorithm[2];
+		//algorithms[0] = new DE_0_NoCHT();
+		//algorithms[1] = new DE_1_Brickwall();
+		//algorithms[2] = new DE_2_Penalty_Mean();
+		//algorithms[3] = new DE_3_Penalty_Max();
+		//algorithms[4] = new DE_4_PieceWise_Standard();
+		algorithms[0] = new DE_5_PieceWise_POC();
+		algorithms[1] = new DE_6_PieceWise_Epsilon();
 		
 		//Problems
 		AbstractProblem[] problems = new AbstractProblem[78];
