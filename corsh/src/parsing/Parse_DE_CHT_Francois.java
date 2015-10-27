@@ -8,7 +8,6 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 
 import org.apache.commons.math3.stat.descriptive.moment.Mean;
-import org.apache.commons.math3.stat.descriptive.moment.StandardDeviation;
 
 public class Parse_DE_CHT_Francois {
 	public static void main(String[] args) {
@@ -880,12 +879,13 @@ public class Parse_DE_CHT_Francois {
 		String line = null;
 		
 		try {
-			PrintWriter writer = new PrintWriter("results_" + problem + ".txt");
-			writer.println(problem + ", minFitness, maxFitness, meanFitness, stdDevFitness, minViolation, maxViolation, meanViolation, stdDevViolation");
+			PrintWriter writer = new PrintWriter("results_" + problem + ".csv");
+			writer.println(problem + ", FeasibilityRate, MeanFitness, MeanViolation, BestFitness, ViolationForBestFitness");
 			
 			//For each CHT
-			for(int i = 0; i < 7; i++) {
+			for(int i = 0; i < 7; i++) {			
 				String title = titles[i];
+				System.out.println("Attempting " + title + "...");
 				double[] fitnesses = new double[30];
 				double[] violations = new double[30];
 				
@@ -895,8 +895,8 @@ public class Parse_DE_CHT_Francois {
 				
 				//Read each Line
 				bufferedReader.readLine();
+				int index = 0;
 				while((line = bufferedReader.readLine()) != null) {
-					int index = 0;
 					line = line.replaceAll("\\s+", "");
 					String[] parts = line.split(":");
 					fitnesses[index] = Double.parseDouble(parts[0]);
@@ -905,13 +905,25 @@ public class Parse_DE_CHT_Francois {
 	            }   
 				
 				//Setup for output
-				Arrays.sort(fitnesses);
-				Arrays.sort(violations);
-				StandardDeviation std = new StandardDeviation();
+				double bestFitness = Double.MAX_VALUE;
+				double bestViolation = Double.MAX_VALUE;
+				for(int j = 0; j < 30; j++) {
+					if(fitnesses[j] < bestFitness) {
+						bestFitness = fitnesses[j];
+						bestViolation = violations[j];
+					}
+				}
 				Mean mn = new Mean();
+				int feasibilityRate = 0;
+				for(int j = 0; j < 30; j++) {
+					if(violations[j] == 0) {
+						feasibilityRate++;
+					}
+				}
+				feasibilityRate = (feasibilityRate/30)*100;
 				
 				//Output
-				writer.println(getCHT(i) + "," + fitnesses[0] + "," + fitnesses[29] + "," + mn.evaluate(fitnesses, 0, 30) + "," + std.evaluate(fitnesses) + "," + violations[0] + "," + violations[29] + "," + mn.evaluate(violations, 0, 30) + "," + std.evaluate(violations));
+				writer.println(getCHT(i) + "," + feasibilityRate + "," + mn.evaluate(fitnesses, 0, 30) + "," + mn.evaluate(violations, 0, 30) + "," + bestFitness + "," + bestViolation);
 				
 	            bufferedReader.close();         
 			}
