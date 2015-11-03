@@ -1,0 +1,8 @@
+G12, FeasibilityRate, MeanFitness, MeanViolation, BestFitness, ViolationForBestFitness
+NoCHT,100.0,-1.0,0.0,-1.0,0.0
+BrickWall,100.0,-1.0,0.0,-1.0,0.0
+PenaltyMean,100.0,-1.0,0.0,-1.0,0.0
+PenaltyMax,100.0,-1.0,0.0,-1.0,0.0
+PieceWiseStd,100.0,-1.0,0.0,-1.0,0.0
+PieceWisePOC,100.0,-1.0,0.0,-1.0,0.0
+PieceWiseEpsilon,100.0,-1.0,0.0,-1.0,0.0

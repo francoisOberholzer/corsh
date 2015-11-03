@@ -5,8 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Arrays;
-
 import org.apache.commons.math3.stat.descriptive.moment.Mean;
 
 public class Parse_DE_CHT_Francois {
@@ -914,7 +912,7 @@ public class Parse_DE_CHT_Francois {
 					}
 				}
 				Mean mn = new Mean();
-				int feasibilityRate = 0;
+				double feasibilityRate = 0;
 				for(int j = 0; j < 30; j++) {
 					if(violations[j] == 0) {
 						feasibilityRate++;
@@ -928,6 +926,7 @@ public class Parse_DE_CHT_Francois {
 	            bufferedReader.close();         
 			}
 			
+			System.out.println("Finished");
 			writer.close();
 		}
 		catch(FileNotFoundException ex) {

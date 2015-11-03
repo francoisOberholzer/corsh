@@ -18,7 +18,7 @@ public class DE_4_PieceWise_Standard extends AbstractAlgorithm {
 	public Solution run(AbstractProblem funct, int maxEvaluations) {
 		Vector<Double> bestPosition = new Vector<Double>(Arrays.asList(0.0));
 		double bestFitness = Double.MAX_VALUE;
-		double bestViolation = 0;
+		double bestViolation = Double.MAX_VALUE;;
 		int currentEvaluations = 0;
 		int evaluationsTillNextPrint = POPSIZE;
 		int dimension = funct.getDimension();
