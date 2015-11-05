@@ -8,19 +8,19 @@ import problems.AbstractProblem;
 /**
  * Created by David on 2015-09-17.
  */
-public class U_Rastigrin extends AbstractProblem {
+public class U_Rastrigrin extends AbstractProblem {
     private static int dimension = 30;
     private static double[] domainsMin = new double[dimension];
     private static double[] domainsMax = new double[dimension];
 
-    public U_Rastigrin(){
+    public U_Rastrigrin(){
         for (int i = 0; i < getDimension(); i++) {
             domainsMax[i] = 5.12;
             domainsMin[i] = -5.12;
         }
     }
 
-    public U_Rastigrin(int dim){
+    public U_Rastrigrin(int dim){
         dimension=dim;
         for (int i = 0; i < getDimension(); i++) {
             domainsMax[i] = 5.12;
@@ -49,6 +49,6 @@ public class U_Rastigrin extends AbstractProblem {
     }
 
     public String getName() {
-        return "Rastigrin";
+        return "Rastrigrin";
     }
 }
