@@ -74,6 +74,37 @@ public class Print {
 			return;
 		}
 	}
+
+	public void printUnconstrainedDEProgressFinal(String titleAlgorithm, String titleProblem, int problemDimensions) {
+		try {
+			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_IN_" + problemDimensions + "_DE_PROGRESS.txt");
+
+			writer.println("Position - Fitness");
+
+			for(int i = 0; i < positions.size(); i++) {
+				writer.println(positions.get(i) + " - " + fitnesses.get(i) );
+			}
+
+			writer.close();
+		}
+		catch (FileNotFoundException fnfe) {
+			System.out.println("Error file not found.");
+			return;
+		}
+	}
+
+	public void simplePrinter(String toPrint, String fileName) {
+		try {
+			PrintWriter writer = new PrintWriter(fileName);
+
+			writer.println(toPrint);
+			writer.close();
+		}
+		catch (FileNotFoundException fnfe) {
+			System.out.println("Error file not found.");
+			return;
+		}
+	}
 	
 	//For drawing FVC graphs, called by Start_Metrics_FVCGraphs
 	public static void printFVC(String titleProblem, double[][] values) {

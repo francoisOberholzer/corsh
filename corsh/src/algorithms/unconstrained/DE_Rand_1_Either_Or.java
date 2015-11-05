@@ -91,7 +91,7 @@ public class DE_Rand_1_Either_Or extends AbstractAlgorithm {
             TrialPopulationPvPu = new ArrayList<Vector<Double>>(POPSIZE);
         }
 
-        print.printUnconstrainedDEProgressFinal(this.getName(), problem.getName());
+        print.printUnconstrainedDEProgressFinal(this.getName(), problem.getName(), problem.getDimension());
 
         Solution result = new Solution(bestFitness, bestPosition);
 
