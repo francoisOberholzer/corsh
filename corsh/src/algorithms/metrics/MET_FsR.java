@@ -2,11 +2,8 @@ package algorithms.metrics;
 
 import general.RandFunctions;
 import general.Solution;
-
 import java.util.Vector;
-
 import algorithms.AbstractAlgorithm;
-
 import problems.AbstractProblem;
 
 public class MET_FsR extends AbstractAlgorithm {
