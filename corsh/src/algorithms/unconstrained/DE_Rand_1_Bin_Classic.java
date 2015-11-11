@@ -49,6 +49,12 @@ public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
         //DE
         while (currentEvaluations < maxEvaluations) { //Until stopping condition is met
             for (int i = 0; i < POPSIZE; i++) { //For each individual in Pop
+
+
+                //TODO Insert Printing Here
+                //print CurrentPopulationPx
+
+
                 //Mutation and Crossover
                 int[] randomIndividuals = getRandomIndividuals(i);
                 Vector<Double> targetVector = CurrentPopulationPx.get(i);
@@ -91,7 +97,7 @@ public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
             TrialPopulationPvPu = new ArrayList<Vector<Double>>(POPSIZE);
         }
 
-        print.printUnconstrainedDEProgressFinal(this.getName(), problem.getName());
+        print.printUnconstrainedDEProgressFinal(this.getName(), problem.getName(), problem.getDimension());
 
         Solution result = new Solution(bestFitness, bestPosition);
 
