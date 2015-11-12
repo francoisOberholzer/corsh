@@ -722,14 +722,14 @@ public class Parse_Metrics {
 		
 		try {
 			PrintWriter writer = new PrintWriter("results_" + problem + ".csv");
-			writer.println(problem + ", FeasibilityRate, MeanFitness, MeanViolation, BestFitness, ViolationForBestFitness");
+			writer.println(problem + ", FsR, FVC, PiIZ001, PiIZ025, RFBx");
+			double[] allMetrics = new double[5];
 			
-			//For each CHT
-			for(int i = 0; i < 7; i++) {			
+			//For each Metric
+			for(int i = 0; i < 5; i++) {			
 				String title = titles[i];
 				System.out.println("Attempting " + title + "...");
-				double[] fitnesses = new double[30];
-				double[] violations = new double[30];
+				double[] metrics = new double[30];
 				
 				//Input
 				FileReader fileReader = new FileReader(title);
@@ -741,34 +741,18 @@ public class Parse_Metrics {
 				while((line = bufferedReader.readLine()) != null) {
 					line = line.replaceAll("\\s+", "");
 					String[] parts = line.split(":");
-					fitnesses[index] = Double.parseDouble(parts[0]);
-					violations[index] = Double.parseDouble(parts[1]);
+					metrics[index] = Double.parseDouble(parts[3]);
 					index++;
 	            }   
 				
 				//Setup for output
-				double bestFitness = Double.MAX_VALUE;
-				double bestViolation = Double.MAX_VALUE;
-				for(int j = 0; j < 30; j++) {
-					if(fitnesses[j] < bestFitness) {
-						bestFitness = fitnesses[j];
-						bestViolation = violations[j];
-					}
-				}
 				Mean mn = new Mean();
-				double feasibilityRate = 0;
-				for(int j = 0; j < 30; j++) {
-					if(violations[j] == 0) {
-						feasibilityRate++;
-					}
-				}
-				feasibilityRate = (feasibilityRate/30)*100;
-				
-				//Output
-				writer.println(getCHT(i) + "," + feasibilityRate + "," + mn.evaluate(fitnesses, 0, 30) + "," + mn.evaluate(violations, 0, 30) + "," + bestFitness + "," + bestViolation);
-				
+				allMetrics[i] = mn.evaluate(metrics, 0, 30);
+
 	            bufferedReader.close();         
 			}
+			
+			writer.println(" ," + allMetrics[0] + "," + allMetrics[1] + "," + allMetrics[2] + "," + allMetrics[3] + "," + allMetrics[4]);
 			
 			System.out.println("Finished");
 			writer.close();
@@ -779,30 +763,5 @@ public class Parse_Metrics {
         catch(IOException ex) {
             System.out.println("Error reading file '" + problem + "'");                  
         }
-	}
-	
-	private static String getCHT(int i) {
-		if(i == 0) {
-			return "NoCHT";
-		}
-		else if(i == 1) {
-			return "BrickWall";
-		}
-		else if(i == 2) {
-			return "PenaltyMean";
-		}
-		else if(i == 3) {
-			return "PenaltyMax";
-		}
-		else if(i == 4) {
-			return "PieceWiseStd";
-		}
-		else if(i == 5) {
-			return "PieceWisePOC";
-		}
-		else if(i == 6) {
-			return "PieceWiseEpsilon";
-		}
-		return "";
 	}
 }
