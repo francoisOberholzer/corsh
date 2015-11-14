@@ -95,6 +95,6 @@ public class G04 extends AbstractProblem {
     }
     
     public String getName() { 
-    	return "G4_5D";
+    	return "G04_5D";
     }
 }
