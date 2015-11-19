@@ -21,6 +21,8 @@ public class U_Ackley extends AbstractProblem{
 
     public U_Ackley(int dim) {
         dimension = dim;
+        domainsMin = new double[dimension];
+        domainsMax = new double[dimension];
         for (int i = 0; i < getDimension(); i++) {
             domainsMax[i] = 32.768;
             domainsMin[i] = -32.768;

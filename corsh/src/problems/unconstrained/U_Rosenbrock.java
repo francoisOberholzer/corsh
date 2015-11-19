@@ -9,19 +9,18 @@ import problems.AbstractProblem;
  */
 public class U_Rosenbrock extends AbstractProblem {
 
-    private static int dimension = 30;
-    private static double[] domainsMin = new double[dimension];
-    private static double[] domainsMax = new double[dimension];
+    private static int dimension ;
+    private static double[] domainsMin ;
+    private static double[] domainsMax ;
 
     public U_Rosenbrock(){
-        for (int i = 0; i < getDimension(); i++) {
-            domainsMax[i] = 2.048;
-            domainsMin[i] = -2.048;
-        }
+        new U_Rosenbrock(30);
     }
 
     public U_Rosenbrock(int dim){
         dimension=dim;
+        domainsMin = new double[dimension];
+        domainsMax = new double[dimension];
         for (int i = 0; i < getDimension(); i++) {
             domainsMax[i] = 2.048;
             domainsMin[i] = -2.048;

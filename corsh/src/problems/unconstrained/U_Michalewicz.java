@@ -9,19 +9,18 @@ import java.util.Vector;
  */
 public class U_Michalewicz extends AbstractProblem{
 
-    private static int dimension = 30;
-    private static double[] domainsMin = new double[dimension];
-    private static double[] domainsMax = new double[dimension];
+    private static int dimension;
+    private static double[] domainsMin;
+    private static double[] domainsMax;
 
     public U_Michalewicz(){
-        for (int i = 0; i < getDimension(); i++) {
-            domainsMax[i] = Math.PI;
-            domainsMin[i] = 0;
-        }
+        new U_Michalewicz(30);
     }
 
     public U_Michalewicz(int dim) {
         dimension = dim;
+        domainsMin = new double[dimension];
+        domainsMax = new double[dimension];
         for (int i = 0; i < getDimension(); i++) {
             domainsMax[i] = Math.PI;
             domainsMin[i] = 0;

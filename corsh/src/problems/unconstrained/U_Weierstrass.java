@@ -9,24 +9,23 @@ import java.util.Vector;
  */
 public class U_Weierstrass extends AbstractProblem {
 
-    private static int dimension = 30;
-    private static double[] domainsMin = new double[dimension];
-    private static double[] domainsMax = new double[dimension];
+    private static int dimension;
+    private static double[] domainsMin;
+    private static double[] domainsMax;
     private double a;
     private double b;
     private int kMax;
     private double constant;
 
     public U_Weierstrass(){
-        for (int i = 0; i < getDimension(); i++) {
-            domainsMax[i] = 10;
-            domainsMin[i] = -5;
-        }
+        new U_Weierstrass(30);
         computeConstant();
     }
 
     public U_Weierstrass(int dim) {
         dimension = dim;
+        domainsMin = new double[dimension];
+        domainsMax = new double[dimension];
         for (int i = 0; i < getDimension(); i++) {
             domainsMax[i] = 10;
             domainsMin[i] = -5;
