@@ -7,6 +7,7 @@ public class Simulation {
 	private AbstractAlgorithm[] algorithms;
 	private AbstractProblem[] problems;
 	private int maxEvaluations;
+	public static int simRunNumber = 1;
 	
 	//Constructor
 	public Simulation(AbstractAlgorithm[] _algorithms, AbstractProblem[] _problems, int _maxEvaluations) {
@@ -24,11 +25,12 @@ public class Simulation {
 				System.out.println("\t on  " + problems[p].getName());
 				
 				for(int i = 0; i < 30; i++) { //For 30 times
+					simRunNumber=i+1;
 					results[i] = algorithms[a].run(problems[p], maxEvaluations);
 				}
 				
 				//Print
-				Print.printBestRuns(algorithms[a].getName(), problems[p].getName(), results);	
+				Print.printBestRuns(algorithms[a].getName(), problems[p].getName(), results, problems[p].getDimension());
 			}
 		}
 	}
