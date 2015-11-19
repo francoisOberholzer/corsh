@@ -1,9 +1,7 @@
 package algorithms.unconstrained;
 
 import algorithms.AbstractAlgorithm;
-import general.Print;
-import general.RandFunctions;
-import general.Solution;
+import general.*;
 import problems.AbstractProblem;
 
 import java.util.ArrayList;
@@ -39,6 +37,11 @@ public class DE_Target_to_Best_1_Bin extends AbstractAlgorithm {
                         problem.getDomainsMax()[j]));
             }
         }
+
+        //Initialise Printer
+        ProgressionPrinter printer = new ProgressionPrinter(Simulation.simRunNumber, dimension, getName(), problem.getName());
+
+        printer.saveGeneration(CurrentPopulationPx);
 
         //DE
         while (currentEvaluations < maxEvaluations) { //Until stopping condition is met
@@ -90,10 +93,12 @@ public class DE_Target_to_Best_1_Bin extends AbstractAlgorithm {
             //Move over to next generation
             CurrentPopulationPx = TrialPopulationPvPu;
             TrialPopulationPvPu = new ArrayList<Vector<Double>>(POPSIZE);
+
+            printer.saveGeneration(CurrentPopulationPx);
         }
 
         print.printUnconstrainedDEProgressFinal(this.getName(), problem.getName(), problem.getDimension());
-
+        printer.printRun();
         Solution result = new Solution(bestFitness, bestPosition);
 
         return result;
