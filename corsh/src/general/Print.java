@@ -29,6 +29,28 @@ public class Print {
 			return;
 		}
 	}
+
+	public static void printBestRuns(String titleAlgorithm, String titleProblem, Solution[] solutions, int problemDimensions) {
+		try {
+			String dims = ""+problemDimensions;
+			if(dims.length()==1){
+				dims = "0"+ dims;
+			}
+			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem +"_IN_" +dims+ "_RAW.txt");
+
+			writer.println("Fitness : Violation : Position : Miscellaneous");
+
+			for(int i = 0; i < solutions.length; i++) {
+				writer.println(solutions[i].getFitness() + " : " + solutions[i].getViolation() + " : " + solutions[i].getPosition() + " : " + solutions[i].getMiscellaneous());
+			}
+
+			writer.close();
+		}
+		catch (FileNotFoundException fnfe) {
+			System.out.println("Error file not found.");
+			return;
+		}
+	}
 	
 	//DE Progress for Constrained and Unconstrained functions
 	public void printDEProgress(Vector<Double> _position, double _fitness, double _violation) {
@@ -77,7 +99,13 @@ public class Print {
 
 	public void printUnconstrainedDEProgressFinal(String titleAlgorithm, String titleProblem, int problemDimensions) {
 		try {
-			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_IN_" + problemDimensions + "_DE_PROGRESS.txt");
+
+			String dims = ""+problemDimensions;
+			if(dims.length()==1){
+				dims = "0"+ dims;
+			}
+
+			PrintWriter writer = new PrintWriter(titleAlgorithm + "_ON_" + titleProblem + "_IN_" + dims +"_DE_PROGRESS" + ".txt");
 
 			writer.println("Position - Fitness");
 
