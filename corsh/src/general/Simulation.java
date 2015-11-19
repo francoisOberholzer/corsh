@@ -22,10 +22,11 @@ public class Simulation {
 			System.out.println("Starting " + algorithms[a].getName());
 			for(int p = 0; p < problems.length; p++) { //For every problem
 				Solution[] results = new Solution[30];
-				System.out.println("\t on  " + problems[p].getName());
+				System.out.println("\t on  " + problems[p].getName() + " in " + problems[p].getDimension() + " dimensions");
 				
 				for(int i = 0; i < 30; i++) { //For 30 times
 					simRunNumber=i+1;
+					System.out.println("\t\t run "+simRunNumber);
 					results[i] = algorithms[a].run(problems[p], maxEvaluations);
 				}
 				
