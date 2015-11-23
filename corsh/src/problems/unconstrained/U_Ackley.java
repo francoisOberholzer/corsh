@@ -8,14 +8,13 @@ import problems.AbstractProblem;
  * Created by David on 2015-09-17.
  */
 public class U_Ackley extends AbstractProblem{
-    private static int dimension = 30;
+    private static int dimension;
     private static double[] domainsMin = new double[dimension];
     private static double[] domainsMax = new double[dimension];
 
     public U_Ackley(){
         for (int i = 0; i < getDimension(); i++) {
-            domainsMax[i] = 32.768;
-            domainsMin[i] = -32.768;
+            new U_Ackley(30);
         }
     }
 
