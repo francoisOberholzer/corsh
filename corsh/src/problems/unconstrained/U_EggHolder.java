@@ -9,19 +9,22 @@ import java.util.Vector;
  */
 public class U_EggHolder extends AbstractProblem {
 
-    private static int dimension = 2;
-    private static double[] domainsMin = new double[dimension];
-    private static double[] domainsMax = new double[dimension];
+    private static int dimension;
+    private static double[] domainsMin;
+    private static double[] domainsMax;
 
     public U_EggHolder(){
-        for (int i = 0; i < getDimension(); i++) {
-            domainsMax[i] = 512;
-            domainsMin[i] = -512;
-        }
+        new U_EggHolder(2);
     }
 
     public U_EggHolder(int dim) {
         dimension = dim;
+        if ((getDimension() != 2))
+        {
+            System.out.println(getName() + " is only known/defined for 2 dimensions. You tried "+ getDimension() + " dimensions. Things may break...");
+        }
+        domainsMin = new double[dimension];
+        domainsMax = new double[dimension];
         for (int i = 0; i < getDimension(); i++) {
             domainsMax[i] = 512;
             domainsMin[i] = -512;

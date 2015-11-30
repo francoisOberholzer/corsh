@@ -8,19 +8,18 @@ import problems.AbstractProblem;
  * Created by David on 2015-09-17.
  */
 public class U_Quartic extends AbstractProblem {
-    private static int dimension = 30;
-    private static double[] domainsMin = new double[dimension];
-    private static double[] domainsMax = new double[dimension];
+    private static int dimension;
+    private static double[] domainsMin;
+    private static double[] domainsMax;
 
     public U_Quartic(){
-        for (int i = 0; i < getDimension(); i++) {
-            domainsMax[i] = 1.28;
-            domainsMin[i] = -1.28;
-        }
+        new U_Quartic(30);
     }
 
     public U_Quartic(int dim){
         dimension=dim;
+        domainsMin = new double[dimension];
+        domainsMax = new double[dimension];
         for (int i = 0; i < getDimension(); i++) {
             domainsMax[i] = 1.28;
             domainsMin[i] = -1.28;

@@ -8,19 +8,18 @@ import problems.AbstractProblem;
  * Created by David on 2015-09-17.
  */
 public class U_Bohachevsky extends AbstractProblem {
-    private static int dimension = 2;
-    private static double[] domainsMin = new double[dimension];
-    private static double[] domainsMax = new double[dimension];
+    private static int dimension;
+    private static double[] domainsMin;
+    private static double[] domainsMax;
 
     public U_Bohachevsky(){
-        for (int i = 0; i < getDimension(); i++) {
-            domainsMax[i] = 100;
-            domainsMin[i] = -100;
-        }
+        new U_Bohachevsky(30);
     }
 
     public U_Bohachevsky(int dim){
         dimension=dim;
+        domainsMin = new double[dimension];
+        domainsMax = new double[dimension];
         for (int i = 0; i < getDimension(); i++) {
             domainsMax[i] = 100;
             domainsMin[i] = -100;

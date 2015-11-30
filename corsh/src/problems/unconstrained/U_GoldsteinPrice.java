@@ -9,21 +9,22 @@ import java.util.Vector;
  * Created by David on 2015-09-17.
  */
 public class U_GoldsteinPrice extends AbstractProblem{
-    private static int dimension = 2;
-    private static double[] domainsMin = new double[dimension];
-    private static double[] domainsMax = new double[dimension];
+    private static int dimension;
+    private static double[] domainsMin;
+    private static double[] domainsMax;
 
     public U_GoldsteinPrice(){
-        for (int i = 0; i < getDimension(); i++) {
-            domainsMax[i] = 2;
-            domainsMin[i] = -2;
-        }
+        new U_GoldsteinPrice(2);
     }
 
     public U_GoldsteinPrice(int dim){
-        if(dim>2){
-            System.out.println(getName()+ " should work in up to 2 dimensions");
+        dimension = dim;
+        if ((getDimension() != 2))
+        {
+            System.out.println(getName() + " is only known/defined for 2 dimensions. You tried "+ getDimension() + " dimensions. Things may break...");
         }
+        domainsMin = new double[dimension];
+        domainsMax = new double[dimension];
         for (int i = 0; i < getDimension(); i++) {
             domainsMax[i] = 2;
             domainsMin[i] = -2;

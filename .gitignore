@@ -15,5 +15,6 @@ fitnessLandscapeCode/
 *.project
 
 /*.txt
+/*.csv
 
 corsh/*.txt

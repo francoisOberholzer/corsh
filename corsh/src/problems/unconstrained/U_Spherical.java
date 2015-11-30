@@ -9,19 +9,18 @@ import problems.AbstractProblem;
  */
 public class U_Spherical extends AbstractProblem {
 
-    private static int dimension = 30;
-    private static double[] domainsMin = new double[dimension];
-    private static double[] domainsMax = new double[dimension];
+    private static int dimension;
+    private static double[] domainsMin;
+    private static double[] domainsMax;
 
     public U_Spherical(){
-        for (int i = 0; i < getDimension(); i++) {
-            domainsMax[i] = 100;
-            domainsMin[i] = -100;
-        }
+        new U_Spherical(30);
     }
 
     public U_Spherical(int dim){
         dimension=dim;
+        domainsMin = new double[dimension];
+        domainsMax = new double[dimension];
         for (int i = 0; i < getDimension(); i++) {
             domainsMax[i] = 100;
             domainsMin[i] = -100;

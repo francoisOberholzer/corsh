@@ -9,19 +9,18 @@ import java.util.Vector;
  */
 public class U_Zakharov extends AbstractProblem {
 
-    private static int dimension = 2;
-    private static double[] domainsMin = new double[dimension];
-    private static double[] domainsMax = new double[dimension];
+    private static int dimension;
+    private static double[] domainsMin;
+    private static double[] domainsMax;
 
     public U_Zakharov(){
-        for (int i = 0; i < getDimension(); i++) {
-            domainsMax[i] = 10;
-            domainsMin[i] = -10;
-        }
+        new U_Zakharov(30);
     }
 
     public U_Zakharov(int dim) {
         dimension = dim;
+        domainsMin = new double[dimension];
+        domainsMax = new double[dimension];
         for (int i = 0; i < getDimension(); i++) {
             domainsMax[i] = 10;
             domainsMin[i] = -10;

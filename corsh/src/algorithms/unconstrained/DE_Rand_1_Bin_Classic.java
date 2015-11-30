@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.Vector;
 
 import algorithms.AbstractAlgorithm;
+import general.*;
 import problems.AbstractProblem;
-import general.Print;
-import general.RandFunctions;
-import general.Solution;
 
 /**
  * Created by David on 2015-09-10.
@@ -45,6 +43,11 @@ public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
                 CurrentPopulationPx.get(i).add(RandFunctions.getRandom(problem.getDomainsMin()[j], problem.getDomainsMax()[j]));
             }
         }
+
+        //Initialise Printer
+        ProgressionPrinter printer = new ProgressionPrinter(Simulation.simRunNumber, dimension, getName(), problem.getName());
+
+        printer.saveGeneration(CurrentPopulationPx);
 
         //DE
         while (currentEvaluations < maxEvaluations) { //Until stopping condition is met
@@ -95,10 +98,12 @@ public class DE_Rand_1_Bin_Classic extends AbstractAlgorithm {
             //Move over to next generation
             CurrentPopulationPx = TrialPopulationPvPu;
             TrialPopulationPvPu = new ArrayList<Vector<Double>>(POPSIZE);
+
+            printer.saveGeneration(CurrentPopulationPx);
         }
 
         print.printUnconstrainedDEProgressFinal(this.getName(), problem.getName(), problem.getDimension());
-
+        printer.printRun();
         Solution result = new Solution(bestFitness, bestPosition);
 
         return result;

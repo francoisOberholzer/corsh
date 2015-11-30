@@ -24,6 +24,8 @@ public class Start_Unconstrained_DEs {
     private static AbstractProblem[] getProblemsList() {
         ArrayList<AbstractProblem> pl = new ArrayList<AbstractProblem>(); //problemsList
 
+        //Beale?Goldstein?SixHump?
+
         int[] dimensions = {1, 2, 5, 10, 15, 30};
 
         for (int i = 0; i < dimensions.length; i++) {
@@ -33,7 +35,7 @@ public class Start_Unconstrained_DEs {
             pl.add(new U_Alpine(dimensions[i]));
             pl.add(new U_Griewank(dimensions[i]));
             pl.add(new U_Quadric(dimensions[i]));
-            pl.add(new U_Quadric(dimensions[i]));
+            pl.add(new U_Quartic(dimensions[i]));
             pl.add(new U_Rastrigrin(dimensions[i]));
             pl.add(new U_Salomon(dimensions[i]));
             pl.add(new U_Schwefel2_22(dimensions[i]));
@@ -64,7 +66,7 @@ public class Start_Unconstrained_DEs {
         for (int i = 0; i < pl.size(); i++) {
             problems[i] = pl.get(i);
         }
-        
+
         return problems;
     }
 
