@@ -49,7 +49,8 @@ public class DE_Best_1_Bin extends AbstractAlgorithm {
         //Initialise Printer
         ProgressionPrinter printer = new ProgressionPrinter(Simulation.simRunNumber, dimension, getName(), problem.getName());
 
-        printer.saveGeneration(CurrentPopulationPx);
+       printer.saveGeneration(CurrentPopulationPx);
+        //printer.saveGenerationInAL(CurrentPopulationPx);
 
         //DE
         while (currentEvaluations < maxEvaluations) { //Until stopping condition is met
@@ -103,6 +104,7 @@ public class DE_Best_1_Bin extends AbstractAlgorithm {
             TrialPopulationPvPu = new ArrayList<Vector<Double>>(POPSIZE);
 
             printer.saveGeneration(CurrentPopulationPx);
+            //printer.saveGenerationInAL(CurrentPopulationPx);
         }
 
         print.printUnconstrainedDEProgressFinal(this.getName(), problem.getName(), problem.getDimension());

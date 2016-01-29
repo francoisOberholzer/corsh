@@ -24,26 +24,27 @@ public class Start_Unconstrained_DEs {
     private static AbstractProblem[] getProblemsList() {
         ArrayList<AbstractProblem> pl = new ArrayList<AbstractProblem>(); //problemsList
 
-        //Beale?Goldstein?SixHump?
-
+/*
         int[] dimensions = {1, 2, 5, 10, 15, 30};
 
         for (int i = 0; i < dimensions.length; i++) {
 
             //1, 2, 5, 10, 15, 30
-            pl.add(new U_Ackley(dimensions[i]));
-            pl.add(new U_Alpine(dimensions[i]));
-            pl.add(new U_Griewank(dimensions[i]));
-            pl.add(new U_Quadric(dimensions[i]));
-            pl.add(new U_Quartic(dimensions[i]));
-            pl.add(new U_Rastrigrin(dimensions[i]));
-            pl.add(new U_Salomon(dimensions[i]));
-            pl.add(new U_Schwefel2_22(dimensions[i]));
-            pl.add(new U_Schwefel2_26(dimensions[i]));
-            pl.add(new U_SkewRastrigin(dimensions[i]));
-            pl.add(new U_Spherical(dimensions[i]));
-            pl.add(new U_Step(dimensions[i]));
-            pl.add(new U_Weierstrass(dimensions[i]));
+            if(dimensions[i] != 30) {
+                pl.add(new U_Ackley(dimensions[i]));
+                pl.add(new U_Alpine(dimensions[i]));
+                pl.add(new U_Griewank(dimensions[i]));
+                pl.add(new U_Quadric(dimensions[i]));
+                pl.add(new U_Quartic(dimensions[i]));
+                pl.add(new U_Rastrigrin(dimensions[i]));
+                pl.add(new U_Salomon(dimensions[i]));
+                pl.add(new U_Schwefel2_22(dimensions[i]));
+                pl.add(new U_Schwefel2_26(dimensions[i]));
+                pl.add(new U_SkewRastrigin(dimensions[i]));
+                pl.add(new U_Spherical(dimensions[i]));
+                pl.add(new U_Step(dimensions[i]));
+                pl.add(new U_Weierstrass(dimensions[i]));
+            }
 
             //2, 5, 10, 15, 30
             if(dimensions[i] > 1) {
@@ -60,6 +61,13 @@ public class Start_Unconstrained_DEs {
                 }
             }
         }
+        pl.add(new U_Beale(2));
+        pl.add(new U_EggHolder(2));
+        pl.add(new U_GoldsteinPrice(2));
+        pl.add(new U_SixHumpCamelBack(2));
+        */
+
+        pl.add(new U_Ackley(1));
 
 
         AbstractProblem[] problems = new AbstractProblem[pl.size()];

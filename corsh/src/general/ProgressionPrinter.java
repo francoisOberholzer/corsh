@@ -20,6 +20,8 @@ public class ProgressionPrinter {
     private String deName;
     private String problemName;
     private String csvString;
+    private ArrayList<ArrayList<Vector<Double>>> allGenerations;
+    private boolean usingStringMethod;
 
     public ProgressionPrinter(int _runNumber, int _dimensions, String _deName, String _problemName){
         runNumber=_runNumber;
@@ -27,10 +29,18 @@ public class ProgressionPrinter {
         deName=_deName;
         problemName=_problemName;
         csvString="";
+        allGenerations = new ArrayList<>();
+        usingStringMethod=true;
     }
 
     public void saveGeneration(ArrayList<Vector<Double>> population){
         csvString += population.toString()+ "\n";
+    }
+
+    public void saveGenerationInAL(ArrayList<Vector<Double>> population){
+        allGenerations.add(population);
+        usingStringMethod=false;
+
     }
 
     public void printRun(){
@@ -45,7 +55,15 @@ public class ProgressionPrinter {
             }
             PrintWriter writer = new PrintWriter(deName + "_ON_" + problemName + "_IN_" + dims +"_RUN" + run+ ".csv");
 
-            writer.print(csvString);
+            if (usingStringMethod){
+                writer.print(csvString);
+            }
+            else
+            {
+                for (int i = 0; i < allGenerations.size(); i++) {
+                    writer.println(allGenerations.get(i));
+                }
+            }
 
             writer.close();
         }
